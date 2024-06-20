@@ -399,3 +399,31 @@
 .gap-y-5{
     row-gap: 20px;
 }
+
+.gap-x-1{
+    column-gap: 4px;
+}
+.gap-x-2{
+    column-gap: 8px;
+}
+.gap-x-3{
+    column-gap: 12px;
+}
+.gap-x-4{
+    column-gap: 16px;
+}
+.gap-x-5{
+    column-gap: 20px;
+}
+
+// PADDINGS
+.page-sc-py-40{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.page-sc-pt-40{
+    padding-top: 40px;
+}
+.page-sc-pb-40{
+    padding-bottom: 40px;
+}

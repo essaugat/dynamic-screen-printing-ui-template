@@ -18,6 +18,16 @@ $(document).ready(function () {
     arrows: false,
   });
 
+  $(".quote-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    autoplay: true,
+    autoplaySpped: 5000,
+  });
+
   // init Isotope
   var $grid = $(".hero-explore-tab-items").isotope({
     filter: ".hero-explore-1",
