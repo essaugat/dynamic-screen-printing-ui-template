@@ -1,0 +1,18 @@
+.slick-dots {
+    li {
+        &.slick-active {
+            button {
+                &::before {
+                    color: #1d3363 !important;
+                }
+            }
+        }
+        button {
+            &::before {
+                font-size: 12px !important;
+                color: #63b2f7 !important;
+                opacity: 1 !important;
+            }
+        }
+    }
+}

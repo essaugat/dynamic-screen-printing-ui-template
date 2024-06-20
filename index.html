@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- SLICK CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="dist/css/main.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- HEADER SECTION -->
+      <header class="page-header">
+        <div class="page-header-top d-flex align-items-center">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <div class="header-top-brand">
+              <a href="index.html">
+                <img src="assets/siteicons/logo.svg" alt="" />
+              </a>
+            </div>
+            <div class="header-top-search">
+              <form>
+                <div class="search-input-group d-flex align-items-center">
+                  <input
+                    type="text"
+                    class="control border-0 shadow-none"
+                    placeholder="Search our services and products ..."
+                  />
+                  <button class="input-group-btn">
+                    <img src="assets/icons/search_gray.svg" alt="" />
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="header-top-profile">
+              <button type="button" class="profile-icon border-0 shadow-none">
+                <img src="assets/images/user.jpeg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="page-header-nav">
+          <div class="container">
+            <div
+              class="header-nav-group d-flex flex-wrap justify-content-between gap-1"
+            >
+              <div class="header-nav-left">
+                <ul
+                  class="nav-list d-flex align-items-center justify-content-start flex-wrap"
+                >
+                  <li class="nav-item nav-item-home">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-icon"
+                        ><img src="assets/icons/home_dark.svg" alt=""
+                      /></span>
+                      <span class="nav-link-text">Home</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Printing Services</span>
+                      <span class="nav-link-dropdown-icon">
+                        <img src="assets/icons/arrow_down_dark.svg" alt="" />
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Marketing Materials</span>
+                      <span class="nav-link-dropdown-icon">
+                        <img src="assets/icons/arrow_down_dark.svg" alt="" />
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Business Stationary</span>
+                      <span class="nav-link-dropdown-icon">
+                        <img src="assets/icons/arrow_down_dark.svg" alt="" />
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Corporate Printing</span>
+                      <span class="nav-link-dropdown-icon">
+                        <img src="assets/icons/arrow_down_dark.svg" alt="" />
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Special Occasions</span>
+                      <span class="nav-link-dropdown-icon">
+                        <img src="assets/icons/arrow_down_dark.svg" alt="" />
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Industry Solutions</span>
+                      <span class="nav-link-dropdown-icon">
+                        <img src="assets/icons/arrow_down_dark.svg" alt="" />
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="header-nav-right">
+                <ul
+                  class="nav-list d-flex align-items-center justify-content-end flex-wrap"
+                >
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Company</span>
+                      <span class="nav-link-dropdown-icon">
+                        <img src="assets/icons/arrow_down_dark.svg" alt="" />
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Get a Quote</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link">
+                      <span class="nav-link-text">Help Center</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- END OF HEADER SECTION -->
+
+      <!-- HOME HERO SECTION -->
+      <section class="page-sc-hero">
+        <img
+          class="hero-image-fill"
+          src="assets/images/hero_banner.png"
+          alt=""
+        />
+        <div class="container position-relative">
+          <div class="sc-hero-content d-grid">
+            <div class="hero-left">
+              <div class="hero-text-container d-grid row-gap-3">
+                <h1 class="hero-ttl font-medium">
+                  Complete Digital Printing Service at one place
+                </h1>
+                <p class="text-xl hero-lead mb-0">
+                  Elevate your brand with eye-catching screen printing. Get
+                  ready for compliments and increased brand recognition.
+                </p>
+              </div>
+
+              <div
+                class="hero-btn-group d-flex flex-wrap justify-content-start"
+              >
+                <button
+                  type="button"
+                  class="btn d-inline-flex align-items-center btn-primary"
+                >
+                  <span class="btn-text">Upload File</span>
+                  <span class="btn-icon">
+                    <img src="assets/icons/upload_white.svg" alt="" />
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn d-inline-flex align-items-center btn-secondary"
+                >
+                  <span class="btn-text">Get a Quote</span>
+                  <span class="btn-icon">
+                    <img src="assets/icons/quote_theme.svg" alt="" />
+                  </span>
+                </button>
+              </div>
+
+              <div class="achieve-items d-flex position-absolute">
+                <div
+                  class="achieve-item text-center d-flex align-items-center justify-content-center flex-column"
+                >
+                  <div
+                    class="achieve-item-icon d-flex align-items-center justify-content-center"
+                  >
+                    <img src="assets/icons/calendar_blue.svg" alt="" />
+                  </div>
+                  <div class="achieve-item-info font-inter">
+                    <span
+                      class="achieve-item-info-val font-semibold d-block text-3xl"
+                      >30+</span
+                    >
+                    <span class="achieve-item-info-stat text-sm"
+                      >Years in Business</span
+                    >
+                  </div>
+                </div>
+                <div class="achieve-item-separator"></div>
+                <div
+                  class="achieve-item text-center d-flex align-items-center justify-content-center flex-column"
+                >
+                  <div
+                    class="achieve-item-icon d-flex align-items-center justify-content-center"
+                  >
+                    <img src="assets/icons/star_blue.svg" alt="" />
+                  </div>
+                  <div class="achieve-item-info font-inter">
+                    <span
+                      class="achieve-item-info-val font-semibold d-block text-3xl"
+                      >100+</span
+                    >
+                    <span class="achieve-item-info-stat text-sm">
+                      Clients Served</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-right">
+              <div class="hero-product-slider">
+                <div class="hero-slider-item">
+                  <img src="assets/images/walking_hoodie.gif" alt="" />
+                </div>
+                <div class="hero-slider-item">
+                  <img src="assets/images/walking_hoodie.gif" alt="" />
+                </div>
+                <div class="hero-slider-item">
+                  <img src="assets/images/walking_hoodie.gif" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF HOME HERO SECTION -->
+
+      <!-- HERO EXPLORE SECTION -->
+      <section class="page-sc-hero-explore">
+        <div class="container">
+          <div class="sc-hero-explore-tabs mx-auto">
+            <div
+              class="hero-explore-tab-heads button-group filter-button-group d-flex justify-content-center"
+            >
+              <button
+                type="button"
+                data-filter=".hero-explore-1"
+                class="hero-explore-tab-head gap-y-4 d-flex flex-column align-items-center justify-content-center active"
+              >
+                <div
+                  class="tab-head-icon d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    class="default-icon"
+                    src="assets/icons/explore_one.svg"
+                    alt=""
+                  />
+                  <img
+                    class="active-icon"
+                    src="assets/icons/explore_one_active.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="tab-head-name">Printing Services</div>
+              </button>
+              <button
+                type="button"
+                data-filter=".hero-explore-2"
+                class="hero-explore-tab-head gap-y-4 d-flex flex-column align-items-center justify-content-center"
+              >
+                <div
+                  class="tab-head-icon d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    class="default-icon"
+                    src="assets/icons/explore_two.svg"
+                    alt=""
+                  />
+                  <img
+                    class="active-icon"
+                    src="assets/icons/explore_two_active.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="tab-head-name">Marketing Materials</div>
+              </button>
+              <button
+                type="button"
+                data-filter=".hero-explore-3"
+                class="hero-explore-tab-head gap-y-4 d-flex flex-column align-items-center justify-content-center"
+              >
+                <div
+                  class="tab-head-icon d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    class="default-icon"
+                    src="assets/icons/explore_three.svg"
+                    alt=""
+                  />
+                  <img
+                    class="active-icon"
+                    src="assets/icons/explore_three_active.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="tab-head-name">Business Stationery</div>
+              </button>
+              <button
+                type="button"
+                data-filter=".hero-explore-4"
+                class="hero-explore-tab-head gap-y-4 d-flex flex-column align-items-center justify-content-center"
+              >
+                <div
+                  class="tab-head-icon d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    class="default-icon"
+                    src="assets/icons/explore_four.svg"
+                    alt=""
+                  />
+                  <img
+                    class="active-icon"
+                    src="assets/icons/explore_four_active.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="tab-head-name">Corporate Printing</div>
+              </button>
+            </div>
+
+            <div class="hero-explore-tab-items mx-auto row">
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-1"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item1.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Business Cards</div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-1"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item2.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Flyers</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-1"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item3.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Posters & Banners</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-1"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item4.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Polo shirts</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-1"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item5.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Tshirts</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-1"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item6.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Caps</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-1"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item7.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Sportswear</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-2"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item8.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Books and Catalogues</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-2"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item9.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Brochures</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-2"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item3.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Cards</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-2"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item2.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Flyers</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-2"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item8.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Posters</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-2"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item9.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Invitation Post</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-2"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item3.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">POS marketing</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-3"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item8.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Books and Catalogues</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-3"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item9.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Brochures</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-3"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item3.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Cards</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-3"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item8.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Posters</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-3"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item9.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Invitation Post</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-3"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item2.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Flyers</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-3"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item3.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">POS marketing</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-4"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item2.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Flyers</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-4"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item8.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Posters</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-4"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item9.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Invitation Post</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-4"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item3.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">POS marketing</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-4"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item8.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Books and Catalogues</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-4"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item9.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Brochures</div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-4"
+              >
+                <div class="hero-explore-tab-item">
+                  <div class="tab-item-img">
+                    <img src="assets/images/item3.png" alt="" />
+                  </div>
+                  <div class="tab-item-ttl">Cards</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF HERO EXPLORE SECTION  -->
+
+      <!-- POPULAR PRODUCTS SECTION -->
+      <div class="page-sc-popular-products page-sc-py-40">
+        <div class="container">
+          <div class="sc-popular-products-content">
+            <div class="product-grid">
+              <div
+                class="product-grid-head d-flex align-items-start justify-content-between"
+              >
+                <h3 class="grid-head-ttl text-xl font-medium">
+                  Popular Products on "Printing Services"
+                </h3>
+                <a
+                  href="#"
+                  class="btn-link text-sm text-gray text-decoration-underline"
+                  >Explore all</a
+                >
+              </div>
+              <div class="product-grid-list">
+                <div class="product-card">
+                  <div class="product-card-img-wrapper">
+                    <img
+                      class="product-card-img"
+                      src="assets/images/product1.png"
+                      alt=""
+                    />
+                    <button type="button" class="product-wishlist-btn">
+                      <img src="assets/icons/heart_red.svg" alt="" />
+                    </button>
+
+                    <div
+                      class="product-explore-overlay d-flex flex-column align-items-center justify-content-center text-center"
+                    >
+                      <button type="button" class="product-explore-btn">
+                        <img src="assets/icons/search_white.svg" alt="" />
+                      </button>
+                      <p class="product-explore-text text-base text-white">
+                        Explore Product
+                      </p>
+                    </div>
+                  </div>
+                  <div class="product-card-body">
+                    <h4 class="product-card-ttl">Hoodie Print</h4>
+                    <div class="product-card-price-info">
+                      From only $0.11 each in bulk
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card">
+                  <div class="product-card-img-wrapper">
+                    <img
+                      class="product-card-img"
+                      src="assets/images/product2.png"
+                      alt=""
+                    />
+                    <button type="button" class="product-wishlist-btn">
+                      <img src="assets/icons/heart_red.svg" alt="" />
+                    </button>
+
+                    <div
+                      class="product-explore-overlay d-flex flex-column align-items-center justify-content-center text-center"
+                    >
+                      <button type="button" class="product-explore-btn">
+                        <img src="assets/icons/search_white.svg" alt="" />
+                      </button>
+                      <p class="product-explore-text text-base text-white">
+                        Explore Product
+                      </p>
+                    </div>
+                  </div>
+                  <div class="product-card-body">
+                    <h4 class="product-card-ttl">Tote Bags</h4>
+                    <div class="product-card-price-info">
+                      From only $0.11 each in bulk
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card">
+                  <div class="product-card-img-wrapper">
+                    <img
+                      class="product-card-img"
+                      src="assets/images/product3.png"
+                      alt=""
+                    />
+                    <button type="button" class="product-wishlist-btn">
+                      <img src="assets/icons/heart_red.svg" alt="" />
+                    </button>
+
+                    <div
+                      class="product-explore-overlay d-flex flex-column align-items-center justify-content-center text-center"
+                    >
+                      <button type="button" class="product-explore-btn">
+                        <img src="assets/icons/search_white.svg" alt="" />
+                      </button>
+                      <p class="product-explore-text text-base text-white">
+                        Explore Product
+                      </p>
+                    </div>
+                  </div>
+                  <div class="product-card-body">
+                    <h4 class="product-card-ttl">T-shirts</h4>
+                    <div class="product-card-price-info">
+                      From only $0.11 each in bulk
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card">
+                  <div class="product-card-img-wrapper">
+                    <img
+                      class="product-card-img"
+                      src="assets/images/product4.gif"
+                      alt=""
+                    />
+                    <button type="button" class="product-wishlist-btn">
+                      <img src="assets/icons/heart_red.svg" alt="" />
+                    </button>
+                    <div
+                      class="product-explore-overlay d-flex flex-column align-items-center justify-content-center text-center"
+                    >
+                      <button type="button" class="product-explore-btn">
+                        <img src="assets/icons/search_white.svg" alt="" />
+                      </button>
+                      <p class="product-explore-text text-base text-white">
+                        Explore Product
+                      </p>
+                    </div>
+                  </div>
+                  <div class="product-card-body">
+                    <h4 class="product-card-ttl">Caps</h4>
+                    <div class="product-card-price-info">
+                      From only $0.11 each in bulk
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF POPULAR PRODUCTS SECTION -->
+
+      <!-- BANNER ONE SECTION -->
+      <section class="page-sc-banner-01">
+        <div class="container">
+          <div class="sc-banner-01-content">
+            <div class="banner-ttl-group">
+              <h3 class="banner-ttl">Don't Miss Out!</h3>
+              <h3 class="banner-ttl">Get Your Prints Today</h3>
+            </div> 
+            <div class="banner-btn-group">
+              <button class="btn btn-white btn-sm btn-wide">Get a Quote</button>
+              <a href="#" class="btn btn-transparent btn-sm btn-wide">Explore Top Products</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF BANNER ONE SECTION -->
+    </div>
+
+    <!-- JQUERY CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+    <!-- SLICK JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="app/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+.btn {
+    font-weight: 400;
+    font-family: $font-family-poppins;
+    font-size: 20px;
+    column-gap: 8px;
+
+    &-text {
+        font-weight: 400;
+    }
+
+    // VARIANTS
+    &-primary,
+    &-theme {
+        background: $theme-color !important;
+        border-color: $theme-color !important;
+        color: $white !important;
+
+        &:hover,
+        &:focus,
+        &:disabled,
+        &:active {
+            background: darken($theme-color, 5%) !important;
+            border-color: $theme-color !important;
+            color: $white !important;
+        }
+    }
+
+    &-secondary,
+    &-theme-light {
+        background: $theme-light-color !important;
+        border-color: $theme-light-color !important;
+        color: $marian-blue!important;
+
+        &:hover,
+        &:focus,
+        &:disabled,
+        &:active {
+            background: darken($theme-light-color, 5%) !important;
+            border-color: $theme-light-color !important;
+            color: $marian-blue!important;
+        }
+    }
+}
+
+.btn-link {
+    color: $battleship-gray;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    transition: $default-transition;
+
+    &:hover {
+        color: $theme-color;
+    }
+
+    .btn-icon {
+        width: 16px;
+        height: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

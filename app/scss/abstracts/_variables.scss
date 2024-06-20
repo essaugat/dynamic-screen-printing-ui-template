@@ -1,0 +1,54 @@
+$white: #fff;
+$black: #000;
+$delft-blue: #1d3363;
+$uranian-blue: #C0E0FD;
+$theme-color: $delft-blue;
+$theme-light-color: $uranian-blue;
+$alice-blue: #eff7ff;
+$davy-gray: #5d5d5d;
+$argentinian-blue: #63b1f7;
+$seasalt: #f6f6f6;
+$onyx: #3d3d3d;
+$gray: #808080;
+$eerie-black: #262626;
+$orange: rgba(255, 165, 0, 0.1);
+$cadet-gray: #94a3b8;
+$battleship-gray: #888;
+$gray-100: #f7f7f7;
+$gray-200: #e0e0e0;
+$gray-300: #dee2e7;
+$gray-400: #bdc4cd;
+$gray-500: #8b96a5;
+$gray-600: #505050;
+$gray-800: #808080;
+$timberwolf: #D1D1D1;
+$bittersweet: #FF5C57;
+$platinum: #e7e7e7;
+$marian-blue: #204488;
+$sapphire: #214EAC;
+
+// TRANSITION DEFAULT
+$default-transition: all 300ms ease-in-out;
+
+// FONT STACK
+$font-family-poppins: "Poppins", sans-serif;
+$font-family-inter: "Inter", sans-serif;
+
+// MEDIA BREAK POINTS
+$breakpoints-up: (
+  "xs": "480px",
+  "sm": "576px",
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1200px",
+  "xxl": "1400px"
+);
+
+$breakpoints-down: (
+  "xs": "479.98px",
+  "sm": "575.98px",
+  "md": "767.98px",
+  "lg": "991.98px",
+  "xl": "1199.98px",
+  "xxl": "1399.98px"
+);
