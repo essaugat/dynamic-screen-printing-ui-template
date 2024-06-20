@@ -48,6 +48,9 @@
 .text-gray{
     color: $gray;
 }
+.text-onyx{
+    color: $onyx;
+}
 
 // FONT STACK CLASSES
 .font-poppins {
@@ -426,4 +429,9 @@
 }
 .page-sc-pb-40{
     padding-bottom: 40px;
+}
+
+.page-sc-py-100{
+    padding-top: 100px;
+    padding-bottom: 100px;
 }

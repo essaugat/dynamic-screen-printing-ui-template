@@ -313,3 +313,43 @@
         }
     }
 }
+
+
+.page-sc-services{
+    .services-list{
+        margin-top: 80px;
+
+        .services-item{
+            grid-template-columns: auto 200px;
+            padding: 12px;
+            border: 1px solid #e7e7e7;
+            border-radius: 12px;
+            height: 100%;
+
+            &-wrapper{
+                padding: 12px;
+            }
+
+            &-right{
+                height: 200px;
+                width: 200px;
+                border-radius: 12px;
+            }
+
+            &-badge{
+                color: #5D5D5D;
+                background: #F6F6F6;
+                padding: 4.5px 8px;
+            }
+
+            &-ttl{
+                margin-top: 9px;
+                margin-bottom: 9px;
+            }
+
+            &-text{
+                margin-bottom: 82px;
+            }
+        }
+    }
+}

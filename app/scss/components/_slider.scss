@@ -16,3 +16,28 @@
         }
     }
 }
+
+.quote-slider {
+    .slick-slider-btn {
+        width: 36px;
+        height: 36px;
+        transition: $default-transition;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .slick-next {
+        &.slick-arrow {
+            right: 57px;
+            z-index: 10;
+        }
+    }
+    .slick-prev {
+        &.slick-arrow {
+            left: 57px;
+            z-index: 10;
+        }
+    }
+}

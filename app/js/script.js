@@ -26,6 +26,10 @@ $(document).ready(function () {
     arrows: true,
     autoplay: true,
     autoplaySpped: 5000,
+    prevArrow:
+      "<img class='slick-slider-btn slick-prev' src='../../assets/icons/circle_chevron_left_light.svg'>",
+    nextArrow:
+      "<img class='slick-slider-btn slick-next' src='../../assets/icons/circle_chevron_right_light.svg'>",
   });
 
   // init Isotope
