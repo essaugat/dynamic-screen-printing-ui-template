@@ -45,10 +45,10 @@
 .text-delft-blue {
     color: $delft-blue;
 }
-.text-gray{
+.text-gray {
     color: $gray;
 }
-.text-onyx{
+.text-onyx {
     color: $onyx;
 }
 
@@ -387,51 +387,78 @@
 }
 
 // GAP
-.gap-y-1{
+.gap-y-1 {
     row-gap: 4px;
 }
-.gap-y-2{
+.gap-y-2 {
     row-gap: 8px;
 }
-.gap-y-3{
+.gap-y-3 {
     row-gap: 12px;
 }
-.gap-y-4{
+.gap-y-4 {
     row-gap: 16px;
 }
-.gap-y-5{
+.gap-y-5 {
     row-gap: 20px;
 }
+.gap-y-6 {
+    row-gap: 24px;
+}
+.gap-y-7 {
+    row-gap: 28px;
+}
+.gap-y-8 {
+    row-gap: 32px;
+}
+.gap-y-9 {
+    row-gap: 36px;
+}
+.gap-y-10 {
+    row-gap: 40px;
+}
 
-.gap-x-1{
+.gap-x-0_5 {
+    column-gap: 2px;
+}
+.gap-x-1 {
     column-gap: 4px;
 }
-.gap-x-2{
+.gap-x-2 {
     column-gap: 8px;
 }
-.gap-x-3{
+.gap-x-3 {
     column-gap: 12px;
 }
-.gap-x-4{
+.gap-x-4 {
     column-gap: 16px;
 }
-.gap-x-5{
+.gap-x-5 {
     column-gap: 20px;
+}
+.gap-x-6 {
+    column-gap: 24px;
 }
 
 // PADDINGS
-.page-sc-py-40{
+.page-sc-py-40 {
     padding-top: 40px;
     padding-bottom: 40px;
 }
-.page-sc-pt-40{
+.page-sc-pt-40 {
     padding-top: 40px;
 }
-.page-sc-pb-40{
+.page-sc-pb-40 {
     padding-bottom: 40px;
 }
 
-.page-sc-py-100{
+.page-sc-py-100 {
     padding-top: 100px;
+    padding-bottom: 100px;
+}
+.page-sc-pt-100 {
+    padding-top: 100px;
+}
+.page-sc-pb-100 {
     padding-bottom: 100px;
 }

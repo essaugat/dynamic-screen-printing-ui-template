@@ -32,6 +32,35 @@ $(document).ready(function () {
       "<img class='slick-slider-btn slick-next' src='../../assets/icons/circle_chevron_right_light.svg'>",
   });
 
+  $(".trust-reviews-slider").slick({
+    dots: false,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   // init Isotope
   var $grid = $(".hero-explore-tab-items").isotope({
     filter: ".hero-explore-1",
