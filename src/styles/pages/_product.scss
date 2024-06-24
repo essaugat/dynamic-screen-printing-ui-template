@@ -1,0 +1,85 @@
+.page-sc-product-explore {
+    .sc-product-explore-grid {
+        grid-template-columns: 315px auto;
+        gap: 20px;
+
+        @include breakpoint-down(lg) {
+            row-gap: 40px;
+            grid-template-columns: 100%;
+        }
+    }
+
+    .product-grid-cats {
+        border-right: 1px solid #e7e7e7;
+
+        .sc-heading {
+            margin-bottom: 20px;
+        }
+    }
+
+    .cats-list {
+        padding-right: 24px;
+
+        @include breakpoint-down(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include breakpoint-down(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-down(sm) {
+            grid-template-columns: 100%;
+        }
+
+        .cats-item {
+            border: 1px solid #e7e7e7;
+            padding: 9px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: $default-transition;
+
+            &.active,
+            &:hover {
+                background: #eff7ff;
+                border-color: #eff7ff;
+            }
+        }
+
+        .cats-sublist {
+            margin-top: 16px;
+
+            .cats-subitem {
+                font-size: 14px;
+                color: $battleship-gray;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .product-grid-list {
+        grid-template-columns: repeat(3, 1fr);
+
+        @include breakpoint-down(xl) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-down(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include breakpoint-down(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-down(sm) {
+            grid-template-columns: 100%;
+        }
+    }
+}
