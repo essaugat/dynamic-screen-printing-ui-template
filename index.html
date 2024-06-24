@@ -32,8 +32,10 @@
       referrerpolicy="no-referrer"
     />
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="dist/css/main.css" />
+    <link rel="stylesheet" href="dist/main.css" />
+    <link rel="stylesheet" href="dist/vendor.css" />
   </head>
+
   <body>
     <div class="page-wrapper">
       <!-- HEADER SECTION -->
@@ -61,7 +63,7 @@
                 </div>
               </form>
             </div>
-            <div class="header-top-profile">
+            <div class="header-top-profile d-flex align-items-center">
               <button type="button" class="profile-icon border-0 shadow-none">
                 <img src="assets/images/user.jpeg" alt="" />
               </button>
@@ -69,7 +71,7 @@
           </div>
         </div>
         <div class="page-header-nav">
-          <div class="container">
+          <div class="container header-nav-content">
             <div
               class="header-nav-group d-flex flex-wrap justify-content-between gap-1"
             >
@@ -86,36 +88,52 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <button
+                      type="button"
+                      class="nav-link"
+                      data-mega-menu-target="mega-menu-item-01"
+                    >
                       <span class="nav-link-text">Printing Services</span>
                       <span class="nav-link-dropdown-icon">
                         <img src="assets/icons/arrow_down_dark.svg" alt="" />
                       </span>
-                    </a>
+                    </button>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <button
+                      type="button"
+                      class="nav-link"
+                      data-mega-menu-target="mega-menu-item-02"
+                    >
                       <span class="nav-link-text">Marketing Materials</span>
                       <span class="nav-link-dropdown-icon">
                         <img src="assets/icons/arrow_down_dark.svg" alt="" />
                       </span>
-                    </a>
+                    </button>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <button
+                      type="button"
+                      class="nav-link"
+                      data-mega-menu-target="mega-menu-item-03"
+                    >
                       <span class="nav-link-text">Business Stationary</span>
                       <span class="nav-link-dropdown-icon">
                         <img src="assets/icons/arrow_down_dark.svg" alt="" />
                       </span>
-                    </a>
+                    </button>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <button
+                      type="button"
+                      class="nav-link"
+                      data-mega-menu-target="mega-menu-item-04"
+                    >
                       <span class="nav-link-text">Corporate Printing</span>
                       <span class="nav-link-dropdown-icon">
                         <img src="assets/icons/arrow_down_dark.svg" alt="" />
                       </span>
-                    </a>
+                    </button>
                   </li>
                   <li class="nav-item">
                     <a href="" class="nav-link">
@@ -141,7 +159,7 @@
                   class="nav-list d-flex align-items-center justify-content-end flex-wrap"
                 >
                   <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="#" class="nav-link">
                       <span class="nav-link-text">Company</span>
                       <span class="nav-link-dropdown-icon">
                         <img src="assets/icons/arrow_down_dark.svg" alt="" />
@@ -161,6 +179,606 @@
                 </ul>
               </div>
             </div>
+            <!-- MEGA MENU ITEMS -->
+            <div class="header-mega-menu-list">
+              <div class="header-mega-menu-item mega-menu-item-01">
+                <div class="mega-menu-main">
+                  <div class="mega-menu-nav">
+                    <div
+                      class="mega-menu-nav-head d-flex align-items-center justify-content-between"
+                    >
+                      <h4 class="text-sapphire text-base mb-0">
+                        Printing services
+                      </h4>
+                      <a href="#" class="btn-link btn-link-sm">
+                        <span class="btn-text">Explore all products</span>
+                        <span class="btn-icon">
+                          <img
+                            src="assets/icons/arrow_slanted_gray.svg"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                    </div>
+                    <div class="mega-menu-nav-group d-grid">
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Business Card</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Flyers</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Poster & Banners</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                      </ul>
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Tshirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                      </ul>
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Tshirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-menu-blocks d-grid grid-cols-2 gap-x-6">
+                    <div class="mega-menu-block-item bg-alice-blue p-3">
+                      <h4
+                        class="text-theme text-base font-medium block-item-ttl"
+                      >
+                        Ready for Expert Design Help? Get a Free Consultation?
+                      </h4>
+                      <p class="text-davy-gray mb-0 text-sm block-item-text">
+                        Need stunning designs? We handle it all, from print to
+                        digital. Our experts collaborate with you to bring your
+                        ideas to life. Let's create something amazing together.
+                      </p>
+                      <a
+                        href="#"
+                        class="block-item-btn d-inline-flex align-items-center justify-content-center text-decoration-none"
+                        >Get Connected</a
+                      >
+                    </div>
+                    <div class="mega-menu-block-item bg-ivory p-3">
+                      <h4
+                        class="text-fulvous text-base font-medium block-item-ttl"
+                      >
+                        Ready for Expert Design Help? Get a Free Consultation?
+                      </h4>
+                      <p class="text-davy-gray mb-0 text-sm block-item-text">
+                        Need stunning designs? We handle it all, from print to
+                        digital. Our experts collaborate with you to bring your
+                        ideas to life. Let's create something amazing together.
+                      </p>
+                      <a
+                        href="#"
+                        class="block-item-btn d-inline-flex align-items-center justify-content-center text-decoration-none"
+                        >Get a quote</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="mega-menu-bottom">
+                  <div
+                    class="mega-menu-services-info d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >24-hour fast production*</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >Premium quality products at a low price</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >FREE design templates</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >Amazing customer service</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-mega-menu-item mega-menu-item-02">
+                <div class="mega-menu-main">
+                  <div class="mega-menu-nav">
+                    <div
+                      class="mega-menu-nav-head d-flex align-items-center justify-content-between"
+                    >
+                      <h4 class="text-sapphire text-base mb-0">
+                        Marketing Materials
+                      </h4>
+                      <a href="#" class="btn-link btn-link-sm">
+                        <span class="btn-text">Explore all products</span>
+                        <span class="btn-icon">
+                          <img
+                            src="assets/icons/arrow_slanted_gray.svg"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                    </div>
+                    <div class="mega-menu-nav-group d-grid">
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Business Card</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Flyers</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Poster & Banners</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                      </ul>
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Tshirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                      </ul>
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Tshirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-menu-blocks d-grid grid-cols-2 gap-x-6">
+                    <div class="mega-menu-block-item bg-alice-blue p-3">
+                      <h4
+                        class="text-theme text-base font-medium block-item-ttl"
+                      >
+                        Ready for Expert Design Help? Get a Free Consultation?
+                      </h4>
+                      <p class="text-davy-gray mb-0 text-sm block-item-text">
+                        Need stunning designs? We handle it all, from print to
+                        digital. Our experts collaborate with you to bring your
+                        ideas to life. Let's create something amazing together.
+                      </p>
+                      <a
+                        href="#"
+                        class="block-item-btn d-inline-flex align-items-center justify-content-center text-decoration-none"
+                        >Get Connected</a
+                      >
+                    </div>
+                    <div class="mega-menu-block-item bg-ivory p-3">
+                      <h4
+                        class="text-fulvous text-base font-medium block-item-ttl"
+                      >
+                        Ready for Expert Design Help? Get a Free Consultation?
+                      </h4>
+                      <p class="text-davy-gray mb-0 text-sm block-item-text">
+                        Need stunning designs? We handle it all, from print to
+                        digital. Our experts collaborate with you to bring your
+                        ideas to life. Let's create something amazing together.
+                      </p>
+                      <a
+                        href="#"
+                        class="block-item-btn d-inline-flex align-items-center justify-content-center text-decoration-none"
+                        >Get a quote</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="mega-menu-bottom">
+                  <div
+                    class="mega-menu-services-info d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >24-hour fast production*</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >Premium quality products at a low price</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >FREE design templates</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >Amazing customer service</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-mega-menu-item mega-menu-item-03">
+                <div class="mega-menu-main">
+                  <div class="mega-menu-nav">
+                    <div
+                      class="mega-menu-nav-head d-flex align-items-center justify-content-between"
+                    >
+                      <h4 class="text-sapphire text-base mb-0">
+                        Business Stationary
+                      </h4>
+                      <a href="#" class="btn-link btn-link-sm">
+                        <span class="btn-text">Explore all products</span>
+                        <span class="btn-icon">
+                          <img
+                            src="assets/icons/arrow_slanted_gray.svg"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                    </div>
+                    <div class="mega-menu-nav-group d-grid">
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Business Card</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Flyers</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Poster & Banners</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                      </ul>
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Tshirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                      </ul>
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Tshirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-menu-blocks d-grid grid-cols-2 gap-x-6">
+                    <div class="mega-menu-block-item bg-alice-blue p-3">
+                      <h4
+                        class="text-theme text-base font-medium block-item-ttl"
+                      >
+                        Ready for Expert Design Help? Get a Free Consultation?
+                      </h4>
+                      <p class="text-davy-gray mb-0 text-sm block-item-text">
+                        Need stunning designs? We handle it all, from print to
+                        digital. Our experts collaborate with you to bring your
+                        ideas to life. Let's create something amazing together.
+                      </p>
+                      <a
+                        href="#"
+                        class="block-item-btn d-inline-flex align-items-center justify-content-center text-decoration-none"
+                        >Get Connected</a
+                      >
+                    </div>
+                    <div class="mega-menu-block-item bg-ivory p-3">
+                      <h4
+                        class="text-fulvous text-base font-medium block-item-ttl"
+                      >
+                        Ready for Expert Design Help? Get a Free Consultation?
+                      </h4>
+                      <p class="text-davy-gray mb-0 text-sm block-item-text">
+                        Need stunning designs? We handle it all, from print to
+                        digital. Our experts collaborate with you to bring your
+                        ideas to life. Let's create something amazing together.
+                      </p>
+                      <a
+                        href="#"
+                        class="block-item-btn d-inline-flex align-items-center justify-content-center text-decoration-none"
+                        >Get a quote</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="mega-menu-bottom">
+                  <div
+                    class="mega-menu-services-info d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >24-hour fast production*</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >Premium quality products at a low price</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >FREE design templates</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >Amazing customer service</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-mega-menu-item mega-menu-item-04">
+                <div class="mega-menu-main">
+                  <div class="mega-menu-nav">
+                    <div
+                      class="mega-menu-nav-head d-flex align-items-center justify-content-between"
+                    >
+                      <h4 class="text-sapphire text-base mb-0">
+                        Corporate Printing
+                      </h4>
+                      <a href="#" class="btn-link btn-link-sm">
+                        <span class="btn-text">Explore all products</span>
+                        <span class="btn-icon">
+                          <img
+                            src="assets/icons/arrow_slanted_gray.svg"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                    </div>
+                    <div class="mega-menu-nav-group d-grid">
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Business Card</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Flyers</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Poster & Banners</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                      </ul>
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Tshirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                      </ul>
+                      <ul class="mega-menu-nav-list list-unstyled">
+                        <li>
+                          <a href="#" class="text-sm">Polo Shirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Tshirts</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Caps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-sm">Sports wear</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mega-menu-blocks d-grid grid-cols-2 gap-x-6">
+                    <div class="mega-menu-block-item bg-alice-blue p-3">
+                      <h4
+                        class="text-theme text-base font-medium block-item-ttl"
+                      >
+                        Ready for Expert Design Help? Get a Free Consultation?
+                      </h4>
+                      <p class="text-davy-gray mb-0 text-sm block-item-text">
+                        Need stunning designs? We handle it all, from print to
+                        digital. Our experts collaborate with you to bring your
+                        ideas to life. Let's create something amazing together.
+                      </p>
+                      <a
+                        href="#"
+                        class="block-item-btn d-inline-flex align-items-center justify-content-center text-decoration-none"
+                        >Get Connected</a
+                      >
+                    </div>
+                    <div class="mega-menu-block-item bg-ivory p-3">
+                      <h4
+                        class="text-fulvous text-base font-medium block-item-ttl"
+                      >
+                        Ready for Expert Design Help? Get a Free Consultation?
+                      </h4>
+                      <p class="text-davy-gray mb-0 text-sm block-item-text">
+                        Need stunning designs? We handle it all, from print to
+                        digital. Our experts collaborate with you to bring your
+                        ideas to life. Let's create something amazing together.
+                      </p>
+                      <a
+                        href="#"
+                        class="block-item-btn d-inline-flex align-items-center justify-content-center text-decoration-none"
+                        >Get a quote</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="mega-menu-bottom">
+                  <div
+                    class="mega-menu-services-info d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >24-hour fast production*</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >Premium quality products at a low price</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >FREE design templates</span
+                      >
+                    </div>
+                    <div
+                      class="services-info-item d-flex align-items-center gap-x-4"
+                    >
+                      <div class="services-info-item-square"></div>
+                      <span class="text-gray text-sm"
+                        >Amazing customer service</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END OF MEGA MENU ITEMS -->
           </div>
         </div>
       </header>
@@ -1753,17 +2371,21 @@
                     <div class="row">
                       <div class="col-md-6 d-flex align-items-center">
                         <div class="tab-content-block-left">
-                          <h3>Dynamic Screenprinting: On Time, Every Time</h3>
+                          <h3>
+                            Seamless Collaboration: Clear Communication Every
+                            Step
+                          </h3>
                           <p>
-                            Dynamic Screenprinting ensures that every order is
-                            completed and delivered on time, maintaining
-                            reliability and trust with clients.
+                            The company prioritizes clear and proactive
+                            communication with clients, keeping them informed
+                            throughout the entire process to ensure smooth
+                            collaboration and satisfaction.
                           </p>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="tab-content-block-right">
-                          <img src="assets/images/commit1.png" alt="" />
+                          <img src="assets/images/commit2.png" alt="" />
                         </div>
                       </div>
                     </div>
@@ -1780,17 +2402,21 @@
                     <div class="row">
                       <div class="col-md-6 d-flex align-items-center">
                         <div class="tab-content-block-left">
-                          <h4>Dynamic Screenprinting: On Time, Every Time</h4>
+                          <h4>
+                            Beyond Printing: We Help You Achieve Your Branding
+                            Goals
+                          </h4>
                           <p>
-                            Dynamic Screenprinting ensures that every order is
-                            completed and delivered on time, maintaining
-                            reliability and trust with clients.
+                            Dynamic Screenprinting genuinely cares about its
+                            clients' success, offering support and assistance to
+                            help them achieve their branding and marketing goals
+                            effectively.
                           </p>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="tab-content-block-right">
-                          <img src="assets/images/commit1.png" alt="" />
+                          <img src="assets/images/commit3.png" alt="" />
                         </div>
                       </div>
                     </div>
@@ -1961,7 +2587,7 @@
                 Track your order!
               </h3>
               <div class="banner-btn-text text-white text-base">
-                <p class="mb-0">
+                <p class="mb-0 text-white">
                   Stay informed about the status of your order every step of the
                   way. Click below to track your order and ensure it arrives on
                   time and in perfect condition.
@@ -1980,7 +2606,7 @@
       <!-- END OF BANNER TWO SECTION -->
 
       <!-- SECTION TRUST -->
-      <div class="page-sc-trust-reviews page-sc-py-100">
+      <section class="page-sc-trust-reviews page-sc-py-100">
         <div class="container">
           <div class="sc-trust-reviews-content">
             <div
@@ -2246,7 +2872,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- END OF SECTION TRUST -->
 
       <!-- PORTRAIT GALLERY SECTION -->
@@ -2294,7 +2920,7 @@
       <!-- END OF PORTRAIT GALLERY SECTION -->
 
       <!-- FAQ SECTION -->
-      <div class="page-sc-faq page-sc-py-100">
+      <section class="page-sc-faq page-sc-py-100">
         <div class="container">
           <div class="sc-faq-content">
             <div class="faq-content-left">
@@ -2579,15 +3205,15 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- END OF FAQ SECTION -->
 
       <!-- GET CONNECTED SECTION -->
       <section class="page-sc-get-connected page-sc-py-100">
         <div class="container">
           <div class="sc-get-connected-content">
-            <div class="get-connected-grid d-grid">
-              <div class="get-connected-left">
+            <div class="get-connected-grid d-grid gap-x-10">
+              <div class="get-connected-left d-flex flex-column">
                 <div class="sc-heading text-start">
                   <h3 class="sc-heading-ttl font-medium text-3xl text-white">
                     Interested in our service, but confused on what to select?
@@ -2598,20 +3224,687 @@
                     will get back to you with solutions.
                   </p>
                 </div>
-                <div class="get-connected-info text-white text-sm">
-                  <address>
-                     <span class="mb-2 d-block">Office</span>
-                    7 Epic Place Villawood, <br> NSW 2163, Australia
+                <div
+                  class="get-connected-info text-white text-sm flex-1 d-flex align-items-end"
+                >
+                  <address class="mb-0">
+                    <span class="mb-2 d-block">Office</span>
+                    7 Epic Place Villawood, <br />
+                    NSW 2163, Australia
                   </address>
                   <div></div>
                 </div>
               </div>
-              <div class="get-connected-right"></div>
+              <div class="get-connected-right">
+                <form action="" class="form-block-elem">
+                  <div class="form-elem-group">
+                    <div class="form-elem">
+                      <label for="" class="form-label text-white">Name</label>
+                      <input
+                        type="text"
+                        class="form-control shadow-none"
+                        id=""
+                        name=""
+                        placeholder="Ex.  Tesla Coorporations"
+                      />
+                    </div>
+                    <div class="form-elem">
+                      <label for="" class="form-label text-white">Email</label>
+                      <input
+                        type="text"
+                        class="form-control shadow-none"
+                        id=""
+                        name=""
+                        placeholder="xyx@mail.com"
+                      />
+                    </div>
+                    <div class="form-elem">
+                      <label for="" class="form-label text-white"
+                        >Message</label
+                      >
+                      <textarea
+                        class="form-control shadow-none"
+                        name=""
+                        id=""
+                        placeholder="Your message here"
+                      ></textarea>
+                    </div>
+                    <div class="form-btn">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-sm w-100"
+                      >
+                        Get Connected
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- END OF GET CONNECTED SECTION -->
+
+      <!-- BLOG SECTION -->
+      <section class="page-sc-blogs page-sc-py-100">
+        <div class="container">
+          <div class="sc-heading text-xl mb-4">
+            <h3 class="sc-heading-ttl text-xl font-medium mb-0">
+              Insights & Resources
+            </h3>
+          </div>
+          <div class="sc-blogs-content">
+            <div class="blogs-grid d-grid">
+              <div class="blogs-grid-left">
+                <div class="blogs-item">
+                  <div class="blogs-item-img">
+                    <img
+                      class="w-100 h-100 object-cover"
+                      src="assets/images/blog1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="blogs-item-body">
+                    <h4 class="blogs-item-ttl text-base text-onyx font-medium">
+                      This is a blog title that will help you
+                    </h4>
+                    <div class="blogs-item-text text-base text-gray">
+                      This is a blog description that will give more detailed
+                      illustration of what the blog contains and how it will
+                      help you out during your journey with us.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blogs-grid-right d-grid">
+                <div class="blogs-item">
+                  <div class="blogs-item-img">
+                    <img
+                      class="w-100 h-100 object-cover"
+                      src="assets/images/blog2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="blogs-item-body">
+                    <h4 class="blogs-item-ttl text-base text-onyx font-medium">
+                      This is a blog title that will help you
+                    </h4>
+                    <div class="blogs-item-text text-base text-gray">
+                      This is a blog description that will give more detailed
+                      illustration of what the blog contains and how it will
+                      help you out during your journey with us.
+                    </div>
+                  </div>
+                </div>
+                <div class="blogs-item">
+                  <div class="blogs-item-img">
+                    <img
+                      class="w-100 h-100 object-cover"
+                      src="assets/images/blog3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="blogs-item-body">
+                    <h4 class="blogs-item-ttl text-base text-onyx font-medium">
+                      This is a blog title that will help you
+                    </h4>
+                    <div class="blogs-item-text text-base text-gray">
+                      This is a blog description that will give more detailed
+                      illustration of what the blog contains and how it will
+                      help you out during your journey with us.
+                    </div>
+                  </div>
+                </div>
+                <div class="blogs-item">
+                  <div class="blogs-item-img">
+                    <img
+                      class="w-100 h-100 object-cover"
+                      src="assets/images/blog4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="blogs-item-body">
+                    <h4 class="blogs-item-ttl text-base text-onyx font-medium">
+                      This is a blog title that will help you
+                    </h4>
+                    <div class="blogs-item-text text-base text-gray">
+                      This is a blog description that will give more detailed
+                      illustration of what the blog contains and how it will
+                      help you out during your journey with us.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF BLOG SECTION -->
+
+      <!-- CLIENT REVIEWS SECTION -->
+      <section class="page-sc-creviews page-sc-py-100">
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="sc-heading text-xl">
+              <h3 class="sc-heading-ttl text-xl font-medium mb-0">Reviews</h3>
+            </div>
+            <button
+              type="button"
+              class="d-inline-flex align-items-center gap-x-2 review-sort-btn"
+            >
+              <span class="text-davy-gray text-sm">Sort by</span>
+              <span class="icon-16">
+                <img src="assets/icons/sort_gray.svg" alt="" />
+              </span>
+            </button>
+          </div>
+          <div class="sc-creviews-content">
+            <div class="creviews-items d-grid gap-6 grid-cols-2">
+              <div class="creviews-item d-grid gap-3">
+                <div class="creviews-item-head d-grid gap-3">
+                  <div class="creviews-item-img overflow-hidden">
+                    <img
+                      class="w-100 h-100 object-cover"
+                      src="assets/images/review.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="creviews-item-details">
+                    <div
+                      class="creviews-details-top d-flex align-items-center justify-content-between"
+                    >
+                      <p
+                        class="creviews-name text-base font-medium text-davy-gray"
+                      >
+                        Shyam Poudel
+                      </p>
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="creviews-details-bottom d-flex gap-x-10">
+                      <div class="creviews-details-bottom-item">
+                        <p class="mb-0 text-battleship-gray text-sm">Service</p>
+                        <p class="mb-0 text-sm text-onyx">
+                          Customizes business card
+                        </p>
+                      </div>
+                      <div class="creviews-details-bottom-item">
+                        <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                        <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="creviews-item-body text-sm text-davy-gray">
+                  Dynamic Screen-Printing delivers exceptional quality. The
+                  prints are crisp, vibrant, and exactly what I envisioned. They
+                  use high-quality materials, ensuring my business card will
+                  grab my potential client attention.
+                </div>
+              </div>
+              <div class="creviews-item d-grid gap-3">
+                <div class="creviews-item-head d-grid gap-3">
+                  <div class="creviews-item-img overflow-hidden">
+                    <img
+                      class="w-100 h-100 object-cover"
+                      src="assets/images/review.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="creviews-item-details">
+                    <div
+                      class="creviews-details-top d-flex align-items-center justify-content-between"
+                    >
+                      <p
+                        class="creviews-name text-base font-medium text-davy-gray"
+                      >
+                        Shyam Poudel
+                      </p>
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="creviews-details-bottom d-flex gap-x-10">
+                      <div class="creviews-details-bottom-item">
+                        <p class="mb-0 text-battleship-gray text-sm">Service</p>
+                        <p class="mb-0 text-sm text-onyx">
+                          Customizes business card
+                        </p>
+                      </div>
+                      <div class="creviews-details-bottom-item">
+                        <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                        <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="creviews-item-body text-sm text-davy-gray">
+                  Dynamic Screen-Printing delivers exceptional quality. The
+                  prints are crisp, vibrant, and exactly what I envisioned. They
+                  use high-quality materials, ensuring my business card will
+                  grab my potential client attention.
+                </div>
+              </div>
+              <div class="creviews-item d-grid gap-3">
+                <div class="creviews-item-head d-grid gap-3">
+                  <div class="creviews-item-img overflow-hidden">
+                    <img
+                      class="w-100 h-100 object-cover"
+                      src="assets/images/review.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="creviews-item-details">
+                    <div
+                      class="creviews-details-top d-flex align-items-center justify-content-between"
+                    >
+                      <p
+                        class="creviews-name text-base font-medium text-davy-gray"
+                      >
+                        Shyam Poudel
+                      </p>
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="creviews-details-bottom d-flex gap-x-10">
+                      <div class="creviews-details-bottom-item">
+                        <p class="mb-0 text-battleship-gray text-sm">Service</p>
+                        <p class="mb-0 text-sm text-onyx">
+                          Customizes business card
+                        </p>
+                      </div>
+                      <div class="creviews-details-bottom-item">
+                        <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                        <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="creviews-item-body text-sm text-davy-gray">
+                  Dynamic Screen-Printing delivers exceptional quality. The
+                  prints are crisp, vibrant, and exactly what I envisioned. They
+                  use high-quality materials, ensuring my business card will
+                  grab my potential client attention.
+                </div>
+              </div>
+              <div class="creviews-item d-grid gap-3">
+                <div class="creviews-item-head d-grid gap-3">
+                  <div class="creviews-item-img overflow-hidden">
+                    <img
+                      class="w-100 h-100 object-cover"
+                      src="assets/images/review.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="creviews-item-details">
+                    <div
+                      class="creviews-details-top d-flex align-items-center justify-content-between"
+                    >
+                      <p
+                        class="creviews-name text-base font-medium text-davy-gray"
+                      >
+                        Shyam Poudel
+                      </p>
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img src="assets/icons/star_yellow_fill.svg" alt="" />
+                        <img
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="creviews-details-bottom d-flex gap-x-10">
+                      <div class="creviews-details-bottom-item">
+                        <p class="mb-0 text-battleship-gray text-sm">Service</p>
+                        <p class="mb-0 text-sm text-onyx">
+                          Customizes business card
+                        </p>
+                      </div>
+                      <div class="creviews-details-bottom-item">
+                        <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                        <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="creviews-item-body text-sm text-davy-gray">
+                  Dynamic Screen-Printing delivers exceptional quality. The
+                  prints are crisp, vibrant, and exactly what I envisioned. They
+                  use high-quality materials, ensuring my business card will
+                  grab my potential client attention.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF CLIENT REVIEWS SECTION -->
+
+      <!-- BANNER THREE SECTION -->
+      <section class="page-sc-banner-03 position-relative page-sc-py-40">
+        <div class="container">
+          <div
+            class="sc-banner-03-content position-relative d-grid align-items-end gap-x-5 overflow-hidden"
+          >
+            <div class="shape-one position-absolute">
+              <img src="assets/shapes/circle_double_half.svg" alt="" />
+            </div>
+            <div class="sc-banner-left">
+              <h3 class="banner-ttl text-3xl font-normal">
+                Having any issues with out Service ? Get connected with us.
+              </h3>
+              <div
+                class="banner-btn-group d-flex flex-wrap align-items-center justify-content-start gap-x-3 gap-y-3"
+              >
+                <a href="#" class="btn btn-fulvous btn-sm btn-wide"
+                  >Contact Support</a
+                >
+              </div>
+            </div>
+            <div
+              class="sc-banner-right d-flex align-items-end justify-content-center"
+            >
+              <img src="assets/shapes/circle_half_fill.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF BANNER THREE SECTION -->
+
+      <section class="page-sc-features page-sc-py-100">
+        <div class="container">
+          <div class="sc-features-content">
+            <div class="features-items d-grid grid-cols-4 gap-6">
+              <div
+                class="feature-item d-flex flex-column justify-content-center align-items-center gap-y-3 text-center"
+              >
+                <div class="feature-item-icon">
+                  <img src="assets/icons/clock_theme.svg" />
+                </div>
+                <div class="text-davy-gray text-base">
+                  Fast and Efficient Quality Work
+                </div>
+              </div>
+              <div
+                class="feature-item d-flex flex-column justify-content-center align-items-center gap-y-3 text-center"
+              >
+                <div class="feature-item-icon">
+                  <img src="assets/icons/truck_theme.svg" />
+                </div>
+                <div class="text-davy-gray text-base">Track Your Order</div>
+              </div>
+              <div
+                class="feature-item d-flex flex-column justify-content-center align-items-center gap-y-3 text-center"
+              >
+                <div class="feature-item-icon">
+                  <img src="assets/icons/support_theme.svg" />
+                </div>
+                <div class="text-davy-gray text-base">
+                  Reliable Customer Support
+                </div>
+              </div>
+              <div
+                class="feature-item d-flex flex-column justify-content-center align-items-center gap-y-3 text-center"
+              >
+                <div class="feature-item-icon">
+                  <img src="assets/icons/badge_theme.svg" />
+                </div>
+                <div class="text-davy-gray text-base">
+                  Commitment to Your Success
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER SECTION -->
+      <footer class="page-footer page-sc-py-60">
+        <div class="page-footer-content container">
+          <div class="footer-top page-sc-pb-60">
+            <div class="footer-top-grid d-grid">
+              <div class="footer-top-left">
+                <div
+                  class="footer-brand d-grid justify-content-center text-center justify-content-md-start text-md-start"
+                >
+                  <a class="mb-3" href="#"
+                    ><img
+                      class="footer-brand-img"
+                      src="assets/siteicons/logo_outline.png"
+                      alt=""
+                  /></a>
+                  <a
+                    href="#"
+                    class="footer-brand-name text-white font-medium text-xl mb-2"
+                    >Dynamic Screen Printing</a
+                  >
+                  <p class="mb-0 text-sm font-medium text-white">
+                    Best Apparel is what we do.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="footer-top-right d-grid grid-cols-4 align-items-start gap-5 text-center text-sm-start"
+              >
+                <div class="footer-nav d-grid gap-y-4">
+                  <h4 class="footer-nav-ttl text-base text-white font-medium">
+                    Solutions
+                  </h4>
+                  <ul class="footer-nav-list list-unstyled d-grid gap-y-2">
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Screen printing</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Digital Transfer</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Direct to Garment</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Supacolour</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Finished product</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-nav d-grid gap-y-4">
+                  <h4 class="footer-nav-ttl text-base text-white font-medium">
+                    Popular Products
+                  </h4>
+                  <ul class="footer-nav-list list-unstyled d-grid gap-y-2">
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Digital Print</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Screen print</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Business cards</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Flex print</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Hoodie print</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-nav d-grid gap-y-4">
+                  <h4 class="footer-nav-ttl text-base text-white font-medium">
+                    Company
+                  </h4>
+                  <ul class="footer-nav-list list-unstyled d-grid gap-y-2">
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >About Us</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Get a Quote</a
+                      >
+                    </li>
+                    <li class="footer-nav-item">
+                      <a
+                        href="#"
+                        class="footer-nav-link text-sm text-cadet-gray"
+                        >Visit Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-nav d-grid gap-y-4">
+                  <h4 class="footer-nav-ttl text-base text-white font-medium">
+                    Social
+                  </h4>
+                  <ul
+                    class="footer-nav-list list-unstyled d-flex align-items-center justify-content-center justify-content-sm-start gap-x-4"
+                  >
+                    <li class="footer-nav-item">
+                      <a href="#" class="footer-social-link text-white"
+                        ><img src="assets/icons/facebook_light.svg" alt=""
+                      /></a>
+                    </li>
+                    <li class="footer-nav-item">
+                      <a href="#" class="footer-social-link text-white"
+                        ><img src="assets/icons/twitter_light.svg"
+                      /></a>
+                    </li>
+                    <li class="footer-nav-item">
+                      <a href="#" class="footer-social-link text-white">
+                        <img src="assets/icons/instagram_light.svg" alt="" />
+                      </a>
+                    </li>
+                    <li class="footer-nav-item">
+                      <a href="#" class="footer-social-link text-white">
+                        <img src="assets/icons/youtube_light.svg" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="footer-bottom mt-3 d-flex flex-column flex-lg-row align-items-center justify-content-between"
+          >
+            <ul
+              class="footer-links d-flex flex-wrap align-items-center gap-x-7 list-unstyled"
+            >
+              <li class="footer-link-item">
+                <a href="" class="text-alice-blue text-sm">Cookies Policy</a>
+              </li>
+              <li class="footer-link-item">
+                <a href="" class="text-alice-blue text-sm">Terms of Service</a>
+              </li>
+              <li class="footer-link-item">
+                <a href="" class="text-alice-blue text-sm">Privacy</a>
+              </li>
+              <li class="footer-link-item">
+                <a href="" class="text-alice-blue text-sm">Security Policy</a>
+              </li>
+              <li class="footer-link-item">
+                <a href="" class="text-alice-blue text-sm">Legal</a>
+              </li>
+            </ul>
+            <div class="footer-region d-flex align-items-center gap-x-2">
+              <span class="icon-24"
+                ><img src="assets/icons/globa_white.svg" alt=""
+              /></span>
+              <span class="text-white">Region</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END OF FOOTER SECTION -->
     </div>
 
     <!-- JQUERY CDN -->
@@ -2631,6 +3924,6 @@
     ></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <!-- CUSTOM JS -->
-    <script src="app/js/script.js"></script>
+    <script src="src/scripts/custom.js"></script>
   </body>
 </html>

@@ -1,0 +1,148 @@
+// Default Color
+$white: #fff;
+$black: #000;
+
+// Base colors
+$delft-blue: #1d3363;
+$uranian-blue: #c0e0fd;
+$theme: #1d3363;
+$theme-light: $uranian-blue;
+$alice-blue: #eff7ff;
+$davy-gray: #5d5d5d;
+$argentinian-blue: #63b1f7;
+$seasalt: #f6f6f6;
+$onyx: #454545;
+$gray: #808080;
+$eerie-black: #262626;
+$orange: rgba(255, 165, 0, 0.1);
+$cadet-gray: #94a3b8;
+$battleship-gray: #888;
+$gray-100: #f7f7f7;
+$gray-200: #e0e0e0;
+$gray-300: #dee2e7;
+$gray-400: #bdc4cd;
+$gray-500: #8b96a5;
+$gray-600: #505050;
+$gray-800: #808080;
+$timberwolf: #d1d1d1;
+$bittersweet: #ff5c57;
+$platinum: #e7e7e7;
+$marian-blue: #204488;
+$sapphire: #214eac;
+$ivory: #fffcea;
+$fulvous: #e27c00;
+
+$colors: (
+  white: #fff,
+  black: #000,
+  delft-blue: #1d3363,
+  uranian-blue: #c0e0fd,
+  theme: #1d3363,
+  theme-light: #c0e0fd,
+  alice-blue: #eff7ff,
+  davy-gray: #5d5d5d,
+  argentinian-blue: #63b1f7,
+  seasalt: #f6f6f6,
+  onyx: #454545,
+  gray: #808080,
+  eerie-black: #262626,
+  orange: rgba(255, 165, 0, 0.1),
+  cadet-gray: #94a3b8,
+  battleship-gray: #888,
+  gray-100: #f7f7f7,
+  gray-200: #e0e0e0,
+  gray-300: #dee2e7,
+  gray-400: #bdc4cd,
+  gray-500: #8b96a5,
+  gray-600: #505050,
+  gray-800: #808080,
+  timberwolf: #d1d1d1,
+  bittersweet: #ff5c57,
+  platinum: #e7e7e7,
+  marian-blue: #204488,
+  sapphire: #214eac,
+  ivory: #fffcea,
+  fulvous: #e27c00
+);
+
+// TRANSITION DEFAULT
+$default-transition: all 300ms ease-in-out;
+
+// FONT STACK
+$font-family-poppins: "Poppins", sans-serif;
+$font-family-inter: "Inter", sans-serif;
+
+// FONT SIZES
+$font-sizes: (
+  "2xs": 10px,
+  "xs": 12px,
+  "sm": 14px,
+  "base": 16px,
+  "lg": 18px,
+  "xl": 20px,
+  "2xl": 24px,
+  "3xl": 32px,
+  "4xl": 36px,
+  "5xl": 48px
+);
+
+// FONT WEIGHTS
+$font-weights: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+  "black": 900
+);
+
+// MEDIA BREAK POINTS
+$breakpoints-up: (
+  "xs": "480px",
+  "sm": "576px",
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1200px",
+  "xxl": "1400px"
+);
+
+$breakpoints-down: (
+  "xs": "479.98px",
+  "sm": "575.98px",
+  "md": "767.98px",
+  "lg": "991.98px",
+  "xl": "1199.98px",
+  "xxl": "1399.98px",
+  "xxxl": "1499.98px",
+);
+
+// BASE FONT
+$font-family-base: $font-family-poppins;
+$font-color-base: $delft-blue;
+$font-size-base: map-get($font-sizes, "base");
+$font-weight-base: map-get($font-weights, "normal");
+
+// LEADING & TRACKING
+$leading-base: 1.6; // recommeded 1.5
+$tracking-base: 0.04em;
+
+// Z-INDEX
+$z-low: 10;
+$z-mid: 100;
+$z-high: 1000;
+
+// TRANSITION
+$default-transition-timing: ease-in-out;
+$default-transition-duration: 300ms;
+$default-transition: all $default-transition-timing $default-transition-duration;
+
+// FONT SIZES FOR H1 - H6
+$h1-font-size: 2 * $font-size-base;
+$h2-font-size: 1.5 * $font-size-base;
+$h3-font-size: 1.17 * $font-size-base;
+$h4-font-size: 1 * $font-size-base;
+$h5-font-size: 0.83 * $font-size-base;
+$h6-font-size: 0.67 * $font-size-base;

@@ -1,0 +1,216 @@
+// Typography
+%text {
+  font-family: $font-family-poppins;
+  font-weight: map-get($font-weights, normal);
+  color: $davy-gray;
+}
+p {
+  @extend %text;
+}
+
+// TEXT SIZE MAPPINGS
+$text-xs-sizes: (
+  null: "xs",
+  lg: "2xs",
+  sm: "3xs"
+);
+$text-sm-sizes: (
+  null: "sm",
+  lg: "xs",
+  sm: "2xs"
+);
+$text-base-sizes: (
+  null: "base",
+  lg: "sm",
+  sm: "xs"
+);
+$text-lg-sizes: (
+  null: "lg",
+  lg: "md",
+  sm: "sm"
+);
+$text-xl-sizes: (
+  null: "xl",
+  lg: "lg",
+  sm: "md"
+);
+$text-2xl-sizes: (
+  null: "2xl",
+  lg: "xl",
+  sm: "lg"
+);
+
+/* ### PARAGRAPH ### */
+@mixin make-text-font-sizes($fs-map, $fs-breakpoints: $breakpoints-down) {
+  @extend %text;
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: map-get($font-sizes, $fs-font-size) !important;
+    } @else {
+      // If $fs-font-size is a key that exists in $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+
+      @media screen and (max-width: $fs-breakpoint) {
+        font-size: map-get($font-sizes, $fs-font-size) !important;
+      }
+    }
+  }
+}
+
+.text-xs {
+  @include make-text-font-sizes($text-sm-sizes);
+}
+.text-sm {
+  @include make-text-font-sizes($text-sm-sizes);
+}
+.text-base {
+  @include make-text-font-sizes($text-base-sizes);
+}
+.text-lg {
+  @include make-text-font-sizes($text-lg-sizes);
+}
+.text-xl {
+  @include make-text-font-sizes($text-xl-sizes);
+}
+.text-2xl {
+  @include make-text-font-sizes($text-2xl-sizes);
+}
+
+/* #### HEADINGS #### */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-poppins;
+  font-weight: map-get($font-weights, "semibold");
+  margin-bottom: 0;
+  letter-spacing: normal;
+}
+
+h1,
+.h1,
+.alpha {
+  font-size: $h1-font-size;
+}
+h2,
+.h2,
+.beta {
+  font-size: $h2-font-size;
+}
+h3,
+.h3,
+.gamma {
+  font-size: $h3-font-size;
+}
+h4,
+.h4,
+.delta {
+  font-size: $h4-font-size;
+}
+h5,
+.h5,
+.epsilon {
+  font-size: $h5-font-size;
+}
+h6,
+.h6,
+.zeta {
+  font-size: $h6-font-size;
+}
+
+// Only give these headings a margin-top if they are after other elements
+* + h1,
+* + .h1,
+* + .alpha,
+* + h2,
+* + .h2,
+* + .beta,
+* + h3,
+* + .h3,
+* + .gamma,
+* + h4,
+* + .h4,
+* + .delta {
+  margin-top: 12px;
+}
+
+// text size related classes
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-base {
+  font-size: 16px;
+}
+.text-lg {
+  font-size: 18px;
+}
+.text-xl {
+  font-size: 20px;
+}
+.text-2xl {
+  font-size: 24px;
+}
+.text-3xl {
+  font-size: 32px;
+}
+.text-4xl {
+  font-size: 36px;
+}
+.text-5xl {
+  font-size: 48px;
+}
+
+// text/font size for medium/tablet size screen devices
+@include breakpoint-down(lg) {
+  .text-sm {
+    font-size: 13px !important;
+  }
+  .text-base {
+    font-size: 15px !important;
+  }
+  .text-lg {
+    font-size: 18px !important;
+  }
+  .text-xl {
+    font-size: 20px !important;
+  }
+}
+
+// text/font size for small size screen devices
+@include breakpoint-down(sm) {
+  .text-sm {
+    font-size: 12px !important;
+  }
+  .text-base {
+    font-size: 14px !important;
+  }
+  .text-lg {
+    font-size: 16px !important;
+  }
+  .text-xl {
+    font-size: 18px !important;
+  }
+}
+
+// text/font size of extra small/mobile screen devices
+@include breakpoint-down(xs) {
+  .text-sm {
+    font-size: 11px !important;
+  }
+  .text-base {
+    font-size: 13px !important;
+  }
+  .text-lg {
+    font-size: 15px !important;
+  }
+  .text-xl {
+    font-size: 17px !important;
+  }
+}

@@ -1,0 +1,20 @@
+// FORGOT PASSWORD PAGE
+.forgot-pwd-form{
+    .form-elem-group{
+        margin-bottom: 52px;
+    }
+}
+
+.page-sc-get-connected{
+    .get-connected-right{
+        .form-elem{
+            row-gap: 8px;
+        }
+
+        .form-control{
+            &::placeholder{
+                color: #94A3B8!important;
+            }
+        }
+    }
+}
