@@ -14,7 +14,7 @@
     .hero-explore-tab-heads {
         gap: 16px;
 
-        @include breakpoint-down(md){
+        @include breakpoint-down(md) {
             flex-wrap: wrap;
         }
     }
@@ -24,7 +24,7 @@
         border-radius: 20px;
         padding: 24px 12px;
 
-        @include breakpoint-down(md){
+        @include breakpoint-down(md) {
             width: calc(50% - 8px);
         }
 
@@ -155,8 +155,26 @@
                 color: $davy-gray;
             }
 
-            &-left, &-right{
+            &-left,
+            &-right {
                 padding: 16px;
+            }
+        }
+    }
+}
+
+.sc-product-detail-tab {
+    .tab-content {
+        .tab-pane {
+            p,
+            ul,
+            a {
+                color: #5d5d5d !important;
+            }
+
+            ul{
+                list-style-type: disc;
+                padding-left: 26px;
             }
         }
     }

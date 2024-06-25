@@ -74,6 +74,14 @@ $(document).ready(function () {
     $(".filter-button-group button").removeClass("active");
     $(this).addClass("active");
   });
+
+  $(".product-detail-preview").on("click", ".preview-thumb-item", function () {
+    let currentImgItem = $(this);
+    $(".preview-thumb-item").removeClass("preview-selected");
+    currentImgItem.addClass("preview-selected");
+    let currentImgUrl = $(currentImgItem).find("img").attr("src");
+    $(".product-preview-full").find("img").attr("src", currentImgUrl);
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -103,5 +111,14 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.remove("show");
       });
     }
+  });
+
+  document.querySelectorAll(".design-upload-content").forEach((uploadBox) => {
+    uploadBox.addEventListener("click", function (event) {
+      const fileInput = uploadBox.querySelector(".design-upload-input");
+      if (fileInput) {
+        fileInput.click();
+      }
+    });
   });
 });

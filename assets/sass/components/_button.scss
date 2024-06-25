@@ -9,6 +9,8 @@
   column-gap: 8px;
   text-align: center;
   transition: $default-transition;
+  height: 48px;
+  white-space: nowrap;
 
   // EFFECTS
   &:hover {
@@ -25,12 +27,12 @@
     font-size: 16px;
     padding-left: 16px;
     padding-right: 16px;
-    min-height: 45px;
+    height: 42px;
   }
 
   &.btn-xs {
     font-size: 12px;
-    min-height: 32px;
+    height: 32px;
     column-gap: 4px;
   }
 
@@ -117,6 +119,21 @@
     }
   }
 
+  &-alice-blue {
+    background: $alice-blue !important;
+    border-color: $alice-blue !important;
+    color: $theme !important;
+
+    &:hover,
+    &:focus,
+    &:disabled,
+    &:active {
+      background: darken($alice-blue, 5%) !important;
+      border-color: $alice-blue !important;
+      color: $theme !important;
+    }
+  }
+
   &-transparent {
     background: transparent !important;
     color: $white !important;
@@ -181,7 +198,6 @@
     }
   }
 }
-
 
 // misc buttons
 .sort-btn {

@@ -34,6 +34,10 @@
             &.active {
                 color: $white;
                 padding-left: 0;
+
+                .breadcrumb-link{
+                    color: $white;
+                }
             }
 
             &::before {
@@ -47,6 +51,7 @@
 
         &-link{
             margin-left: 8px;
+            color: $timberwolf;
         }
     }
 }
