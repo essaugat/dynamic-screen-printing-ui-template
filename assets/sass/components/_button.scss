@@ -74,7 +74,7 @@
 
   &-white {
     background: $white !important;
-    color: #1d3363 !important;
+    color: $delft-blue !important;
     border-color: $white !important;
 
     &:hover,
@@ -83,7 +83,7 @@
     &:active {
       background: darken($white, 5%) !important;
       border-color: $white !important;
-      color: #1d3363 !important;
+      color: $delft-blue !important;
     }
   }
 
@@ -134,16 +134,16 @@
 
   &-o-platinum {
     background: transparent !important;
-    border: 1px solid #e7e7e7 !important;
-    color: #5d5d5d !important;
+    border: 1px solid $platinum !important;
+    color: $davy-gray !important;
 
     &:hover,
     &:focus,
     &:disabled,
     &:active {
       background: transparent !important;
-      border-color: #e7e7e7 !important;
-      color: #5d5d5d !important;
+      border-color: $platinum !important;
+      color: $davy-gray !important;
     }
   }
 }
@@ -185,7 +185,7 @@
 
 // misc buttons
 .sort-btn {
-  background: #f6f6f6;
+  background: $seasalt;
   border-radius: 8px;
   height: 32px;
   min-width: 90px;

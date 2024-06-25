@@ -24,7 +24,7 @@
 }
 
 .product-card {
-    border: 1px solid #e7e7e7;
+    border: 1px solid $platinum;
     border-radius: 12px;
     background: $white;
     display: grid;
@@ -86,7 +86,7 @@
     }
 
     .product-card-body {
-        background: #f6f6f6;
+        background: $seasalt;
         padding: 12px;
         text-align: center;
     }
@@ -94,7 +94,7 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        color: #454545;
+        color: $onyx;
     }
     .product-card-price-info {
         color: #808080;

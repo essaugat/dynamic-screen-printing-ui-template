@@ -3,7 +3,7 @@
         &.slick-active {
             button {
                 &::before {
-                    color: #1d3363 !important;
+                    color: $delft-blue !important;
                 }
             }
         }

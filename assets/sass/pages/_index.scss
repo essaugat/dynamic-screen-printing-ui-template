@@ -10,7 +10,6 @@
     .header-top {
       &-brand {
         max-width: 160px;
-        width: 100%;
       }
 
       &-search {
@@ -20,26 +19,15 @@
         .search-input-group {
           padding-left: 16px;
           padding-right: 16px;
-          width: 100%;
-          border-radius: 8px;
           border: 1px solid $alice-blue;
-          background: #fff;
           column-gap: 8px;
 
           input {
-            width: 100%;
-            padding-left: 0;
-            padding-right: 0;
             height: 40px;
 
             &::placeholder {
               color: $cadet-gray !important;
             }
-          }
-          .input-group-btn {
-            width: 24px;
-            height: 24px;
-            min-width: 24px;
           }
         }
       }
@@ -48,8 +36,6 @@
         .profile-icon {
           width: 42px;
           height: 42px;
-          border-radius: 100%;
-          overflow: hidden;
         }
 
         .auth-btn{
@@ -60,10 +46,7 @@
   }
 
   &-nav {
-    padding-top: 4px;
-    padding-bottom: 4px;
     border-bottom: 1px solid $platinum;
-    position: relative;
 
     .header-nav-left {
       .nav-list {
@@ -83,11 +66,6 @@
           }
         }
       }
-    }
-
-    .nav-list {
-      padding: 0 !important;
-      margin: 0 !important;
     }
 
     .nav-item {
@@ -124,8 +102,6 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 20px;
-        height: 20px;
       }
 
       &-dropdown-icon {
@@ -207,8 +183,6 @@
 
       .mega-menu-blocks {
         .mega-menu-block-item {
-          border-radius: 12px;
-
           .block-item-btn {
             min-height: 32px;
             padding: 0 12px;
@@ -219,11 +193,11 @@
 
           &.bg-alice-blue {
             .block-item-btn {
-              border: 1px solid #c0e0fd;
-              color: #1d3363;
+              border: 1px solid $uranian-blue;
+              color: $delft-blue;
 
               &:hover {
-                background: #1d3363;
+                background: $delft-blue;
                 color: $white;
               }
             }
@@ -232,10 +206,10 @@
           &.bg-ivory {
             .block-item-btn {
               border: 1px solid $fulvous;
-              color: #984208;
+              color: $brown;
 
               &:hover {
-                background: #984208;
+                background: $brown;
                 color: $white;
               }
             }
@@ -251,7 +225,7 @@
           &-square {
             width: 20px;
             height: 20px;
-            background: #d9d9d9;
+            background: $platinum2;
           }
         }
       }
@@ -289,10 +263,10 @@
     .hero-left {
       .hero-ttl {
         font-size: 42px;
-        color: #1d3363;
+        color: $delft-blue;
       }
       .hero-lead {
-        color: #454545;
+        color: $onyx;
       }
     }
 
@@ -325,13 +299,13 @@
       }
 
       .achieve-item-separator {
-        background: #e7e7e7;
+        background: $platinum;
         width: 1px;
         height: 122px;
       }
 
       .achieve-item-icon {
-        background: #dcedfd;
+        background: $alice-blue2;
         width: 48px;
         height: 48px;
         border-radius: 100%;
@@ -365,7 +339,7 @@
   .sc-banner-01-content,
   .sc-banner-02-content,
   .sc-banner-03-content {
-    background: #1d3363;
+    background: $delft-blue;
     padding: 40px 40px 36px 40px;
     border-radius: 24px;
 
@@ -431,11 +405,11 @@
         width: 100%;
         padding: 12px 16px;
         background-color: transparent;
-        border-bottom: 1px solid #d1d1d1;
+        border-bottom: 1px solid $timberwolf;
         font-size: 16px;
 
         &::placeholder {
-          color: #dcdcdc;
+          color: $platinum2;
         }
       }
     }
@@ -451,7 +425,7 @@
 
 .page-sc-banner-03 {
   .sc-banner-03-content {
-    background: #fffcea;
+    background: $ivory;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 40px 40px 0 40px;
@@ -466,7 +440,7 @@
     }
 
     .banner-ttl {
-      color: #984208 !important;
+      color: $brown !important;
       margin-bottom: 40px;
       position: relative;
       z-index: 1;
@@ -553,7 +527,7 @@
     .services-item {
       grid-template-columns: auto 200px;
       padding: 12px;
-      border: 1px solid #e7e7e7;
+      border: 1px solid $platinum;
       border-radius: 12px;
       height: 100%;
 
@@ -568,8 +542,8 @@
       }
 
       &-badge {
-        color: #5d5d5d;
-        background: #f6f6f6;
+        color: $davy-gray;
+        background: $seasalt;
         padding: 4.5px 8px;
       }
 
@@ -636,7 +610,7 @@
 }
 
 .page-sc-trust-reviews {
-  background: #eff7ff;
+  background: $alice-blue;
 
   .trust-reviews-items {
     margin-top: 80px;
@@ -666,7 +640,7 @@
       .review-item {
         &-star {
           @extend %star-common;
-          background: #49b38d;
+          background: $mint;
         }
       }
 
@@ -734,7 +708,7 @@
   }
   .collection-item-info {
     border-radius: 12px;
-    background: #eff7ff;
+    background: $alice-blue;
     border-radius: 12px;
     padding-top: 44px;
     padding-bottom: 44px;
@@ -766,7 +740,7 @@
     }
 
     &-button {
-      background: #f6f6f6;
+      background: $seasalt;
       border-radius: 8px !important;
       padding: 12px 16px;
       color: #4e5861;
@@ -880,7 +854,7 @@
     }
 
     .creviews-item {
-      border: 1px solid #e7e7e7;
+      border: 1px solid $platinum;
       background: $white;
       border-radius: 8px;
       padding: 16px;
@@ -898,7 +872,7 @@
     .creviews {
       &-details {
         &-top {
-          border-bottom: 1px solid #e7e7e7;
+          border-bottom: 1px solid $platinum;
         }
 
         &-bottom {

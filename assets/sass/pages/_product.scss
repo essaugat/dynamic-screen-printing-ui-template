@@ -10,7 +10,7 @@
     }
 
     .product-grid-cats {
-        border-right: 1px solid #e7e7e7;
+        border-right: 1px solid $platinum;
 
         .sc-heading {
             margin-bottom: 20px;
@@ -33,7 +33,7 @@
         }
 
         .cats-item {
-            border: 1px solid #e7e7e7;
+            border: 1px solid $platinum;
             padding: 9px 12px;
             border-radius: 8px;
             font-size: 14px;
@@ -41,8 +41,8 @@
 
             &.active,
             &:hover {
-                background: #eff7ff;
-                border-color: #eff7ff;
+                background: $alice-blue;
+                border-color: $alice-blue;
             }
         }
 

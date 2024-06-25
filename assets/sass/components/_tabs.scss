@@ -1,6 +1,6 @@
 .sc-hero-explore-tabs {
     padding: 40px;
-    border: 1px solid #e7e7e7;
+    border: 1px solid $platinum;
     border-radius: 24px;
     max-width: 1145px;
     background: $white;
@@ -20,7 +20,7 @@
     }
 
     .hero-explore-tab-head {
-        background: #f6f6f6;
+        background: $seasalt;
         border-radius: 20px;
         padding: 24px 12px;
 
@@ -29,7 +29,7 @@
         }
 
         &.active {
-            background: #eff7ff;
+            background: $alice-blue;
 
             .tab-head-icon {
                 img {
@@ -43,7 +43,7 @@
             }
 
             .tab-head-name {
-                color: #1d3363;
+                color: $delft-blue;
             }
         }
 
@@ -63,7 +63,7 @@
             }
         }
         .tab-head-name {
-            color: #5d5d5d;
+            color: $davy-gray;
         }
     }
 
@@ -100,7 +100,7 @@
 
             .tab-item-ttl {
                 font-size: 14px;
-                color: #5d5d5d;
+                color: $davy-gray;
             }
         }
     }
@@ -110,9 +110,9 @@
     .nav-tabs {
         .nav-link {
             padding: 12px;
-            color: #5d5d5d;
+            color: $davy-gray;
             border: 0;
-            border-bottom: 1px solid var(--Neutral-Gray-100, #E7E7E7);
+            border-bottom: 1px solid var(--Neutral-Gray-100, $platinum);
 
             &:focus,
             &:hover {
@@ -143,7 +143,7 @@
             h4,
             h5,
             h6 {
-                color: #454545;
+                color: $onyx;
                 font-weight: 400;
                 margin-bottom: 8px;
                 line-height: 1.45;
@@ -152,7 +152,7 @@
                 font-size: 14px;
                 font-weight: 400;
                 font-size: normal;
-                color: #5d5d5d;
+                color: $davy-gray;
             }
 
             &-left, &-right{
