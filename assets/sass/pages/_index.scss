@@ -382,7 +382,7 @@
       width: 243px;
       height: 243px;
       left: 0;
-      background-image: url("../../../assets/shapes/circle_light.svg");
+      background-image: url("../../../assets/images/shapes/circle_light.svg");
 
       @include breakpoint-down(lg) {
         scale: 0.9;
@@ -393,7 +393,7 @@
       width: 133px;
       height: 153px;
       right: 0;
-      background-image: url("../../../assets/shapes/circle_yellow.svg");
+      background-image: url("../../../assets/images/shapes/circle_yellow.svg");
     }
 
     .sc-banner-left {
@@ -496,7 +496,7 @@
       width: 243px;
       height: 243px;
       left: 0;
-      background-image: url("../../../assets/shapes/circle_yellow_light.svg");
+      background-image: url("../../../assets/images/shapes/circle_yellow_light.svg");
 
       @include breakpoint-down(lg) {
         scale: 0.9;

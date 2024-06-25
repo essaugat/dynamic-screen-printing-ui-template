@@ -2276,7 +2276,7 @@ textarea.form-control {
   width: 243px;
   height: 243px;
   left: 0;
-  background-image: url("../../../assets/shapes/circle_light.svg");
+  background-image: url("../../../assets/images/shapes/circle_light.svg");
 }
 @media (max-width: 991.98px) {
   .page-sc-banner-01 .sc-banner-01-content::before,
@@ -2303,7 +2303,7 @@ textarea.form-control {
   width: 133px;
   height: 153px;
   right: 0;
-  background-image: url("../../../assets/shapes/circle_yellow.svg");
+  background-image: url("../../../assets/images/shapes/circle_yellow.svg");
 }
 .page-sc-banner-01 .sc-banner-01-content .sc-banner-left .banner-ttl-group,
 .page-sc-banner-01 .sc-banner-02-content .sc-banner-left .banner-ttl-group,
@@ -2389,7 +2389,7 @@ textarea.form-control {
   width: 243px;
   height: 243px;
   left: 0;
-  background-image: url("../../../assets/shapes/circle_yellow_light.svg");
+  background-image: url("../../../assets/images/shapes/circle_yellow_light.svg");
 }
 @media (max-width: 991.98px) {
   .page-sc-banner-03 .sc-banner-03-content::before {
@@ -2816,4 +2816,4 @@ textarea.form-control {
 }
 .page-sc-get-connected .get-connected-right .form-control::placeholder {
   color: #94A3B8 !important;
-}/*# sourceMappingURL=main.css.map */
+}
