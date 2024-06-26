@@ -1,0 +1,76 @@
+.page-sc-profile {
+    .sc-profile-grid {
+        grid-template-columns: 345px auto;
+
+        @include breakpoint-down(xl) {
+            grid-template-columns: 300px auto;
+        }
+
+        @include breakpoint-down(lg) {
+            grid-template-columns: 100%;
+            row-gap: 40px;
+        }
+    }
+
+    .profile-grid-menu {
+        padding-right: 20px;
+
+        .sc-heading {
+            margin-bottom: 12px;
+        }
+    }
+
+    .profile-grid-main {
+        padding: 16px;
+
+        @include breakpoint-down(lg) {
+            padding: 0;
+        }
+    }
+
+    .profile-menu-list {
+        .profile-menu-item {
+            border: 1px solid $platinum;
+            padding: 9px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: $default-transition;
+
+            &.active,
+            &:hover {
+                background: $alice-blue;
+                border-color: $alice-blue;
+
+                .profile-menu-item-text {
+                    color: $blue !important;
+                }
+            }
+        }
+
+        .profile-menu-sublist {
+            margin-top: 16px;
+
+            .profile-menu-subitem {
+                font-size: 14px;
+                color: $battleship-gray;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                margin-bottom: 10px;
+                display: flex;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // REVIEWS PAGE
+    .profile-review-wrapper {
+        .creviews-items {
+            @include breakpoint-down(md) {
+                grid-template-columns: 100%;
+            }
+        }
+    }
+}

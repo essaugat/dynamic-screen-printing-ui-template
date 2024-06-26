@@ -64,13 +64,13 @@
                 </div>
               </form>
             </div>
-            <div class="header-top-profile d-flex align-items-center">
-              <button
-                type="button"
-                class="profile-icon border-0 shadow-none rounded-full overflow-hidden"
-              >
-                <img src="assets/images/user.jpeg" alt="" />
-              </button>
+            <div class="header-top-profile d-flex align-items-center gap-x-4">
+              <a href="login.html" class="auth-btn btn btn-seasalt btn-sm"
+                >Login
+              </a>
+              <a href="sign_up.html" class="auth-btn btn btn-primary btn-sm"
+                >Signup
+              </a>
             </div>
           </div>
         </div>
@@ -802,17 +802,17 @@
       >
         <div class="container">
           <div class="page-breadcrumb-content text-white text-center">
-            <h2 class="breadcrumb-ttl text-3xl mb-1">Legal Notice</h2>
-            <p class="breadcrumb-lead text-white text-base">
-              We care about data and treat it in a very responsible way.
-            </p>
+            <h2 class="breadcrumb-ttl text-3xl mb-1">My Profile</h2>
             <nav style="--bs-breadcrumb-divider: '>'">
               <ol class="breadcrumb d-flex justify-content-center mb-0">
                 <li class="breadcrumb-item">
                   <a class="breadcrumb-link" href="#">Home</a>
                 </li>
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link" href="#">Profile</a>
+                </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  <a class="breadcrumb-link" href="#">Legal Notice</a>
+                  <a class="breadcrumb-link" href="#">Reviews</a>
                 </li>
               </ol>
             </nav>
@@ -822,204 +822,809 @@
       <!-- END OF PAGE BREADCRUMB -->
 
       <!-- PRODUCT GRID SECTION -->
-      <div class="page-sc-docs page-sc-pt-40 page-sc-pb-100">
+      <div class="page-sc-profile page-sc-py-40">
         <div class="container">
-          <div class="sc-docs-grid d-grid gap-5">
-            <div class="docs-grid-toc pe-3 border-r-platinum">
-              <h4
-                class="docs-toc-ttl pb-custom-12 border-b-platinum text-theme font-medium"
-              >
-                Table of Contents
-              </h4>
-              <div class="docs-toc-list d-grid gap-y-3 py-custom-12">
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
-                  </div>
-                  <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+          <div class="sc-profile-grid d-grid">
+            <div class="profile-grid-menu border-r-platinum">
+              <div class="sc-heading">
+                <h3 class="sc-heading-ttl text-xl text-onyx font-medium mb-2">
+                  Menu
+                </h3>
+              </div>
+              <div class="profile-menu-list d-grid gap-3">
+                <div class="profile-menu-item">
+                  <button
+                    class="d-flex align-items-center justify-content-between w-100"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-profile-menu-01"
+                    role="button"
                   >
-                    Acceptance of Terms
+                    <span class="profile-menu-item-text text-davy-gray"
+                      >Manage my account</span
+                    >
+                    <span class="profile-menu-item-icon">
+                      <img src="assets/icons/arrow_down_dark.svg" alt="" />
+                    </span>
+                  </button>
+                  <div
+                    class="collapse profile-menu-sublist"
+                    id="collapse-profile-menu-01"
+                  >
+                    <a href="#" class="profile-menu-subitem">Card type 1</a>
+                    <a href="#" class="profile-menu-subitem">Card type 2</a>
+                    <a href="#" class="profile-menu-subitem">Card type 3</a>
+                    <a href="#" class="profile-menu-subitem">Card type 4</a>
                   </div>
                 </div>
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
-                  </div>
-                  <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+                <a
+                  href="#"
+                  class="profile-menu-item d-flex align-items-center justify-content-between w-100"
+                >
+                  <span class="profile-menu-item-text text-davy-gray"
+                    >My orders</span
                   >
-                    Intellectual Property
-                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="profile-menu-item d-flex align-items-center justify-content-between w-100"
+                >
+                  <span class="profile-menu-item-text text-davy-gray"
+                    >Track shippping</span
+                  >
+                </a>
+                <a
+                  href="profile_review.html"
+                  class="profile-menu-item active d-flex align-items-center justify-content-between w-100"
+                >
+                  <span class="profile-menu-item-text text-davy-gray"
+                    >My Reviews</span
+                  >
+                </a>
+              </div>
+            </div>
+            <div class="profile-grid-main">
+              <div class="d-flex align-items-start justify-content-between">
+                <div class="sc-heading">
+                  <h3 class="sc-heading-ttl text-xl text-onyx font-normal mb-3">
+                    Reviews
+                  </h3>
                 </div>
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
+              </div>
+              <div class="profile-review-wrapper">
+                <div class="creviews-items d-grid gap-6 grid-cols-2">
+                  <div
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
+                  >
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
                   >
-                    Trademarks
-                  </div>
-                </div>
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
                   >
-                    Disclaimer of Warranties
-                  </div>
-                </div>
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
                   >
-                    Limitation of Liability
-                  </div>
-                </div>
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
                   >
-                    Governing Law and Jurisdiction
-                  </div>
-                </div>
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
                   >
-                    Entire Agreement
-                  </div>
-                </div>
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
                   >
-                    Changes to this Notice
-                  </div>
-                </div>
-                <div class="docs-toc-item d-grid align-items-start gap-x-2">
-                  <div class="toc-item-icon mt-2">
-                    <img src="assets/icons/dot_theme.svg" alt="" />
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
-                    class="toc-item-name text-base font-medium text-davy-gray"
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
                   >
-                    Contact Us
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
+                  >
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="creviews-item rounded-8 border-platinum p-3 d-grid gap-y-3"
+                  >
+                    <div
+                      class="creviews-item-head d-flex align-items-center justify-content-between"
+                    >
+                      <div
+                        class="creviews-rating d-flex align-items-center gap-x-1"
+                      >
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_fill.svg"
+                          alt=""
+                        />
+                        <img
+                          class="icon-16"
+                          src="assets/icons/star_yellow_outline.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="creview-actions d-flex align-items-center justify-content-end gap-x-3"
+                      >
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/edit_dark.svg" alt="" />
+                        </button>
+                        <button type="button" class="icon-btn icon-20">
+                          <img src="assets/icons/trash_red.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="creviews-item-body text-sm text-davy-gray">
+                      <div class="creviews-item-text">
+                        Dynamic Screen-Printing delivers exceptional quality.
+                        The prints are crisp, vibrant, and exactly what I
+                        envisioned. They use high-quality materials, ensuring my
+                        business card will grab my potential client attention.
+                      </div>
+                    </div>
+                    <div
+                      class="creviews-item-foot border-t-platinum pt-custom-12"
+                    >
+                      <div class="creviews-item-details d-flex gap-5">
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">
+                            Service
+                          </p>
+                          <p class="mb-0 text-sm text-onyx">
+                            Customizes business card
+                          </p>
+                        </div>
+                        <div class="creviews-details-bottom-item">
+                          <p class="mb-0 text-battleship-gray text-sm">Date</p>
+                          <p class="mb-0 text-sm text-onyx">Feb 02, 2024</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="docs-grid-content">
-              <p>Effective Date: 10/06/2024</p>
-              <p>
-                This Legal Notice ("Notice") applies to your access to and use
-                of the website located at [insert website URL] (the "Website")
-                operated by Dynamic Screen Printing ("Dynamic," "we," "us," or
-                "our"). This Notice outlines the terms and conditions governing
-                your use of the Website.
-              </p>
-              <h2>Acceptance of Terms:</h2>
-              <p>
-                By accessing or using the Website, you agree to be bound by the
-                terms and conditions set forth in this Notice. If you disagree
-                with any of the terms and conditions in this Notice, you may not
-                access or use the Website.
-              </p>
-              <ul>
-                <li>
-                  Non-Personal Information: We may also collect non-personal
-                  information about your use of the Website, such as your
-                  browser type, operating system, IP address, browsing history,
-                  and the date and time of your visit. This information is
-                  collected through cookies and other tracking technologies.
-                </li>
-              </ul>
-              <h2>Intellectual Property:</h2>
-              <ul>
-                <li>
-                  The content of the Website, including all text, graphics,
-                  logos, images, and other materials (the "Content") is the
-                  property of Dynamic or its licensors and is protected by
-                  copyright and other intellectual property laws. You may not
-                  copy, modify, distribute, transmit, display, reproduce,
-                  publish, license, create derivative works from, or exploit the
-                  Content in any way without our prior written consent.
-                </li>
-              </ul>
-              <h2>Trademarks:</h2>
-              <p>
-                The trademarks, logos, and service marks displayed on the
-                Website (the "Trademarks") are the registered and unregistered
-                trademarks of Dynamic or its licensors. You may not use the
-                Trademarks without our prior written consent.
-              </p>
-              <h2>Disclaimer of Warranties:</h2>
-              <ul>
-                <li>
-                  THE WEBSITE AND THE CONTENT ARE PROVIDED "AS IS" AND WITHOUT
-                  WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. DYNAMIC DISCLAIMS
-                  ALL WARRANTIES, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF
-                  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-                  NON-INFRINGEMENT, AND SECURITY. DYNAMIC DOES NOT WARRANT THAT
-                  THE WEBSITE WILL BE AVAILABLE, FUNCTIONAL, ERROR-FREE, OR
-                  VIRUS-FREE.
-                </li>
-              </ul>
-              <h2>Limitation of Liability:</h2>
-              <ul>
-                <li>
-                  DYNAMIC SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING OUT OF OR
-                  RELATED TO YOUR USE OF THE WEBSITE OR THE CONTENT, INCLUDING,
-                  BUT NOT LIMITED TO, DIRECT, INDIRECT, INCIDENTAL,
-                  CONSEQUENTIAL, SPECIAL, PUNITIVE, OR EXEMPLARY DAMAGES.
-                </li>
-              </ul>
-
-              <h2>Governing Law and Jurisdiction:</h2>
-              <p>
-                This Notice shall be governed by and construed in accordance
-                with the laws of [insert state or jurisdiction], without regard
-                to its conflict of law provisions. Any dispute arising out of or
-                related to this Notice shall be subject to the exclusive
-                jurisdiction and venue of the courts located in [insert state or
-                jurisdiction].
-              </p>
-              <h2>Entire Agreement:</h2>
-              <p>
-                This Notice constitutes the entire agreement between you and
-                Dynamic with respect to your use of the Website.
-              </p>
-              <h2>Changes to this Notice:</h2>
-              <ul>
-                <li>
-                  Dynamic may revise this Notice at any time by updating this
-                  page. You are encouraged to review this Notice periodically
-                  for any changes. Your continued use of the Website following
-                  the posting of any changes to this Notice constitutes
-                  acceptance of those changes.
-                </li>
-              </ul>
-              <h2>Contact Us:</h2>
-              <p>
-                If you have any questions about this Legal notice, please
-                contact us at dynamicprinting@gmail.com or xxx xxxxxxxxx.
-              </p> 
-            </div> 
           </div>
         </div>
       </div>
@@ -1605,187 +2210,6 @@
         </div>
       </footer>
       <!-- END OF FOOTER SECTION -->
-    </div>
-
-    <!-- ORDER SUCCESS MODAL -->
-    <div
-      class="modal fade modal-customized order-success-modal"
-      id="orderSuccessModal"
-      tabindex="-1"
-      aria-labelledby="orderSuccessModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="product-order-success align-items-start d-grid gap-4">
-              <div class="order-success-left">
-                <h3 class="order-success-ttl text-theme font-normal">
-                  Thank you for your order!
-                </h3>
-                <div
-                  class="order-success-user text-theme font-normal text-5xl lh-1_2"
-                >
-                  Shyam Poudel
-                </div>
-                <div class="order-success-text pt-custom-20">
-                  <div class="d-flex align-items-center flex-wrap gap-2">
-                    <span class="info-icon icon-16">
-                      <img src="assets/icons/info_gray.svg" alt="" />
-                    </span>
-                    <p class="mb-0 text-battleship-gray">
-                      Confirmation mail with tacking ID has been sent to you.
-                    </p>
-                  </div>
-                  <p class="text-battleship-gray mb-0">
-                    Your order will be processed within 24 hours. We will notify
-                    you by email once your order has been shipped.
-                  </p>
-                </div>
-                <div class="order-success-address">
-                  <h3
-                    class="address-info-ttl pb-custom-12 text-base text-davy-gray"
-                  >
-                    Billing addres
-                  </h3>
-                  <ul class="list-unstyled address-info d-grid gap-3">
-                    <li class="address-info-item">
-                      <span
-                        class="address-info-label text-sm text-battleship-gray"
-                        >Name:
-                      </span>
-                      <span class="address-info-data text-base text-davy-gray"
-                        >John Cena</span
-                      >
-                    </li>
-                    <li class="address-info-item">
-                      <span
-                        class="address-info-label text-sm text-battleship-gray"
-                        >Email address:
-                      </span>
-                      <span class="address-info-data text-base text-davy-gray"
-                        >johncena@gmail.com</span
-                      >
-                    </li>
-                    <li class="address-info-item">
-                      <span
-                        class="address-info-label text-sm text-battleship-gray"
-                        >Email address:
-                      </span>
-                      <span class="address-info-data text-base text-davy-gray"
-                        >johncena@gmail.com</span
-                      >
-                    </li>
-                    <li class="address-info-item">
-                      <span
-                        class="address-info-label text-sm text-battleship-gray"
-                        >Contact no.
-                      </span>
-                      <span class="address-info-data text-base text-davy-gray"
-                        >+XXX XXXXXXXXX</span
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="order-success-right rounded-12 p-3 d-grid gap-y-5">
-                <div class="order-product-head d-grid gap-3">
-                  <div class="order-product-img overflow-hidden rounded-8">
-                    <img src="assets/images/preview2.jpg" alt="" />
-                  </div>
-                  <div class="order-product-info">
-                    <h3 class="mb-4 text-onyx text-xl font-normal">
-                      Custom business card
-                    </h3>
-                    <div class="d-flex flex-wrap gap-x-2">
-                      <span>Order ID</span>
-                      <span>#esrdtygu2345</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-product-body">
-                  <div
-                    class="order-product-billing-block border-b-platinum d-grid align-items-start gap-y-2"
-                  >
-                    <div
-                      class="d-flex align-items-center justify-content-between py-1"
-                    >
-                      <span class="text-battleship-gray text-sm"
-                        >Customized business card</span
-                      >
-                      <span class="text-davy-gray text-sm">1200</span>
-                    </div>
-                    <div
-                      class="d-flex align-items-center justify-content-between py-1"
-                    >
-                      <span class="text-battleship-gray text-sm"
-                        >Customized hoodie</span
-                      >
-                      <span class="text-davy-gray text-sm">1200</span>
-                    </div>
-                  </div>
-                  <div
-                    class="order-product-billing-block border-b-platinum d-grid align-items-start gap-y-2"
-                  >
-                    <div
-                      class="d-flex align-items-center justify-content-between py-1"
-                    >
-                      <span class="text-battleship-gray text-sm"
-                        >Delivery charges</span
-                      >
-                      <span class="text-davy-gray text-sm">xxxx</span>
-                    </div>
-                    <div
-                      class="d-flex align-items-center justify-content-between py-1"
-                    >
-                      <span class="text-battleship-gray text-sm">Service</span>
-                      <span class="text-davy-gray text-sm">xxxx</span>
-                    </div>
-                    <div
-                      class="d-flex align-items-center justify-content-between py-1"
-                    >
-                      <span class="text-battleship-gray text-sm">TAX</span>
-                      <span class="text-davy-gray text-sm">xxxx</span>
-                    </div>
-                  </div>
-                  <div
-                    class="order-product-billing-block d-grid align-items-start pb-0 gap-y-2"
-                  >
-                    <div
-                      class="d-flex align-items-center justify-content-between pt-1"
-                    >
-                      <span class="text-battleship-gray text-sm">Total</span>
-                      <span
-                        class="text-davy-gray text-xl font-medium text-eerie-black"
-                        >AU$ 20,000</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer border-t-platinum">
-            <div
-              class="d-flex justify-content-end align-items-center gap-x-4 modal-btn-group"
-            >
-              <button
-                type="button"
-                class="btn btn-sm btn-alice-blue modal-btn text-sm"
-              >
-                Shop again
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary btn-sm modal-btn text-sm"
-                data-bs-dismiss="modal"
-              >
-                Done
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- JQUERY CDN -->

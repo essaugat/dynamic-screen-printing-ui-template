@@ -1,6 +1,6 @@
 .page-sc-docs {
     .sc-docs-grid {
-        grid-template-columns: 315px auto;
+        grid-template-columns: 330px auto;
 
         @include breakpoint-down(xl) {
             grid-template-columns: 100%;
