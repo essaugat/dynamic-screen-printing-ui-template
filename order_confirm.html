@@ -1155,7 +1155,12 @@
                     >AU$ 20,000</span
                   >
                 </div>
-                <button type="button" class="btn btn-theme btn-sm mt-2 w-100">
+                <button
+                  type="button"
+                  class="btn btn-theme btn-sm mt-2 w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderSuccessModal"
+                >
                   Confirm Order
                 </button>
               </div>
@@ -2162,119 +2167,172 @@
       <!-- END OF FOOTER SECTION -->
     </div>
 
-    <!-- MODAL UPLOAD -->
+    <!-- ORDER SUCCESS MODAL -->
     <div
-      class="modal fade modal-customized"
-      id="designUploadModal"
-      tabindex="-1"
-      aria-labelledby="designUploadModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title" id="designUploadModalLabel">
-              Upload you design
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="form-custom d-grid gap-y-6">
-                <div class="form-elem gap-y-3">
-                  <label for="" class="form-label">Front Design</label>
-                  <div
-                    class="design-upload-content rounded-8 d-grid gap-y-3 text-center"
-                  >
-                    <input
-                      type="file"
-                      accept="*"
-                      class="design-upload-input d-none"
-                    />
-                    <div class="icon-32 mx-auto">
-                      <img src="assets/icons/upload_dark.svg" alt="" />
-                    </div>
-                    <div>
-                      <p class="mb-0 text-xs text-davy-gray">
-                        Upload your Design
-                      </p>
-                      <p class="mb-0 text-xs text-davy-gray">
-                        Supported: PNG, JPG & EPS format only.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-elem gap-y-3">
-                  <label for="" class="form-label">Back Design</label>
-                  <div
-                    class="design-upload-content rounded-8 d-grid gap-y-3 text-center"
-                  >
-                    <input
-                      type="file"
-                      accept="*"
-                      class="design-upload-input d-none"
-                    />
-                    <div class="icon-32 mx-auto">
-                      <img src="assets/icons/upload_dark.svg" alt="" />
-                    </div>
-                    <div>
-                      <p class="mb-0 text-xs text-davy-gray">
-                        Upload your Design
-                      </p>
-                      <p class="mb-0 text-xs text-davy-gray">
-                        Supported: PNG, JPG & EPS format only.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-elem gap-y-3">
-                  <label for="" class="form-label">Note</label>
-                  <textarea
-                    name=""
-                    id=""
-                    class="form-control"
-                    placeholder="Enter few notes for us"
-                  ></textarea>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-modal btn-seasalt w-100">
-              Submit
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- END OF MODAL UPLOAD -->
-
-    <!-- Modal -->
-    <div
-      class="modal fade custom-modal"
+      class="modal fade modal-customized order-success-modal"
       id="orderSuccessModal"
       tabindex="-1"
       aria-labelledby="orderSuccessModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-xl modal-dialog-scrollable">
         <div class="modal-content">
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <div class="d-flex justify-content-end align-items-center gap-3">
-                <button
-              type="button"
-              class="btn btn-primary btn-sm modal-btn"
-              data-bs-dismiss="modal"
-            >
-              Done
-            </button>
-            <button type="button" class="btn btn-sm btn-alice-blue modal-btn">Shop again</button>
+          <div class="modal-body">
+            <div class="product-order-success align-items-start d-grid gap-4">
+              <div class="order-success-left">
+                <h3 class="order-success-ttl text-theme font-normal">
+                  Thank you for your order!
+                </h3>
+                <div class="order-success-text">
+                  <div class="d-flex align-items-center flex-wrap gap-2">
+                    <span class="info-icon icon-16">
+                      <img src="assets/icons/info_gray.svg" alt="" />
+                    </span>
+                    <p class="mt-2 mb-0 text-battleship-gray">
+                      Confirmation mail with tacking ID has been sent to you.
+                    </p>
+                  </div>
+                  <p class="text-battleship-gray mb-0">
+                    Your order will be processed within 24 hours. We will notify
+                    you by email once your order has been shipped.
+                  </p>
+                </div>
+                <div class="order-success-address">
+                  <h3
+                    class="address-info-ttl pb-custom-12 text-base text-davy-gray"
+                  >
+                    Billing addres
+                  </h3>
+                  <ul class="list-unstyled address-info d-grid gap-3">
+                    <li class="address-info-item">
+                      <span
+                        class="address-info-label text-sm text-battleship-gray"
+                        >Name:
+                      </span>
+                      <span class="address-info-data text-base text-davy-gray"
+                        >John Cena</span
+                      >
+                    </li>
+                    <li class="address-info-item">
+                      <span
+                        class="address-info-label text-sm text-battleship-gray"
+                        >Email address:
+                      </span>
+                      <span class="address-info-data text-base text-davy-gray"
+                        >johncena@gmail.com</span
+                      >
+                    </li>
+                    <li class="address-info-item">
+                      <span
+                        class="address-info-label text-sm text-battleship-gray"
+                        >Email address:
+                      </span>
+                      <span class="address-info-data text-base text-davy-gray"
+                        >johncena@gmail.com</span
+                      >
+                    </li>
+                    <li class="address-info-item">
+                      <span
+                        class="address-info-label text-sm text-battleship-gray"
+                        >Contact no.
+                      </span>
+                      <span class="address-info-data text-base text-davy-gray"
+                        >+XXX XXXXXXXXX</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="order-success-right rounded-12 p-3 d-grid gap-y-5">
+                <div class="order-product-head d-grid gap-3">
+                  <div class="order-product-img overflow-hidden rounded-8">
+                    <img src="assets/images/preview2.jpg" alt="" />
+                  </div>
+                  <div class="order-product-info">
+                    <h3 class="mb-4 text-onyx text-xl font-normal">
+                      Custom business card
+                    </h3>
+                    <div class="d-flex flex-wrap gap-x-2">
+                      <span>Order ID</span>
+                      <span>#esrdtygu2345</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-product-body">
+                  <div
+                    class="order-product-billing-block border-b-platinum d-grid align-items-start gap-y-2"
+                  >
+                    <div
+                      class="d-flex align-items-center justify-content-between py-1"
+                    >
+                      <span class="text-battleship-gray text-sm"
+                        >Customized business card</span
+                      >
+                      <span class="text-davy-gray text-sm">1200</span>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-between py-1"
+                    >
+                      <span class="text-battleship-gray text-sm"
+                        >Customized hoodie</span
+                      >
+                      <span class="text-davy-gray text-sm">1200</span>
+                    </div>
+                  </div>
+                  <div
+                    class="order-product-billing-block border-b-platinum d-grid align-items-start gap-y-2"
+                  >
+                    <div
+                      class="d-flex align-items-center justify-content-between py-1"
+                    >
+                      <span class="text-battleship-gray text-sm"
+                        >Delivery charges</span
+                      >
+                      <span class="text-davy-gray text-sm">xxxx</span>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-between py-1"
+                    >
+                      <span class="text-battleship-gray text-sm">Service</span>
+                      <span class="text-davy-gray text-sm">xxxx</span>
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-between py-1"
+                    >
+                      <span class="text-battleship-gray text-sm">TAX</span>
+                      <span class="text-davy-gray text-sm">xxxx</span>
+                    </div>
+                  </div>
+                  <div
+                    class="order-product-billing-block d-grid align-items-start pb-0 gap-y-2"
+                  >
+                    <div
+                      class="d-flex align-items-center justify-content-between pt-1"
+                    >
+                      <span class="text-battleship-gray text-sm">Total</span>
+                      <span
+                        class="text-davy-gray text-xl font-medium text-eerie-black"
+                        >AU$ 20,000</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-t-platinum">
+            <div class="d-flex justify-content-end align-items-center gap-x-4 modal-btn-group">
+                <button type="button" class="btn btn-sm btn-alice-blue modal-btn text-sm">
+                    Shop again
+                  </button>
+              <button
+                type="button"
+                class="btn btn-primary btn-sm modal-btn text-sm"
+                data-bs-dismiss="modal"
+              >
+                Done
+              </button>
+              
             </div>
           </div>
         </div>

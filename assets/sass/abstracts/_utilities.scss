@@ -535,10 +535,20 @@
 .pt-custom-12 {
   padding-top: 12px;
 }
-.pt-custom-12 {
+.pb-custom-12 {
   padding-bottom: 12px;
 }
 .py-custom-12 {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.border-b-platinum {
+  border-bottom: 1px solid $platinum!important;
+}
+.border-t-platinum {
+  border-top: 1px solid $platinum!important;
+}
+.border-platinum {
+  border: 1px solid $platinum!important;
 }

@@ -972,13 +972,25 @@
   padding-top: 12px;
 }
 
-.pt-custom-12 {
+.pb-custom-12 {
   padding-bottom: 12px;
 }
 
 .py-custom-12 {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.border-b-platinum {
+  border-bottom: 1px solid #e7e7e7 !important;
+}
+
+.border-t-platinum {
+  border-top: 1px solid #e7e7e7 !important;
+}
+
+.border-platinum {
+  border: 1px solid #e7e7e7 !important;
 }
 
 html {
@@ -1480,6 +1492,7 @@ h6,
 
 .modal-customized .modal-content {
   padding: 24px;
+  border: 0 !important;
 }
 .modal-customized .modal-title {
   color: #1d3363;
@@ -1503,6 +1516,56 @@ h6,
 .modal-customized .btn-modal {
   height: 52px;
   font-size: 16px;
+}
+
+@media (max-width: 991.98px) {
+  .order-success-modal .modal-dialog {
+    --bs-modal-width: 90%!important;
+  }
+}
+.order-success-modal .modal-content {
+  padding: 40px;
+  max-width: 1028px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.order-success-modal .modal-btn-group {
+  margin-top: 20px;
+}
+.order-success-modal .modal-footer {
+  margin-top: 20px;
+}
+.order-success-modal .product-order-success {
+  grid-template-columns: 53% auto;
+}
+@media (max-width: 991.98px) {
+  .order-success-modal .product-order-success {
+    grid-template-columns: 100%;
+  }
+}
+.order-success-modal .product-order-success .order-success-ttl {
+  font-size: 28px;
+}
+.order-success-modal .product-order-success .order-success-address {
+  margin-top: 60px;
+}
+.order-success-modal .product-order-success .order-success-address .address-info-item {
+  display: grid;
+  grid-template-columns: 124px auto;
+  gap: 4px;
+}
+.order-success-modal .product-order-success .order-success-right {
+  border: 1px solid #e7e7e7;
+}
+.order-success-modal .product-order-success .order-product-head {
+  grid-template-columns: 108px auto;
+}
+.order-success-modal .product-order-success .order-product-head .order-product-img {
+  width: 108px;
+  height: 80px;
+}
+.order-success-modal .product-order-success .order-product-body .order-product-billing-block {
+  padding-bottom: 8px;
 }
 
 .sc-heading-ttl {
