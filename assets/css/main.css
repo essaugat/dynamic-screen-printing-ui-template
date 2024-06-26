@@ -3090,6 +3090,9 @@ textarea.form-control {
   border-right: 1px solid #E7E7E7;
   padding-right: 20px;
 }
+.sc-product-cart-grid .product-cart-pay .product-cart-member {
+  padding: 20px;
+}
 
 .product-cart-summary .cart-summary-block {
   border-top: 1px solid #e7e7e7;
