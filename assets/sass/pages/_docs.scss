@@ -1,0 +1,57 @@
+.page-sc-docs {
+    .sc-docs-grid {
+        grid-template-columns: 315px auto;
+
+        @include breakpoint-down(xl) {
+            grid-template-columns: 100%;
+        }
+
+        .docs-grid-content {
+            color: $davy-gray !important;
+            p,
+            span,
+            a,
+            ul,
+            div {
+                color: $davy-gray !important;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+
+                @include breakpoint-down(lg) {
+                    font-size: 14px;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0 !important;
+                }
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: 400;
+                color: $davy-gray !important;
+                margin-bottom: 8px;
+                margin-top: 8px;
+            }
+            ul {
+                list-style-type: disc;
+            }
+        }
+    }
+    .docs-toc-list {
+        .docs-toc-item {
+            grid-template-columns: 8px auto;
+            .toc-item-icon {
+                width: 8px;
+                height: 8px;
+            }
+        }
+    }
+}

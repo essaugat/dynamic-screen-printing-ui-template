@@ -981,6 +981,19 @@
   padding-bottom: 12px;
 }
 
+.pt-custom-20 {
+  padding-top: 20px;
+}
+
+.pb-custom-20 {
+  padding-bottom: 20px;
+}
+
+.py-custom-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .border-b-platinum {
   border-bottom: 1px solid #e7e7e7 !important;
 }
@@ -991,6 +1004,18 @@
 
 .border-platinum {
   border: 1px solid #e7e7e7 !important;
+}
+
+.border-r-platinum {
+  border-right: 1px solid #e7e7e7 !important;
+}
+
+.border-l-platinum {
+  border-left: 1px solid #e7e7e7 !important;
+}
+
+.lh-1_2 {
+  line-height: 1.2;
 }
 
 html {
@@ -1102,6 +1127,8 @@ table {
 .container {
   max-width: 1320px !important;
   width: 100% !important;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
 }
 
 .text-2xl, .text-xl, .text-lg, .text-base, .text-sm, .text-xs, p {
@@ -2857,7 +2884,7 @@ textarea.form-control {
 .page-sc-faq .collection-col-one .collection-item-img {
   height: 235px;
 }
-.page-sc-faq .collection-col-two .collection-item-img {
+.page-sc-faq .collection-col-two mt-4 mt-md-0 .collection-item-img {
   height: 279px;
 }
 .page-sc-faq .accordion-body {
@@ -3157,6 +3184,58 @@ textarea.form-control {
 }
 .page-sc-get-connected .get-connected-right .form-control::placeholder {
   color: #94A3B8 !important;
+}
+
+.page-sc-docs .sc-docs-grid {
+  grid-template-columns: 315px auto;
+}
+@media (max-width: 1199.98px) {
+  .page-sc-docs .sc-docs-grid {
+    grid-template-columns: 100%;
+  }
+}
+.page-sc-docs .sc-docs-grid .docs-grid-content {
+  color: #5d5d5d !important;
+}
+.page-sc-docs .sc-docs-grid .docs-grid-content p,
+.page-sc-docs .sc-docs-grid .docs-grid-content span,
+.page-sc-docs .sc-docs-grid .docs-grid-content a,
+.page-sc-docs .sc-docs-grid .docs-grid-content ul,
+.page-sc-docs .sc-docs-grid .docs-grid-content div {
+  color: #5d5d5d !important;
+}
+.page-sc-docs .sc-docs-grid .docs-grid-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 991.98px) {
+  .page-sc-docs .sc-docs-grid .docs-grid-content p {
+    font-size: 14px;
+  }
+}
+.page-sc-docs .sc-docs-grid .docs-grid-content p:last-of-type {
+  margin-bottom: 0 !important;
+}
+.page-sc-docs .sc-docs-grid .docs-grid-content h1,
+.page-sc-docs .sc-docs-grid .docs-grid-content h2,
+.page-sc-docs .sc-docs-grid .docs-grid-content h3,
+.page-sc-docs .sc-docs-grid .docs-grid-content h4,
+.page-sc-docs .sc-docs-grid .docs-grid-content h5,
+.page-sc-docs .sc-docs-grid .docs-grid-content h6 {
+  font-weight: 400;
+  color: #5d5d5d !important;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.page-sc-docs .sc-docs-grid .docs-grid-content ul {
+  list-style-type: disc;
+}
+.page-sc-docs .docs-toc-list .docs-toc-item {
+  grid-template-columns: 8px auto;
+}
+.page-sc-docs .docs-toc-list .docs-toc-item .toc-item-icon {
+  width: 8px;
+  height: 8px;
 }
 
 .sc-product-cart-grid {

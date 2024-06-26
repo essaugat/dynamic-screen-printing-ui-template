@@ -542,6 +542,16 @@
   padding-top: 12px;
   padding-bottom: 12px;
 }
+.pt-custom-20 {
+  padding-top: 20px;
+}
+.pb-custom-20 {
+  padding-bottom: 20px;
+}
+.py-custom-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 .border-b-platinum {
   border-bottom: 1px solid $platinum!important;
@@ -551,4 +561,15 @@
 }
 .border-platinum {
   border: 1px solid $platinum!important;
+}
+.border-r-platinum{
+  border-right: 1px solid $platinum!important;
+}
+.border-l-platinum{
+  border-left: 1px solid $platinum!important;
+}
+
+// LINE HEIGHTS
+.lh-1_2{
+  line-height: 1.2;
 }
