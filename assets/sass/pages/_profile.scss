@@ -15,13 +15,20 @@
     .profile-grid-menu {
         padding-right: 20px;
 
+        @include breakpoint-down(lg) {
+            max-width: 320px;
+            padding: 0;
+            border: 0 !important;
+        }
+
         .sc-heading {
             margin-bottom: 12px;
         }
     }
 
     .profile-grid-main {
-        padding: 16px;
+        padding-right: 16px;
+        padding-left: 16px;
 
         @include breakpoint-down(lg) {
             padding: 0;
@@ -58,6 +65,10 @@
                 margin-bottom: 10px;
                 display: flex;
 
+                &.active {
+                    color: $blue !important;
+                }
+
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -70,6 +81,28 @@
         .creviews-items {
             @include breakpoint-down(md) {
                 grid-template-columns: 100%;
+            }
+        }
+    }
+
+    // ADDRESS PAGE
+    .profile-address-wrapper {
+        .address-items {
+            @include breakpoint-down(md) {
+                grid-template-columns: 100%;
+            }
+
+            .address-item {
+                &-type {
+                    background: #f6f6f6;
+                    border-radius: 100vh;
+                    color: #516278;
+                    padding: 4px 12px;
+                }
+
+                &-body {
+                    grid-template-columns: 36px auto;
+                }
             }
         }
     }

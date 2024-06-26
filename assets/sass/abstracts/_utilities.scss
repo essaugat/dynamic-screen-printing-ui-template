@@ -482,6 +482,14 @@
   justify-content: center;
 }
 
+.icon-36 {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  @extend %icon-common;
+}
+
 .icon-32 {
   width: 32px;
   height: 32px;
