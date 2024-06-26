@@ -1,0 +1,52 @@
+.table-wrapper {
+  border-radius: 4px;
+  overflow-x: scroll;
+
+  table{
+    min-width: 800px;
+  }
+
+  th,
+  td {
+    color: #5d5d5d;
+    font-size: 14px;
+  }
+
+  thead {
+    th {
+      background: #f6f6f6;
+      padding: 8.5px 10px;
+      font-weight: 400;
+      border-bottom: 0;
+    }
+  }
+
+  tbody {
+    td{
+        padding: 20px 10px;
+        border-bottom: 1px solid $seasalt;
+    }
+
+    .tbl-product-info {
+        min-width: 450px;
+        width: 450px;
+        grid-template-columns: 80px auto;
+
+        .tbl-product-img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .tbl-product-qty{
+        border: 1px solid #E7E7E7;
+
+        button{
+            img{
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+  }
+}

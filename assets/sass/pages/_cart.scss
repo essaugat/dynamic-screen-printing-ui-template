@@ -1,0 +1,22 @@
+.sc-product-cart-grid{
+    grid-template-columns: 66% auto;
+
+    @include breakpoint-down(lg){
+        grid-template-columns: 100%;
+    }
+
+    .product-cart-list{
+        border-right: 1px solid #E7E7E7;
+        padding-right: 20px;
+    }
+}
+
+.product-cart-summary {
+  .cart-summary-block {
+    border-top: 1px solid #e7e7e7;
+
+    &:first-of-type {
+      border-top: 0;
+    }
+  }
+}

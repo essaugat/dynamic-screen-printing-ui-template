@@ -14,10 +14,12 @@
         'components/rating',
         'components/tabs',
         'components/product',
+        'components/table',
         'components/sidebar';
 @import 'layout/header',
         'layout/navbar',
         'layout/footer';
 @import "pages/index", 
         "pages/product",
-        "pages/forms";
+        "pages/forms",
+        "pages/cart";
