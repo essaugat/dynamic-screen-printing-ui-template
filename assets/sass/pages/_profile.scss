@@ -93,6 +93,7 @@
             }
 
             .address-item {
+                cursor: pointer;
                 &-type {
                     background: #f6f6f6;
                     border-radius: 100vh;
@@ -102,6 +103,28 @@
 
                 &-body {
                     grid-template-columns: 36px auto;
+                }
+
+                &:hover {
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
+                    background: #F0F7FF;
+
+                    .address-item{
+                        &-name {
+                            color: #2975e7;
+                        }
+                        &-type {
+                            background: #dcedfd;
+                            color: #2975e7;
+                        }
+                        &-foot{
+                            button, a{
+                                background: #dcedfd!important;
+                                color: #2975e7!important;
+                                border-color: #dcedfd!important;
+                            }
+                        }
+                    }
                 }
             }
         }

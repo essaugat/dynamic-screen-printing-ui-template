@@ -88,3 +88,18 @@
         }
     }
 }
+
+
+.address-add-update-modal{
+    .modal-dialog{
+        @include breakpoint-down(lg){
+            --bs-modal-width: 90%!important;
+        }
+    }
+    .modal-content {
+        padding: 40px;
+        max-width: 874px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
