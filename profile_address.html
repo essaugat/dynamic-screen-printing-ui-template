@@ -1203,7 +1203,7 @@
       aria-labelledby="addressAddUpdateModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
           <div
             class="modal-header d-flex align-items-center justify-content-between"
@@ -1236,21 +1236,29 @@
           </div>
           <div class="modal-body">
             <div class="form-custom d-grid gap-5">
-                <div class="form-elem">
-                    <label for="" class="form-label">Location name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name=""
-                      id=""
-                      placeholder="Amoeba Office"
-                    />
-                  </div>
+              <div class="form-elem">
+                <label for="" class="form-label text-battleship-gray text-sm"
+                  >Location name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id=""
+                  placeholder="Amoeba Office"
+                />
+              </div>
               <div class="form-custom-block">
-                <h4 class="form-elem-ttl font-normal">Contact details</h4>
+                <h4 class="form-elem-ttl font-normal text-davy-gray">
+                  Contact details
+                </h4>
                 <div class="form-elem-group gap-5 d-grid grid-cols-2 gap-5">
                   <div class="form-elem">
-                    <label for="" class="form-label">Full name</label>
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Full name</label
+                    >
                     <input
                       type="text"
                       class="form-control"
@@ -1260,7 +1268,11 @@
                     />
                   </div>
                   <div class="form-elem">
-                    <label for="" class="form-label">Adderss</label>
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Address</label
+                    >
                     <input
                       type="text"
                       class="form-control"
@@ -1270,7 +1282,11 @@
                     />
                   </div>
                   <div class="form-elem">
-                    <label for="" class="form-label">Contact</label>
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Contact</label
+                    >
                     <input
                       type="text"
                       class="form-control"
@@ -1279,145 +1295,73 @@
                       placeholder="XXX XXXXXXXXXX"
                     />
                   </div>
-                  
                 </div>
               </div>
 
               <div class="form-custom-block">
-                <h4 class="form-elem-ttl font-normal">Address details</h4>
+                <h4 class="form-elem-ttl font-normal text-davy-gray">
+                  Address details
+                </h4>
                 <div class="form-elem-group gap-5 d-grid grid-cols-2 gap-5">
                   <div class="form-elem">
-                    <label for="" class="form-label">Province</label>
-                    <select class="form-select" name="" id="">
-                        <option value="">Select province</option>
-                        <option value="">Bagmati</option>
-                        <option value="">Gandaki</option>
-                    </select>
-                  </div>
-                  <div class="form-elem">
-                    <label for="" class="form-label">Select city</label>
-                    <select class="form-select" name="" id="">
-                        <option value="">Select province</option>
-                        <option value="">Kathmandu</option>
-                        <option value="">Illam</option>
-                    </select>
-                  </div>
-                  <div class="form-elem">
-                    <label for="" class="form-label">Province</label>
-                    <select class="form-select" name="" id="">
-                        <option value="">Select province</option>
-                        <option value="">Bagmati</option>
-                        <option value="">Gandaki</option>
-                    </select>
-                  </div>
-                  <div class="form-elem">
-                    <label for="" class="form-label">Area</label>
-                    <select class="form-select" name="" id="">
-                        <option value="">Select area</option>
-                        <option value="">Koteshwor</option>
-                        <option value="">Chhapthok</option>
-                    </select>
-                  </div>
-                  <div class="form-elem">
-                    <label for="" class="form-label">Landmark</label>
-                    <select class="form-select" name="" id="">
-                        <option value="">Choose landmark</option>
-                        <option value="">City Mall</option>
-                        <option value="">Big Mall</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-custom-block">
-                <h4 class="form-elem-ttl font-normal">Billing information</h4>
-                <div class="form-elem">
-                  <div class="d-flex align-content-center flex-wrap gap-5">
-                    <div class="checkbox-option">
-                      <input
-                        name="delivery-option"
-                        type="radio"
-                        class="checkbox-option-input"
-                      />
-                      <span class="checkbox-option-text text-sm text-davy-gray"
-                        >Delivery</span
-                      >
-                    </div>
-                    <div class="checkbox-option">
-                      <input
-                        name="delivery-option"
-                        type="radio"
-                        class="checkbox-option-input"
-                      />
-                      <span class="checkbox-option-text text-sm text-davy-gray"
-                        >Pick up</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-custom-block">
-                <h4 class="form-elem-ttl font-normal">Billing information</h4>
-                <div
-                  class="form-elem form-check-elem d-flex align-items-center gap-x-3"
-                >
-                  <input
-                    class="form-check-input mt-0"
-                    type="checkbox"
-                    value=""
-                    id=""
-                    name=""
-                  />
-                  <label class="form-check-label form-label text-sm" for=""
-                    >Same as billing address
-                  </label>
-                </div>
-              </div>
-
-              <div class="form-custom-block">
-                <div class="form-elem-group gap-5 d-grid grid-cols-2 gap-5">
-                  <div class="form-elem">
-                    <label for="" class="form-label">State</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name=""
-                      id=""
-                      placeholder="Ex: State 1"
-                    />
-                  </div>
-                  <div class="form-elem">
-                    <label for="" class="form-label">City</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name=""
-                      id=""
-                      placeholder="Ex: City"
-                    />
-                  </div>
-                  <div class="form-elem">
-                    <label for="" class="form-label">Street address</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name=""
-                      id=""
-                      placeholder="Ex: street address"
-                    />
-                  </div>
-                  <div class="form-elem">
-                    <label for="" class="form-label"
-                      >Company name (Optional)</label
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Province</label
                     >
-                    <input
-                      type="text"
-                      class="form-control"
-                      name=""
-                      id=""
-                      placeholder="Ex: Dynamic Printing"
-                    />
+                    <select class="form-select" name="" id="">
+                      <option value="">Select province</option>
+                      <option value="">Bagmati</option>
+                      <option value="">Gandaki</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Select city</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Select province</option>
+                      <option value="">Kathmandu</option>
+                      <option value="">Illam</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Province</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Select province</option>
+                      <option value="">Bagmati</option>
+                      <option value="">Gandaki</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Area</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Select area</option>
+                      <option value="">Koteshwor</option>
+                      <option value="">Chhapthok</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Landmark</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Choose landmark</option>
+                      <option value="">City Mall</option>
+                      <option value="">Big Mall</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -1426,12 +1370,14 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-transparent btn-sm text-sm"
               data-bs-dismiss="modal"
             >
-              Close
+              <span class="text-bittersweet">Cancel</span>
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary btn-sm text-sm">
+              Update
+            </button>
           </div>
         </div>
       </div>

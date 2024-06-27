@@ -2,7 +2,7 @@
   border-radius: 4px;
   overflow-x: scroll;
 
-  table{
+  table {
     min-width: 800px;
   }
 
@@ -18,35 +18,58 @@
       padding: 8.5px 10px;
       font-weight: 400;
       border-bottom: 0;
+      text-align: center;
     }
   }
 
   tbody {
-    td{
-        padding: 20px 10px;
-        border-bottom: 1px solid $seasalt;
+    td {
+      padding: 20px 10px;
+      border-bottom: 1px solid $seasalt;
+      vertical-align: middle;
+      text-align: center;
     }
 
     .tbl-product-info {
-        min-width: 450px;
-        width: 450px;
-        grid-template-columns: 80px auto;
+      min-width: 450px;
+      width: 450px;
+      grid-template-columns: 80px auto;
 
-        .tbl-product-img{
-            width: 80px;
-            height: 80px;
-        }
+      .tbl-product-img {
+        width: 80px;
+        height: 80px;
+      }
     }
 
-    .tbl-product-qty{
-        border: 1px solid #E7E7E7;
+    .tbl-product-qty {
+      border: 1px solid #e7e7e7;
 
-        button{
-            img{
-                width: 12px;
-                height: 12px;
-            }
+      button {
+        img {
+          width: 12px;
+          height: 12px;
         }
+      }
+    }
+
+    .tbl-status-badge {
+      border-radius: 100vh;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      padding: 2px 12px;
+
+      &.status-completed {
+        color: $theme;
+        background: #EFF7FF;
+      }
+    }
+
+    .order-detail-btn{
+      &:hover{
+        color: $blue!important;
+      }
     }
   }
 }

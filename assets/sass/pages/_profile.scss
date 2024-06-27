@@ -1,132 +1,155 @@
 .page-sc-profile {
-    .sc-profile-grid {
-        grid-template-columns: 345px auto;
+  .sc-profile-grid {
+    grid-template-columns: 345px auto;
 
-        @include breakpoint-down(xl) {
-            grid-template-columns: 300px auto;
-        }
-
-        @include breakpoint-down(lg) {
-            grid-template-columns: 100%;
-            row-gap: 40px;
-        }
+    @include breakpoint-down(xl) {
+      grid-template-columns: 300px auto;
     }
 
-    .profile-grid-menu {
-        padding-right: 20px;
+    @include breakpoint-down(lg) {
+      grid-template-columns: 100%;
+      row-gap: 40px;
+    }
+  }
 
-        @include breakpoint-down(lg) {
-            max-width: 320px;
-            padding: 0;
-            border: 0 !important;
-        }
+  .profile-grid-menu {
+    padding-right: 20px;
 
-        .sc-heading {
-            margin-bottom: 12px;
-        }
+    @include breakpoint-down(lg) {
+      max-width: 320px;
+      padding: 0;
+      border: 0 !important;
     }
 
-    .profile-grid-main {
-        padding-right: 16px;
-        padding-left: 16px;
+    .sc-heading {
+      margin-bottom: 12px;
+    }
+  }
 
-        @include breakpoint-down(lg) {
-            padding: 0;
+  .profile-grid-main {
+    padding-right: 16px;
+    padding-left: 16px;
+
+    @include breakpoint-down(lg) {
+      padding: 0;
+    }
+  }
+
+  .profile-menu-list {
+    .profile-menu-item {
+      border: 1px solid $platinum;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: $default-transition;
+
+      &.active,
+      &:hover {
+        background: $alice-blue;
+        border-color: $alice-blue;
+
+        .profile-menu-item-text {
+          color: $blue !important;
         }
+      }
     }
 
-    .profile-menu-list {
-        .profile-menu-item {
-            border: 1px solid $platinum;
-            padding: 9px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: $default-transition;
+    .profile-menu-sublist {
+      margin-top: 16px;
 
-            &.active,
-            &:hover {
-                background: $alice-blue;
-                border-color: $alice-blue;
+      .profile-menu-subitem {
+        font-size: 14px;
+        color: $battleship-gray;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-bottom: 10px;
+        display: flex;
 
-                .profile-menu-item-text {
-                    color: $blue !important;
-                }
+        &.active {
+          color: $blue !important;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // REVIEWS PAGE
+  .profile-review-wrapper {
+    .creviews-items {
+      @include breakpoint-down(md) {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+
+  // ADDRESS PAGE
+  .profile-address-wrapper {
+    .address-items {
+      @include breakpoint-down(md) {
+        grid-template-columns: 100%;
+      }
+    }
+
+    .address-item {
+      cursor: pointer;
+      &-type {
+        background: #f6f6f6;
+        border-radius: 100vh;
+        color: #516278;
+        padding: 4px 12px;
+      }
+
+      &-body {
+        grid-template-columns: 36px auto;
+      }
+
+      &:hover {
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
+        background: #f0f7ff;
+
+        .address-item {
+          &-name {
+            color: #2975e7;
+          }
+          &-type {
+            background: #dcedfd;
+            color: #2975e7;
+          }
+          &-foot {
+            button,
+            a {
+              background: #dcedfd !important;
+              color: #2975e7 !important;
+              border-color: #dcedfd !important;
             }
+          }
         }
-
-        .profile-menu-sublist {
-            margin-top: 16px;
-
-            .profile-menu-subitem {
-                font-size: 14px;
-                color: $battleship-gray;
-                padding-top: 2px;
-                padding-bottom: 2px;
-                margin-bottom: 10px;
-                display: flex;
-
-                &.active {
-                    color: $blue !important;
-                }
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
+      }
     }
+  }
 
-    // REVIEWS PAGE
-    .profile-review-wrapper {
-        .creviews-items {
-            @include breakpoint-down(md) {
-                grid-template-columns: 100%;
-            }
-        }
+  // FAVROURITES PAGE
+  .profile-favourites-wrapper {
+    .product-grid-list {
+      grid-template-columns: repeat(3, 1fr);
+
+      @include breakpoint-down(xl) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include breakpoint-down(sm) {
+        grid-template-columns: 100%;
+      }
     }
+  }
 
-    // ADDRESS PAGE
-    .profile-address-wrapper {
-        .address-items {
-            @include breakpoint-down(md) {
-                grid-template-columns: 100%;
-            }
-
-            .address-item {
-                cursor: pointer;
-                &-type {
-                    background: #f6f6f6;
-                    border-radius: 100vh;
-                    color: #516278;
-                    padding: 4px 12px;
-                }
-
-                &-body {
-                    grid-template-columns: 36px auto;
-                }
-
-                &:hover {
-                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.05);
-                    background: #F0F7FF;
-
-                    .address-item{
-                        &-name {
-                            color: #2975e7;
-                        }
-                        &-type {
-                            background: #dcedfd;
-                            color: #2975e7;
-                        }
-                        &-foot{
-                            button, a{
-                                background: #dcedfd!important;
-                                color: #2975e7!important;
-                                border-color: #dcedfd!important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  //   ORDER HISTORY PAGE
+  .profile-order-history-wrapper {
+    .tbl-product-info{
+        min-width: 360px;
+        width: 360px;
     }
+  }
 }

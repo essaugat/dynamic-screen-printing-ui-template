@@ -30,9 +30,9 @@
 }
 
 .order-success-modal {
-    .modal-dialog{
-        @include breakpoint-down(lg){
-            --bs-modal-width: 90%!important;
+    .modal-dialog {
+        @include breakpoint-down(lg) {
+            --bs-modal-width: 90% !important;
         }
     }
     .modal-content {
@@ -41,16 +41,16 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .modal-btn-group{
+    .modal-btn-group {
         margin-top: 20px;
     }
-    .modal-footer{
+    .modal-footer {
         margin-top: 20px;
     }
     .product-order-success {
         grid-template-columns: 53% auto;
 
-        @include breakpoint-down(lg){
+        @include breakpoint-down(lg) {
             grid-template-columns: 100%;
         }
 
@@ -89,11 +89,29 @@
     }
 }
 
+.address-add-update-modal {
+    .modal-dialog {
+        @include breakpoint-down(lg) {
+            --bs-modal-width: 90% !important;
+        }
+    }
+    .modal-body {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-right: 8px;
+        padding-left: 8px;
 
-.address-add-update-modal{
-    .modal-dialog{
-        @include breakpoint-down(lg){
-            --bs-modal-width: 90%!important;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: $timberwolf;
         }
     }
     .modal-content {
@@ -101,5 +119,15 @@
         max-width: 874px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .form-custom {
+        .form-elem {
+            .form-control {
+                &::placeholder {
+                    color: $battleship-gray !important;
+                }
+            }
+        }
     }
 }
