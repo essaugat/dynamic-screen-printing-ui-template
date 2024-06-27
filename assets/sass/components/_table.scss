@@ -52,23 +52,9 @@
       }
     }
 
-    .tbl-status-badge {
-      border-radius: 100vh;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 28px;
-      padding: 2px 12px;
-
-      &.status-completed {
-        color: $theme;
-        background: #EFF7FF;
-      }
-    }
-
-    .order-detail-btn{
-      &:hover{
-        color: $blue!important;
+    .order-detail-btn {
+      &:hover {
+        color: $blue !important;
       }
     }
   }

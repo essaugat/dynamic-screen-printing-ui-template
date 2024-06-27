@@ -79,6 +79,15 @@ textarea {
   display: flex;
 }
 
+.form-elem-wrapper{
+  .form-elem-icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 .page-form {
   &-grid {
     grid-template-columns: repeat(2, 1fr);

@@ -896,7 +896,7 @@
                   type="button"
                   class="btn btn-alice-blue btn-sm text-sm"
                   data-bs-toggle="modal"
-                  data-bs-target="#addressAddUpdateModal"
+                  data-bs-target="#addressAddModal"
                 >
                   Add new address
                 </button>
@@ -904,7 +904,7 @@
               <div class="profile-address-wrapper">
                 <div class="address-items d-grid gap-5 grid-cols-2">
                   <div
-                    class="address-item rounded-8 border-platinum p-3 d-grid gap-y-4"
+                    class="address-item hover-enabled rounded-8 border-platinum p-3 d-grid gap-y-4"
                   >
                     <div
                       class="address-item-head d-flex align-items-center justify-content-between flex-wrap gap-3"
@@ -936,13 +936,15 @@
                       <button
                         type="button"
                         class="btn btn-sm-h btn-seasalt w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addressUpdateModal"
                       >
                         Update
                       </button>
                     </div>
                   </div>
                   <div
-                    class="address-item rounded-8 border-platinum px-3 d-grid gap-y-4"
+                    class="address-item hover-enabled rounded-8 border-platinum px-3 d-grid gap-y-4"
                   >
                     <div
                       class="address-item-head d-flex align-items-center justify-content-between flex-wrap gap-3"
@@ -969,6 +971,8 @@
                       <button
                         type="button"
                         class="btn btn-sm-h btn-seasalt w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addressUpdateModal"
                       >
                         Update
                       </button>
@@ -1198,9 +1202,9 @@
     <!-- ADDRESS MODAL -->
     <div
       class="modal fade modal-customized address-add-update-modal"
-      id="addressAddUpdateModal"
+      id="addressUpdateModal"
       tabindex="-1"
-      aria-labelledby="addressAddUpdateModalLabel"
+      aria-labelledby="addressUpdateModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-scrollable modal-xl">
@@ -1208,7 +1212,7 @@
           <div
             class="modal-header d-flex align-items-center justify-content-between"
           >
-            <h1 class="modal-title fs-5" id="addressAddUpdateModalLabel">
+            <h1 class="modal-title fs-5" id="addressUpdateModalLabel">
               Update address
             </h1>
             <div class="d-flex align-items-center gap-x-5">
@@ -1245,7 +1249,8 @@
                   class="form-control"
                   name=""
                   id=""
-                  placeholder="Amoeba Office"
+                  value="Amoeba Office"
+                  placeholder=""
                 />
               </div>
               <div class="form-custom-block">
@@ -1264,7 +1269,8 @@
                       class="form-control"
                       name=""
                       id=""
-                      placeholder="John"
+                      value="John"
+                      placeholder=""
                     />
                   </div>
                   <div class="form-elem">
@@ -1273,13 +1279,21 @@
                       class="form-label text-battleship-gray text-sm"
                       >Address</label
                     >
-                    <input
-                      type="text"
-                      class="form-control"
-                      name=""
-                      id=""
-                      placeholder="Choose on map"
-                    />
+                    <div class="form-elem-wrapper position-relative">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name=""
+                        id=""
+                        placeholder="Choose on map"
+                      />
+                      <button
+                        type="button"
+                        class="icon-20 position-absolute form-elem-icon"
+                      >
+                        <img src="assets/icons/location_dark.svg" alt="" />
+                      </button>
+                    </div>
                   </div>
                   <div class="form-elem">
                     <label
@@ -1292,7 +1306,203 @@
                       class="form-control"
                       name=""
                       id=""
-                      placeholder="XXX XXXXXXXXXX"
+                      value="XXX XXXXXXXXXX"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-custom-block">
+                <h4 class="form-elem-ttl font-normal text-davy-gray">
+                  Address details
+                </h4>
+                <div class="form-elem-group gap-5 d-grid grid-cols-2 gap-5">
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Province</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Select province</option>
+                      <option value="" selected>Bagmati</option>
+                      <option value="">Gandaki</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Select city</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Select province</option>
+                      <option value="">Kathmandu</option>
+                      <option value="" selected>Illam</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Province</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Select province</option>
+                      <option value="">Bagmati</option>
+                      <option value="" selected>Gandaki</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Area</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Select area</option>
+                      <option value="">Koteshwor</option>
+                      <option value="" selected>Chhapthok</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Landmark</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Choose landmark</option>
+                      <option value="" selected>City Mall</option>
+                      <option value="">Big Mall</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-transparent btn-sm text-sm"
+              data-bs-dismiss="modal"
+            >
+              <span class="text-bittersweet">Cancel</span>
+            </button>
+            <button type="button" class="btn btn-primary btn-sm text-sm">
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade modal-customized address-add-update-modal"
+      id="addressAddModal"
+      tabindex="-1"
+      aria-labelledby="addressAddModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div
+            class="modal-header d-flex align-items-center justify-content-between"
+          >
+            <h1 class="modal-title fs-5" id="addressAddModalLabel">
+              Add Location
+            </h1>
+            <div class="d-flex align-items-center gap-x-5">
+              <div
+                class="form-check form-switch d-flex align-items-center gap-x-4"
+              >
+                <label
+                  class="form-check-label text-xs text-davy-gray"
+                  for="addressDefaultSwitch"
+                  >Set as default</label
+                >
+                <label class="custom-switch">
+                  <input class="custom-switch-input" type="checkbox" /><span
+                    class="custom-switch-trigger wrapper"
+                  ></span>
+                </label>
+              </div>
+              <button
+                type="button"
+                class="btn-close m-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="form-custom d-grid gap-5">
+              <div class="form-elem">
+                <label for="" class="form-label text-battleship-gray text-sm"
+                  >Location name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id=""
+                  placeholder="Enter"
+                />
+              </div>
+              <div class="form-custom-block">
+                <h4 class="form-elem-ttl font-normal text-davy-gray">
+                  Contact details
+                </h4>
+                <div class="form-elem-group gap-5 d-grid grid-cols-2 gap-5">
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Full name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id=""
+                      placeholder="Enter"
+                    />
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Address</label
+                    >
+                    <div class="form-elem-wrapper position-relative">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name=""
+                        id=""
+                        placeholder="Choose on map"
+                      />
+                      <button
+                        type="button"
+                        class="icon-20 position-absolute form-elem-icon"
+                      >
+                        <img src="assets/icons/location_dark.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Contact</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id=""
+                      placeholder="Enter"
                     />
                   </div>
                 </div>

@@ -561,27 +561,64 @@
   padding-bottom: 20px;
 }
 
-.ms-custom-12{
-  margin-left: 12px!important;
+.ms-custom-12 {
+  margin-left: 12px !important;
+}
+.me-custom-12 {
+  margin-right: 12px;
+}
+.mt-custom-12 {
+  margin-top: 12px;
+}
+.mb-custom-12 {
+  margin-bottom: 12px;
+}
+.my-custom-12 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.mt-custom-20 {
+  margin-top: 20px;
+}
+.mb-custom-20 {
+  margin-bottom: 20px;
+}
+.my-custom-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .border-b-platinum {
-  border-bottom: 1px solid $platinum!important;
+  border-bottom: 1px solid $platinum !important;
 }
 .border-t-platinum {
-  border-top: 1px solid $platinum!important;
+  border-top: 1px solid $platinum !important;
 }
 .border-platinum {
-  border: 1px solid $platinum!important;
+  border: 1px solid $platinum !important;
 }
-.border-r-platinum{
-  border-right: 1px solid $platinum!important;
+.border-r-platinum {
+  border-right: 1px solid $platinum !important;
 }
-.border-l-platinum{
-  border-left: 1px solid $platinum!important;
+.border-l-platinum {
+  border-left: 1px solid $platinum !important;
 }
 
 // LINE HEIGHTS
-.lh-1_2{
+.lh-1_2 {
   line-height: 1.2;
+}
+
+.status-badge {
+  border-radius: 100vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 2px 12px;
+
+  &.status-completed {
+    color: $theme;
+    background: #eff7ff;
+  }
 }
