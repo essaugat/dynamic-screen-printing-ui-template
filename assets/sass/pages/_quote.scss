@@ -1,0 +1,10 @@
+.page-sc-quote{
+    .sc-quote-grid{
+        grid-template-columns: 205px auto;
+        .quote-grid{
+            &-left{
+                padding-right: 20px;
+            }
+        }
+    }
+}

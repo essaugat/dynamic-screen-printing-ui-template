@@ -3793,6 +3793,13 @@ textarea.form-control {
   color: #5d5d5d !important;
 }
 
+.page-sc-quote .sc-quote-grid {
+  grid-template-columns: 205px auto;
+}
+.page-sc-quote .sc-quote-grid .quote-grid-left {
+  padding-right: 20px;
+}
+
 .sc-product-cart-grid {
   grid-template-columns: 66% auto;
 }
