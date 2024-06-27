@@ -1093,6 +1093,28 @@
   background: #eff7ff;
 }
 
+.badge {
+  border-radius: 100vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 10px;
+  font-weight: 400;
+}
+.badge.badge-alice-blue {
+  background: #eff7ff;
+  color: #2975e7;
+}
+
+.vert-separator-line {
+  width: 1px;
+  background: #d1d1d1;
+}
+.vert-separator-line.height-12 {
+  height: 12px;
+}
+
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2156,6 +2178,12 @@ textarea.form-control {
 }
 .page-breadcrumb .breadcrumb {
   column-gap: 8px;
+}
+.page-breadcrumb .breadcrumb-ttl {
+  color: #fff !important;
+}
+.page-breadcrumb .breadcrumb-ttl + nav {
+  margin-top: 24px !important;
 }
 .page-breadcrumb .breadcrumb-item {
   display: inline-flex;
@@ -3714,6 +3742,55 @@ textarea.form-control {
   .blog-grid-list.grid-cols-3 {
     grid-template-columns: 100%;
   }
+}
+
+.page-sc-blog-details .blog-details-head {
+  max-width: 648px;
+}
+.page-sc-blog-details .blog-details-body .blog-details-main {
+  grid-template-columns: 312px auto;
+}
+@media (max-width: 991.98px) {
+  .page-sc-blog-details .blog-details-body .blog-details-main {
+    grid-template-columns: 100%;
+  }
+}
+.page-sc-blog-details .blog-details-body .blog-details-overview {
+  padding: 12px 20px;
+  background: #f6f6f6;
+}
+.page-sc-blog-details .blog-details-body .blog-overview-list {
+  list-style-type: disc !important;
+  margin-left: 24px;
+}
+.page-sc-blog-details .blog-details-img {
+  height: 516px;
+}
+@media (max-width: 991.98px) {
+  .page-sc-blog-details .blog-details-img {
+    height: 420px;
+  }
+}
+.page-sc-blog-details .content-stylings p,
+.page-sc-blog-details .content-stylings ul,
+.page-sc-blog-details .content-stylings a {
+  color: #5d5d5d !important;
+}
+.page-sc-blog-details .content-stylings ul {
+  list-style-type: disc;
+  padding-left: 26px;
+}
+.page-sc-blog-details .content-stylings ul li {
+  margin-bottom: 10px;
+}
+.page-sc-blog-details .content-stylings h1,
+.page-sc-blog-details .content-stylings h2,
+.page-sc-blog-details .content-stylings h3,
+.page-sc-blog-details .content-stylings h4,
+.page-sc-blog-details .content-stylings h5,
+.page-sc-blog-details .content-stylings h6 {
+  margin-bottom: 12px;
+  color: #5d5d5d !important;
 }
 
 .sc-product-cart-grid {

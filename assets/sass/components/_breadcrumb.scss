@@ -17,6 +17,14 @@
     .breadcrumb {
         column-gap: 8px;
 
+        &-ttl{
+            color: $white!important;
+
+            & + nav{
+                margin-top: 24px!important;
+            }
+        }
+
         &-item {
             display: inline-flex;
             align-items: center;

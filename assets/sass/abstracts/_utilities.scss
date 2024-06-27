@@ -630,6 +630,30 @@
 
   &.status-completed {
     color: $theme;
-    background: #eff7ff;
+    background: $alice-blue;
+  }
+}
+
+.badge {
+  border-radius: 100vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 10px;
+  font-weight: 400;
+
+  &.badge-alice-blue {
+    background: $alice-blue;
+    color: #2975e7;
+  }
+}
+
+.vert-separator-line {
+  width: 1px;
+  background: #d1d1d1;
+
+  &.height-12 {
+    height: 12px;
   }
 }
