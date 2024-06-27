@@ -108,11 +108,76 @@
     }
   }
 
-  //   ORDER HISTORY PAGE
+  // ORDER HISTORY PAGE
   .profile-order-history-wrapper {
     .tbl-product-info {
       min-width: 360px;
       width: 360px;
+    }
+  }
+
+  // SHIP TRACKING
+  .profile-track-shipping {
+    .track-shipping-form {
+      .input-group {
+        @include breakpoint-down(sm) {
+          flex-direction: column;
+        }
+
+        .form-control {
+          height: 50px !important;
+          @include breakpoint-down(sm) {
+            width: 100%;
+          }
+        }
+        .btn {
+          height: 50px !important;
+        }
+      }
+    }
+
+    .track-shipping-billing {
+      .track-billing-address {
+        .track-address-list {
+          li {
+            grid-template-columns: 124px auto;
+          }
+        }
+      }
+    }
+
+    .track-billing-order {
+      grid-template-columns: 120px auto;
+      margin-left: 20px;
+
+      @include breakpoint-down(sm) {
+        margin-left: 0;
+      }
+
+      .order-details-img {
+        width: 120px;
+        height: 106px;
+      }
+    }
+
+    .track-billing-summary {
+      max-width: 360px;
+      padding: 12px 20px;
+      margin-left: 20px;
+
+      @include breakpoint-down(sm) {
+        margin-left: 0;
+      }
+
+      .form-elem {
+        &.promo-code {
+          .form-control {
+            background: #e7e7e7 !important;
+            border-radius: 0 !important;
+            border-color: #e7e7e7 !important;
+          }
+        }
+      }
     }
   }
 }

@@ -3496,6 +3496,53 @@ textarea.form-control {
   min-width: 360px;
   width: 360px;
 }
+@media (max-width: 575.98px) {
+  .page-sc-profile .profile-track-shipping .track-shipping-form .input-group {
+    flex-direction: column;
+  }
+}
+.page-sc-profile .profile-track-shipping .track-shipping-form .input-group .form-control {
+  height: 50px !important;
+}
+@media (max-width: 575.98px) {
+  .page-sc-profile .profile-track-shipping .track-shipping-form .input-group .form-control {
+    width: 100%;
+  }
+}
+.page-sc-profile .profile-track-shipping .track-shipping-form .input-group .btn {
+  height: 50px !important;
+}
+.page-sc-profile .profile-track-shipping .track-shipping-billing .track-billing-address .track-address-list li {
+  grid-template-columns: 124px auto;
+}
+.page-sc-profile .profile-track-shipping .track-billing-order {
+  grid-template-columns: 120px auto;
+  margin-left: 20px;
+}
+@media (max-width: 575.98px) {
+  .page-sc-profile .profile-track-shipping .track-billing-order {
+    margin-left: 0;
+  }
+}
+.page-sc-profile .profile-track-shipping .track-billing-order .order-details-img {
+  width: 120px;
+  height: 106px;
+}
+.page-sc-profile .profile-track-shipping .track-billing-summary {
+  max-width: 360px;
+  padding: 12px 20px;
+  margin-left: 20px;
+}
+@media (max-width: 575.98px) {
+  .page-sc-profile .profile-track-shipping .track-billing-summary {
+    margin-left: 0;
+  }
+}
+.page-sc-profile .profile-track-shipping .track-billing-summary .form-elem.promo-code .form-control {
+  background: #e7e7e7 !important;
+  border-radius: 0 !important;
+  border-color: #e7e7e7 !important;
+}
 
 .address-item {
   cursor: pointer;
