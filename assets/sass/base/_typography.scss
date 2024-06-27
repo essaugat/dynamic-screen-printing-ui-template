@@ -40,6 +40,30 @@ $text-2xl-sizes: (
   sm: "lg"
 );
 
+$text-3xl-sizes: (
+  null: "3xl",
+  lg: "2xl",
+  sm: "xl"
+);
+
+$text-4xl-sizes: (
+  null: "4xl",
+  lg: "3xl",
+  sm: "2xl"
+);
+
+$text-5xl-sizes: (
+  null: "5xl",
+  lg: "4xl",
+  sm: "3xl"
+);
+
+$text-6xl-sizes: (
+  null: "6xl",
+  lg: "5xl",
+  sm: "4xl"
+);
+
 /* ### PARAGRAPH ### */
 @mixin make-text-font-sizes($fs-map, $fs-breakpoints: $breakpoints-down) {
   @extend %text;
@@ -76,6 +100,18 @@ $text-2xl-sizes: (
 }
 .text-2xl {
   @include make-text-font-sizes($text-2xl-sizes);
+}
+.text-3xl {
+  @include make-text-font-sizes($text-3xl-sizes);
+}
+.text-4xl {
+  @include make-text-font-sizes($text-4xl-sizes);
+}
+.text-5xl {
+  @include make-text-font-sizes($text-5xl-sizes);
+}
+.text-6xl {
+  @include make-text-font-sizes($text-6xl-sizes);
 }
 
 /* #### HEADINGS #### */

@@ -61,6 +61,39 @@ $(document).ready(function () {
     ],
   });
 
+  $(".blog-list-slider").slick({
+    dots: false,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow:
+      "<img class='slick-slider-btn slick-prev' src='../../assets/icons/arrow_left_black.svg'>",
+    nextArrow:
+      "<img class='slick-slider-btn slick-next' src='../../assets/icons/arrow_right_black.svg'>",
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   // init Isotope
   var $grid = $(".hero-explore-tab-items").isotope({
     filter: ".hero-explore-1",

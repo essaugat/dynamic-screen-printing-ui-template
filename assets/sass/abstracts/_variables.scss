@@ -3,7 +3,7 @@ $white: #fff;
 $black: #000;
 
 // Base colors
-$blue: #2975E7;
+$blue: #2975e7;
 $delft-blue: #1d3363;
 $uranian-blue: #c0e0fd;
 $theme: #1d3363;
@@ -39,7 +39,7 @@ $mint: #49b38d;
 $seagreen: #008656;
 
 $colors: (
-  blue: #2975E7,
+  blue: #2975e7,
   white: #fff,
   black: #000,
   delft-blue: #1d3363,
@@ -93,9 +93,10 @@ $font-sizes: (
   "lg": 18px,
   "xl": 20px,
   "2xl": 24px,
-  "3xl": 32px,
-  "4xl": 36px,
-  "5xl": 40px,
+  "3xl": 28px,
+  "4xl": 32px,
+  "5xl": 36px,
+  "6xl": 40px
 );
 
 // FONT WEIGHTS
@@ -108,7 +109,7 @@ $font-weights: (
   "semibold": 600,
   "bold": 700,
   "extrabold": 800,
-  "black": 900,
+  "black": 900
 );
 
 // MEDIA BREAK POINTS
@@ -118,7 +119,7 @@ $breakpoints-up: (
   "md": "768px",
   "lg": "992px",
   "xl": "1200px",
-  "xxl": "1400px",
+  "xxl": "1400px"
 );
 
 $breakpoints-down: (
@@ -128,7 +129,7 @@ $breakpoints-down: (
   "lg": "991.98px",
   "xl": "1199.98px",
   "xxl": "1399.98px",
-  "xxxl": "1499.98px",
+  "xxxl": "1499.98px"
 );
 
 // BASE FONT
