@@ -3796,8 +3796,41 @@ textarea.form-control {
 .page-sc-quote .sc-quote-grid {
   grid-template-columns: 205px auto;
 }
+@media (max-width: 1199.98px) {
+  .page-sc-quote .sc-quote-grid {
+    grid-template-columns: 100%;
+  }
+}
 .page-sc-quote .sc-quote-grid .quote-grid-left {
   padding-right: 20px;
+}
+@media (max-width: 1199.98px) {
+  .page-sc-quote .sc-quote-grid .quote-grid-left {
+    padding-right: 0;
+    border-right: 0 !important;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+}
+@media (max-width: 1199.98px) {
+  .page-sc-quote .sc-quote-grid .quote-grid-left .quote-info-items {
+    display: flex !important;
+    column-gap: 40px;
+    row-gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+.page-sc-quote .sc-quote-grid .quote-grid-left .quote-info-items .quote-info-item-bottom {
+  display: flex;
+  gap: 8px;
+}
+@media (max-width: 767.98px) {
+  .page-sc-quote .sc-quote-grid .quote-form-block .form-custom-block .form-elem-group {
+    grid-template-columns: 100% !important;
+  }
+}
+.page-sc-quote .sc-quote-grid .quote-form-block .form-elem .form-control::placeholder {
+  color: #888 !important;
 }
 
 .sc-product-cart-grid {

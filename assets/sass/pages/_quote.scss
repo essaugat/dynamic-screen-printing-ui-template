@@ -1,9 +1,53 @@
-.page-sc-quote{
-    .sc-quote-grid{
+.page-sc-quote {
+    .sc-quote-grid {
         grid-template-columns: 205px auto;
-        .quote-grid{
-            &-left{
+
+        @include breakpoint-down(xl) {
+            grid-template-columns: 100%;
+        }
+
+        .quote-grid {
+            &-left {
                 padding-right: 20px;
+
+                @include breakpoint-down(xl) {
+                    padding-right: 0;
+                    border-right: 0 !important;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid $platinum;
+                }
+
+                .quote-info-items {
+                    @include breakpoint-down(xl) {
+                        display: flex !important;
+                        column-gap: 40px;
+                        row-gap: 16px;
+                        flex-wrap: wrap;
+                    }
+
+                    .quote-info-item-bottom {
+                        display: flex;
+                        gap: 8px;
+                    }
+                }
+            }
+        }
+
+        .quote-form-block {
+            .form-custom-block {
+                .form-elem-group {
+                    @include breakpoint-down(md) {
+                        grid-template-columns: 100% !important;
+                    }
+                }
+            }
+
+            .form-elem {
+                .form-control {
+                    &::placeholder {
+                        color: $battleship-gray !important;
+                    }
+                }
             }
         }
     }
