@@ -397,3 +397,16 @@ textarea {
 .form-select{
   --bs-form-select-bg-img: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='arrow-down'%3E%3Cpath id='Vector' d='M15.8008 7L10.8008 12L5.80078 7' stroke='%235D5D5D' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E%0A")!important;
 }
+
+.form-check{
+  &-input{
+    &:focus, &:active, &:checked{
+      box-shadow: none!important;
+    }
+
+    &:checked{
+      background-color: $theme!important;
+      border-color: $theme!important;
+    }
+  }
+}

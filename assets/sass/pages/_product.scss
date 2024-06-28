@@ -43,6 +43,12 @@
             &:hover {
                 background: $alice-blue;
                 border-color: $alice-blue;
+
+                .cats-subitem {
+                    input[type="checkbox"] {
+                        background-color: #eff7ff;
+                    }
+                }
             }
         }
 
@@ -59,6 +65,14 @@
 
                 &:last-child {
                     margin-bottom: 0;
+                }
+
+                .subitem-color {
+                    padding: 8px;
+                    &-box {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }
@@ -91,7 +105,7 @@
 
         @include breakpoint-down(lg) {
             grid-template-columns: 100%;
-            row-gap: 40px!important;
+            row-gap: 40px !important;
         }
     }
 
@@ -100,14 +114,14 @@
             width: 430px;
             height: 480px;
 
-            @include breakpoint-down(lg){
+            @include breakpoint-down(lg) {
                 margin-right: auto;
                 margin-left: auto;
             }
         }
 
         &-thumbs {
-            @include breakpoint-down(lg){
+            @include breakpoint-down(lg) {
                 max-width: 430px;
                 margin-right: auto;
                 margin-left: auto;
