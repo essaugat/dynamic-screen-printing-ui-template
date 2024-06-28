@@ -3922,6 +3922,80 @@ textarea.form-control {
   }
 }
 
+@media (max-width: 1399.98px) {
+  .page-sc-o-services .o-services-grid-list {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    gap: 16px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-sc-o-services .o-services-grid-list {
+    gap: 12px !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .page-sc-o-services .o-services-grid-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767.98px) {
+  .page-sc-o-services .o-services-grid-list {
+    grid-template-columns: 100%;
+  }
+}
+.page-sc-o-services .o-services-grid-list .o-services-card {
+  padding: 24px;
+}
+@media (max-width: 1399.98px) {
+  .page-sc-o-services .o-services-grid-list .o-services-card {
+    padding: 16px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .page-sc-o-services .o-services-grid-list .o-services-card {
+    padding: 12px !important;
+  }
+}
+.page-sc-o-services .o-services-grid-list .o-services-card-img {
+  height: 490px;
+}
+.page-sc-o-services .o-services-grid-list .o-services-card-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(323deg, rgba(0, 0, 0, 0) 78.73%, rgba(0, 0, 0, 0.5) 89.42%), linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+.page-sc-o-services .o-services-grid-list .o-services-card-count {
+  top: 24px;
+  left: 24px;
+  z-index: 5;
+  font-size: 52px;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #fff;
+}
+@media (max-width: 991.98px) {
+  .page-sc-o-services .o-services-grid-list .o-services-card-count {
+    font-size: 48px;
+    top: 16px;
+    left: 16px;
+  }
+}
+.page-sc-o-services .o-services-grid-list .o-services-card-ttl-group {
+  z-index: 5;
+  bottom: 24px;
+  left: 24px;
+}
+@media (max-width: 991.98px) {
+  .page-sc-o-services .o-services-grid-list .o-services-card-ttl-group {
+    left: 16px;
+    bottom: 16px;
+  }
+}
+
 .sc-product-cart-grid {
   grid-template-columns: 66% auto;
 }
