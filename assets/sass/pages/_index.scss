@@ -38,7 +38,7 @@
           height: 42px;
         }
 
-        .auth-btn{
+        .auth-btn {
           min-height: 42px;
         }
       }
@@ -780,6 +780,17 @@
 
   .get-connected-info {
     margin-top: 160px;
+
+    @include breakpoint-down(sm) {
+      gap: 20px;
+    }
+
+    &-group {
+      @include breakpoint-down(sm) {
+        grid-template-columns: 100%;
+        gap: 20px;
+      }
+    }
   }
 }
 
@@ -849,7 +860,7 @@
 
 .page-sc-creviews {
   .creviews-items {
-    @include breakpoint-down(md){
+    @include breakpoint-down(md) {
       grid-template-columns: 100%;
     }
 
