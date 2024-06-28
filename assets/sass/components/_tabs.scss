@@ -11,6 +11,14 @@
         0px 35px 35px 0px rgba(158, 158, 158, 0.04),
         0px 9px 19px 0px rgba(158, 158, 158, 0.05);
 
+    @include breakpoint-down(lg) {
+        padding: 24px;
+    }
+
+    @include breakpoint-down(sm) {
+        padding: 16px;
+    }
+
     .hero-explore-tab-heads {
         gap: 16px;
 
@@ -172,7 +180,7 @@
                 color: #5d5d5d !important;
             }
 
-            ul{
+            ul {
                 list-style-type: disc;
                 padding-left: 26px;
             }

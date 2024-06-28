@@ -23,15 +23,32 @@
 
     @include breakpoint-down(lg) {
       grid-template-columns: 100%;
+      row-gap: 40px;
+    }
+
+    @include breakpoint-down(sm) {
+      padding-bottom: 180px;
     }
 
     .hero-left {
       .hero-ttl {
         font-size: 42px;
         color: $delft-blue;
+
+        @include breakpoint-down(sm) {
+          font-size: 32px;
+        }
       }
       .hero-lead {
         color: $onyx;
+      }
+    }
+
+    .hero-right {
+      @include breakpoint-down(lg) {
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
       }
     }
 
@@ -58,6 +75,14 @@
     .achieve-items {
       margin-top: 60px;
       column-gap: 20px;
+
+      @include breakpoint-down(lg) {
+        position: relative !important;
+      }
+
+      @include breakpoint-down(sm) {
+        margin-top: 32px;
+      }
 
       .achieve-item {
         row-gap: 12px;
@@ -96,6 +121,10 @@
   margin-top: -190px;
   z-index: 10;
   margin-bottom: 100px;
+
+  @include breakpoint-down(xl) {
+    margin-top: -140px;
+  }
 }
 
 .page-sc-banner-01,

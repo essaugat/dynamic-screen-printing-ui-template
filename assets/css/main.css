@@ -2247,6 +2247,16 @@ textarea.form-control {
   background: #fff;
   box-shadow: 0px 219px 61px 0px rgba(158, 158, 158, 0), 0px 140px 56px 0px rgba(158, 158, 158, 0.01), 0px 79px 47px 0px rgba(158, 158, 158, 0.03), 0px 35px 35px 0px rgba(158, 158, 158, 0.04), 0px 9px 19px 0px rgba(158, 158, 158, 0.05);
 }
+@media (max-width: 991.98px) {
+  .sc-hero-explore-tabs {
+    padding: 24px;
+  }
+}
+@media (max-width: 575.98px) {
+  .sc-hero-explore-tabs {
+    padding: 16px;
+  }
+}
 .sc-hero-explore-tabs .hero-explore-tab-heads {
   gap: 16px;
 }
@@ -2741,7 +2751,6 @@ textarea.form-control {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     transform: translateX(-100%);
-    transition: transform 300ms ease-in-out;
   }
   .page-header .header-nav-group.show {
     transform: translateX(0);
@@ -2919,14 +2928,32 @@ textarea.form-control {
 @media (max-width: 991.98px) {
   .page-sc-hero .sc-hero-content {
     grid-template-columns: 100%;
+    row-gap: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-sc-hero .sc-hero-content {
+    padding-bottom: 180px;
   }
 }
 .page-sc-hero .sc-hero-content .hero-left .hero-ttl {
   font-size: 42px;
   color: #1d3363;
 }
+@media (max-width: 575.98px) {
+  .page-sc-hero .sc-hero-content .hero-left .hero-ttl {
+    font-size: 32px;
+  }
+}
 .page-sc-hero .sc-hero-content .hero-left .hero-lead {
   color: #454545;
+}
+@media (max-width: 991.98px) {
+  .page-sc-hero .sc-hero-content .hero-right {
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .page-sc-hero .sc-hero-content .hero-product-slider {
   mix-blend-mode: multiply;
@@ -2946,6 +2973,16 @@ textarea.form-control {
 .page-sc-hero .sc-hero-content .achieve-items {
   margin-top: 60px;
   column-gap: 20px;
+}
+@media (max-width: 991.98px) {
+  .page-sc-hero .sc-hero-content .achieve-items {
+    position: relative !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .page-sc-hero .sc-hero-content .achieve-items {
+    margin-top: 32px;
+  }
 }
 .page-sc-hero .sc-hero-content .achieve-items .achieve-item {
   row-gap: 12px;
@@ -2977,6 +3014,11 @@ textarea.form-control {
   margin-top: -190px;
   z-index: 10;
   margin-bottom: 100px;
+}
+@media (max-width: 1199.98px) {
+  .page-sc-hero-explore {
+    margin-top: -140px;
+  }
 }
 
 .page-sc-banner-01 .sc-banner-01-content,
