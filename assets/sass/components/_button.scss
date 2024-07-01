@@ -63,6 +63,13 @@ $button-variants: (
     hover-bg: darken($seasalt, 10%),
     hover-text-color: $davy-gray
   ),
+  "lavender-blush": (
+    bg: $lavender-blush,
+    text: $davy-gray,
+    border-color: $lavender-blush,
+    hover-bg: darken($lavender-blush, 10%),
+    hover-text-color: $davy-gray
+  ),
   "alice-blue": (
     bg: $alice-blue,
     text: $theme,
@@ -121,7 +128,7 @@ $button-variants: (
   &.focus {
     opacity: 0.9;
     text-decoration: none;
-    transform: scale(0.99);
+    // transform: scale(0.99);
   }
 
   &:focus {

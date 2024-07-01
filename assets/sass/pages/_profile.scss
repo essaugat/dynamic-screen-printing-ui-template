@@ -76,6 +76,17 @@
     }
   }
 
+  // MY PROFILE
+  .my-info-group{
+    &-block{
+      .my-info-list{
+        li{
+          grid-template-columns: 125px auto;
+        }
+      }
+    }
+  }
+
   // REVIEWS PAGE
   .profile-review-wrapper {
     .creviews-items {

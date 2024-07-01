@@ -922,7 +922,9 @@
                     class="collapse profile-menu-sublist"
                     id="collapse-profile-menu-01"
                   >
-                    <a href="#" class="profile-menu-subitem">My profile</a>
+                    <a href="#" class="profile-menu-subitem active"
+                      >My profile</a
+                    >
                     <a href="#" class="profile-menu-subitem">Address book</a>
                     <a href="#" class="profile-menu-subitem">My favourites</a>
                   </div>
@@ -937,7 +939,7 @@
                 </a>
                 <a
                   href="#"
-                  class="profile-menu-item d-flex align-items-center justify-content-between w-100 active"
+                  class="profile-menu-item d-flex align-items-center justify-content-between w-100"
                 >
                   <span class="profile-menu-item-text text-davy-gray"
                     >Track shippping</span
@@ -959,32 +961,83 @@
               >
                 <div class="sc-heading">
                   <h3 class="sc-heading-ttl mb-0 text-xl text-onyx font-medium">
-                    Track shipping
+                    My profile
                   </h3>
                 </div>
+                <div class="d-flex align-items-center flex-wrap gap-3">
+                  <button
+                    type="button"
+                    class="btn btn-sm-h btn-primary rounded-4"
+                  >
+                    Edit profile
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm-h btn-alice-blue rounded-4"
+                  >
+                    Change Password
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm-h rounded-4 btn-lavender-blush px-2"
+                  >
+                    <img src="assets/icons/trash_red.svg" alt="" />
+                  </button>
+                </div>
               </div>
-              <div class="profile-track-shipping">
-                <div class="form-custom track-shipping-form">
-                  <div class="form-elem">
-                    <label for="" class="form-label"
-                      >Enter your Tracking ID:</label
+              <div class="profile-my-profile d-grid align-items-start gap-y-6">
+                <div class="my-info-group d-grid align-items-start gap-y-6">
+                  <div class="my-info-group-block d-grid align-items-start">
+                    <p class="text-davy-gray">Personal information</p>
+                    <ul
+                      class="list-unstyled m-0 p-0 d-grid align-items-start gap-y-3 my-info-list"
                     >
-                    <div class="input-group d-flex gap-5">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id=""
-                        name=""
-                        placeholder="Ex. drfytgu34756"
-                        value=""
-                      />
-                      <button
-                        type="submit"
-                        class="btn btn-theme btn-sm text-sm rounded-4"
-                      >
-                        Track my order
-                      </button>
-                    </div>
+                      <li class="d-grid gap-1">
+                        <span class="text-battleship-gray text-sm"
+                          >First Name:</span
+                        >
+                        <span class="text-base text-davy-gray">John</span>
+                      </li>
+                      <li class="d-grid gap-1">
+                        <span class="text-battleship-gray text-sm"
+                          >Last name:</span
+                        >
+                        <span class="text-base text-davy-gray">Cena</span>
+                      </li>
+                      <li class="d-grid gap-1">
+                        <span class="text-battleship-gray text-sm">Gender</span>
+                        <span class="text-base text-davy-gray">Male</span>
+                      </li>
+                      <li class="d-grid gap-1">
+                        <span class="text-battleship-gray text-sm"
+                          >Date of birth</span
+                        >
+                        <span class="text-base text-davy-gray">2000/05/02</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="my-info-group-block d-grid align-items-start">
+                    <p class="text-davy-gray">Shipping information</p>
+                    <ul
+                      class="list-unstyled m-0 p-0 d-grid align-items-start gap-y-3 my-info-list"
+                    >
+                      <li class="d-grid gap-1">
+                        <span class="text-battleship-gray text-sm"
+                          >Email address :</span
+                        >
+                        <span class="text-base text-davy-gray"
+                          >johncena@gmail.com</span
+                        >
+                      </li>
+                      <li class="d-grid gap-1">
+                        <span class="text-battleship-gray text-sm"
+                          >Contact no.</span
+                        >
+                        <span class="text-base text-davy-gray"
+                          >+XXX XXXXXXXXXX</span
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

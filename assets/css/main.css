@@ -173,6 +173,10 @@
   color: #008656 !important;
 }
 
+.text-lavender-blush {
+  color: #fff0f0 !important;
+}
+
 .bg-blue {
   background-color: #2975e7 !important;
 }
@@ -315,6 +319,10 @@
 
 .bg-seagreen {
   background-color: #008656 !important;
+}
+
+.bg-lavender-blush {
+  background-color: #fff0f0 !important;
 }
 
 .font-thin {
@@ -3636,7 +3644,6 @@ Output
 .btn:hover, .btn:focus, .btn.focus {
   opacity: 0.9;
   text-decoration: none;
-  transform: scale(0.99);
 }
 .btn:focus {
   outline: 0;
@@ -3839,6 +3846,17 @@ Output
 .btn-seasalt:hover, .btn-seasalt:focus, .btn-seasalt:disabled, .btn-seasalt:active, .btn-seasalt.disabled, .btn-seasalt.active {
   background: #dddddd !important;
   border-color: #f6f6f6 !important;
+  color: #5d5d5d !important;
+}
+
+.btn-lavender-blush {
+  background: #fff0f0 !important;
+  color: #5d5d5d !important;
+  border: 1px solid #fff0f0 !important;
+}
+.btn-lavender-blush:hover, .btn-lavender-blush:focus, .btn-lavender-blush:disabled, .btn-lavender-blush:active, .btn-lavender-blush.disabled, .btn-lavender-blush.active {
+  background: #ffbdbd !important;
+  border-color: #fff0f0 !important;
   color: #5d5d5d !important;
 }
 
@@ -6564,6 +6582,9 @@ textarea.form-control {
 }
 .page-sc-profile .profile-menu-list .profile-menu-sublist .profile-menu-subitem:last-child {
   margin-bottom: 0;
+}
+.page-sc-profile .my-info-group-block .my-info-list li {
+  grid-template-columns: 125px auto;
 }
 @media (max-width: 767.98px) {
   .page-sc-profile .profile-review-wrapper .creviews-items {
