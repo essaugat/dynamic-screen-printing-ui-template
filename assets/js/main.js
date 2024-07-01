@@ -129,6 +129,7 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll("[data-mega-menu-target]");
   const megaMenus = document.querySelectorAll(".header-mega-menu-item");
+  const headerNavGroup = document.querySelector(".header-nav-group");
 
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -140,7 +141,21 @@ document.addEventListener("DOMContentLoaded", function () {
           menu.classList.remove("show");
         }
       });
+
+      buttons.forEach((btn) => {
+        if (btn !== button) {
+          btn
+            .querySelector(".nav-link-dropdown-icon")
+            .classList.remove("rotate-180");
+          btn.classList.remove("active");
+        }
+      });
+
       targetMenu.classList.toggle("show");
+      button.classList.toggle("active");
+      button
+        .querySelector(".nav-link-dropdown-icon")
+        .classList.toggle("rotate-180");
     });
   });
 
@@ -155,6 +170,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 1200) {
+      // Add 'show' class to header-nav-group if any mega menu is active
+      if ([...megaMenus].some((menu) => menu.classList.contains("show"))) {
+        headerNavGroup.classList.add("show");
+      } else {
+        headerNavGroup.classList.remove("show");
+      }
+    }
+  });
+
   document.querySelectorAll(".design-upload-content").forEach((uploadBox) => {
     uploadBox.addEventListener("click", function (event) {
       const fileInput = uploadBox.querySelector(".design-upload-input");
@@ -162,6 +188,21 @@ document.addEventListener("DOMContentLoaded", function () {
         fileInput.click();
       }
     });
+  });
+
+  // PASSWORD ICONS TOGGLE
+  const passwordFormElem = $(".password-form-elem .form-elem-icon");
+  $(passwordFormElem).on("click", function (event) {
+    const button = $(this);
+    const input = button.siblings("input");
+
+    if (input.attr("type") === "password") {
+      input.attr("type", "text");
+      $(button).addClass("show-password");
+    } else {
+      input.attr("type", "password");
+      $(button).removeClass("show-password");
+    }
   });
 });
 

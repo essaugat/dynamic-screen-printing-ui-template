@@ -2923,6 +2923,10 @@
   height: 12px;
 }
 
+.pointer-event-none {
+  pointer-events: none;
+}
+
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4099,6 +4103,9 @@ input[type=button].btn-block {
     opacity: 0;
   }
 }
+.modal-customized .btn-close {
+  box-shadow: none;
+}
 .modal-customized .modal-content {
   padding: 24px;
   border: 0 !important;
@@ -4218,11 +4225,6 @@ input[type=button].btn-block {
   color: #888 !important;
 }
 
-@media (max-width: 1199.98px) {
-  .order-details-modal .modal-dialog {
-    --bs-modal-width: 90% !important;
-  }
-}
 .order-details-modal .modal-body {
   margin-top: 24px;
   margin-bottom: 24px;
@@ -4257,6 +4259,27 @@ input[type=button].btn-block {
   .order-details-modal .order-details .details-metadata-group {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.edit-profile-modal .modal-content {
+  padding: 40px;
+  max-width: 874px;
+}
+.edit-profile-modal .modal-body {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.edit-profile-modal .form-elem input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.change-password-modal .modal-content {
+  padding: 40px;
+  max-width: 874px;
+}
+.change-password-modal .modal-body {
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .sc-heading-ttl {
@@ -4742,6 +4765,22 @@ textarea.form-control {
   border-color: #1d3363 !important;
 }
 
+.password-form-elem .form-elem-icon {
+  pointer-events: initial !important;
+}
+.password-form-elem .form-elem-icon.show-password .un-slashed {
+  display: inline-flex;
+}
+.password-form-elem .form-elem-icon.show-password .slashed {
+  display: none;
+}
+.password-form-elem .form-elem-icon img {
+  pointer-events: none;
+}
+.password-form-elem .un-slashed {
+  display: none;
+}
+
 .page-breadcrumb::after {
   content: "";
   background: url("../../../assets/images/breadcrumb_banner.png") center/cover no-repeat;
@@ -5213,6 +5252,19 @@ textarea.form-control {
 }
 .page-header-nav .header-nav-left .nav-item:first-child {
   padding-left: 4px;
+}
+.page-header-nav .nav-link .nav-link-dropdown-icon {
+  transition: all ease-in-out 300ms;
+}
+@media (max-width: 1199.98px) {
+  .page-header-nav .nav-link .nav-link-dropdown-icon.rotate-180 {
+    transform: rotate(-90deg);
+  }
+}
+@media (max-width: 767.98px) {
+  .page-header-nav .nav-link .nav-link-dropdown-icon.rotate-180 {
+    transform: rotate(180deg);
+  }
 }
 .page-header-nav .header-nav-right .nav-list {
   margin-bottom: 0 !important;

@@ -448,3 +448,25 @@ textarea {
     }
   }
 }
+
+.password-form-elem {
+  .form-elem-icon {
+    pointer-events: initial !important;
+
+    &.show-password {
+      .un-slashed {
+        display: inline-flex;
+      }
+      .slashed {
+        display: none;
+      }
+    }
+
+    img {
+      pointer-events: none;
+    }
+  }
+  .un-slashed {
+    display: none;
+  }
+}

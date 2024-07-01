@@ -709,3 +709,8 @@ $leading-classes: (
     height: 12px;
   }
 }
+
+// MISC
+.pointer-event-none {
+  pointer-events: none;
+}

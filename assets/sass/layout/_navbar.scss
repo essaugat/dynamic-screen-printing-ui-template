@@ -19,6 +19,21 @@ $z-index-navbar-toggler: 1010;
       }
     }
 
+    .nav-link {
+      .nav-link-dropdown-icon {
+        transition: $default-transition;
+        &.rotate-180 {
+          @include breakpoint-down(xl) {
+            transform: rotate(-90deg);
+          }
+
+          @include breakpoint-down(md) {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
     .header-nav-right {
       .nav-list {
         margin-bottom: 0 !important;

@@ -968,12 +968,16 @@
                   <button
                     type="button"
                     class="btn btn-sm-h btn-primary rounded-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editProfileModal"
                   >
                     Edit profile
                   </button>
                   <button
                     type="button"
                     class="btn btn-sm-h btn-alice-blue rounded-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#changePasswordModal"
                   >
                     Change Password
                   </button>
@@ -1260,12 +1264,12 @@
       <!-- END OF FOOTER SECTION -->
     </div>
 
-    <!-- ORDER DETAILS MODAL -->
+    <!-- EDIT PROFILE MODAL -->
     <div
-      class="modal fade modal-customized order-details-modal"
-      id="orderDetailsModal"
+      class="modal fade modal-customized edit-profile-modal"
+      id="editProfileModal"
       tabindex="-1"
-      aria-labelledby="orderDetailsModalLabel"
+      aria-labelledby="editProfileModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-scrollable modal-xl">
@@ -1273,161 +1277,259 @@
           <div
             class="modal-header d-flex align-items-center justify-content-between"
           >
-            <h1 class="modal-title fs-5" id="orderDetailsModalLabel">
-              Order Details
+            <h1 class="modal-title fs-5" id="editProfileModalLabel">
+              Edit Profile
             </h1>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close m-0"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
           <div class="modal-body">
-            <div class="order-details d-grid align-items-start gap-y-5">
-              <div class="order-details-top d-grid gap-5">
-                <div
-                  class="order-details-img rounded-8 overflow-hidden position-relative"
-                >
-                  <img
-                    class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-                    src="assets/images/preview2.jpg"
-                    alt=""
-                  />
+            <div class="form-custom d-grid gap-5">
+              <div class="form-custom-block d-grid align-items-start gap-y-6">
+                <div class="form-elem-group gap-5 d-grid grid-cols-2 gap-5">
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >First name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id=""
+                      value="John"
+                      placeholder=""
+                    />
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Last name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id=""
+                      value="Cena"
+                      placeholder=""
+                    />
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Gender</label
+                    >
+                    <select class="form-select" name="" id="">
+                      <option value="">Male</option>
+                      <option value="" selected>Female</option>
+                      <option value="">Others</option>
+                    </select>
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Address</label
+                    >
+                    <div class="form-elem-wrapper position-relative">
+                      <input
+                        type="date"
+                        class="form-control"
+                        name=""
+                        id=""
+                        placeholder=""
+                      />
+                      <button
+                        type="button"
+                        class="icon-20 position-absolute form-elem-icon pointer-event-none"
+                      >
+                        <img src="assets/icons/calendar_dark.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div class="order-details-metadata">
-                  <div
-                    class="details-metadata-item d-grid justify-content-start gap-y-2 mb-4"
-                  >
-                    <span class="text-battleship-gray text-sm">Status</span>
-                    <span class="status-badge status-completed text-xs"
-                      >Completed</span
+                <div class="form-elem-group">
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Email address</label
                     >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id=""
+                      value="johncena@gmail.com"
+                      placeholder=""
+                    />
                   </div>
-                  <div class="details-metadata-group d-grid align-items-center">
-                    <div
-                      class="details-metadata-item d-grid justify-content-start gap-y-2"
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Contact no.</label
                     >
-                      <span class="text-battleship-gray text-sm">Order ID</span>
-                      <span class="text-base text-onyx">#tdyghiu3456</span>
-                    </div>
-                    <div
-                      class="details-metadata-item d-grid justify-content-start gap-y-2"
-                    >
-                      <span class="text-battleship-gray text-sm"
-                        >Order date</span
-                      >
-                      <span class="text-base text-onyx">2024/05/05</span>
-                    </div>
-                    <div
-                      class="details-metadata-item d-grid justify-content-start gap-y-2"
-                    >
-                      <span class="text-battleship-gray text-sm">Quantity</span>
-                      <span class="text-base text-onyx">2</span>
-                    </div>
-                    <div
-                      class="details-metadata-item d-grid justify-content-start gap-y-2"
-                    >
-                      <span class="text-battleship-gray text-sm"
-                        >Payment method</span
-                      >
-                      <span class="text-base text-onyx">Cash on delivery</span>
-                    </div>
-                  </div>
-                  <div
-                    class="details-metadata-group d-grid align-items-center mt-custom-20"
-                  >
-                    <div
-                      class="details-metadata-item d-grid justify-content-start gap-y-2"
-                    >
-                      <span class="text-battleship-gray text-sm"
-                        >Print name</span
-                      >
-                      <span class="text-base text-onyx"
-                        >Customised business card</span
-                      >
-                    </div>
-                    <div
-                      class="details-metadata-item d-grid justify-content-start gap-y-2"
-                    >
-                      <span class="text-battleship-gray text-sm"
-                        >Delivery date</span
-                      >
-                      <span class="text-base text-onyx">2024/05/05</span>
-                    </div>
-                    <div
-                      class="details-metadata-item d-grid justify-content-start gap-y-2"
-                    >
-                      <span class="text-battleship-gray text-sm">Price</span>
-                      <span class="text-base text-onyx">AU$20</span>
-                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id=""
+                      value="+XXX XXXXXXXXXX"
+                      placeholder=""
+                    />
                   </div>
                 </div>
               </div>
-              <div
-                class="order-details-bottom d-grid grid-cols-2 align-items-start gap-5"
-              >
-                <div
-                  class="order-details-shipinfo d-grid align-items-start gap-y-3"
-                >
-                  <h4 class="font-normal text-onyx text-base">
-                    Shipping information
-                  </h4>
-                  <div
-                    class="address-item rounded-8 border-platinum p-3 d-grid gap-y-6"
-                  >
-                    <div
-                      class="address-item-head d-flex align-items-center justify-content-between flex-wrap gap-3"
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-transparent btn-sm text-sm"
+              data-bs-dismiss="modal"
+            >
+              <span class="text-bittersweet">Cancel</span>
+            </button>
+            <button type="button" class="btn btn-primary btn-sm text-sm">
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF EDIT PROFILE MODAL -->
+    <div
+      class="modal fade modal-customized change-password-modal"
+      id="changePasswordModal"
+      tabindex="-1"
+      aria-labelledby="changePasswordModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div
+            class="modal-header d-flex align-items-center justify-content-between"
+          >
+            <h1 class="modal-title fs-5" id="changePasswordModalLabel">
+              Change Password
+            </h1>
+            <button
+              type="button"
+              class="btn-close m-0"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-custom d-grid gap-5">
+              <div class="form-custom-block d-grid align-items-start gap-y-6">
+                <div class="form-elem-group gap-5 d-grid">
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Current Password</label
                     >
-                      <p class="address-item-name mb-0">Location 1: Home</p>
-                      <div
-                        class="address-item-type d-inline-flex align-items-center justify-content-center text-xs"
+                    <div
+                      class="form-elem-wrapper password-form-elem position-relative"
+                    >
+                      <input
+                        type="password"
+                        class="form-control"
+                        name=""
+                        id=""
+                        placeholder="Enter your current password here"
+                      />
+                      <button
+                        type="button"
+                        class="icon-20 position-absolute form-elem-icon pointer-event-none"
                       >
-                        Default delivery address
-                      </div>
-                    </div>
-                    <div
-                      class="address-item-body text-sm text-davy-gray d-grid gap-2 align-items-start"
-                    >
-                      <div class="address-item-icon icon-36">
-                        <img src="assets/icons/location_dark.svg" alt="" />
-                      </div>
-                      <div class="address-item-details">
-                        <p class="mb-1 text-base">John Cena</p>
-                        <p class="mb-1 text-sm text-battleship-gray">
-                          +XXX XXXXXXXX
-                        </p>
-                        <p class="mb-0 text-sm">
-                          House no. / building / street / area
-                        </p>
-                      </div>
+                        <img
+                          class="slashed"
+                          src="assets/icons/eye_outline_slash.svg"
+                          alt=""
+                        />
+                        <img
+                          class="un-slashed"
+                          src="assets/icons/eye_outline_dark.svg"
+                          alt=""
+                        />
+                      </button>
                     </div>
                   </div>
-                </div>
-                <div
-                  class="order-details-summary d-grid align-items-start gap-y-3"
-                >
-                  <h4 class="font-normal text-onyx text-base">Total summary</h4>
-                  <div
-                    class="order-summary-list d-grid align-items-start gap-y-3 p-3 border-platinum rounded-8"
-                  >
-                    <div
-                      class="order-summary-item py-1 d-flex gap-x-2 align-items-center justify-content-between text-battleship-gray text-base"
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >New Password</label
                     >
-                      <span>Subtotal (4 items)</span>
-                      <span class="font-medium">1200</span>
+                    <div
+                      class="form-elem-wrapper password-form-elem position-relative"
+                    >
+                      <input
+                        type="password"
+                        class="form-control"
+                        name=""
+                        id=""
+                        placeholder="Minimum 6 characters with numbers and letters"
+                      />
+                      <button
+                        type="button"
+                        class="icon-20 position-absolute form-elem-icon pointer-event-none"
+                      >
+                        <img
+                          class="slashed"
+                          src="assets/icons/eye_outline_slash.svg"
+                          alt=""
+                        />
+                        <img
+                          class="un-slashed"
+                          src="assets/icons/eye_outline_dark.svg"
+                          alt=""
+                        />
+                      </button>
                     </div>
-                    <div
-                      class="order-summary-item py-1 d-flex gap-x-2 align-items-center justify-content-between text-battleship-gray text-base pb-custom-12"
+                  </div>
+                  <div class="form-elem">
+                    <label
+                      for=""
+                      class="form-label text-battleship-gray text-sm"
+                      >Re-type password</label
                     >
-                      <span>Delivery charges</span>
-                      <span class="font-medium">xxxx</span>
-                    </div>
                     <div
-                      class="order-summary-item border-t-platinum d-flex gap-x-2 align-items-center justify-content-between text-battleship-gray text-base pt-custom-12"
+                      class="form-elem-wrapper password-form-elem position-relative"
                     >
-                      <span>Total</span>
-                      <span class="font-medium text-onyx">AU$ 20,000</span>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name=""
+                        id=""
+                        placeholder="Retype your password"
+                      />
+                      <button
+                        type="button"
+                        class="icon-20 position-absolute form-elem-icon pointer-event-none"
+                      >
+                        <img
+                          class="slashed"
+                          src="assets/icons/eye_outline_slash.svg"
+                          alt=""
+                        />
+                        <img
+                          class="un-slashed"
+                          src="assets/icons/eye_outline_dark.svg"
+                          alt=""
+                        />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1435,17 +1537,21 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-alice-blue btn-sm text-sm">
-              Download Invoice
+            <button
+              type="button"
+              class="btn btn-transparent btn-sm text-sm"
+              data-bs-dismiss="modal"
+            >
+              <span class="text-bittersweet">Cancel</span>
             </button>
             <button type="button" class="btn btn-primary btn-sm text-sm">
-              Re-order
+              Change Password
             </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- END OF ORDER DETAILS MODAL -->
+    <!-- CHANGE PASSWORD -->
 
     <!-- JQUERY CDN -->
     <script src="assets/js/lib/jquery.min.js"></script>
