@@ -51,4 +51,14 @@
             }
         }
     }
+
+    .footer-bottom{
+        row-gap: 16px;
+
+        .footer-links{
+            @include breakpoint-down(md){
+                justify-content: center;
+            }
+        }
+    }
 }

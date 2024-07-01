@@ -4,6 +4,10 @@
         font-style: normal;
         color: #3d3d3d;
         margin-bottom: 12px;
+
+        @include breakpoint-down(lg){
+            font-size: 32px;
+        }
     }
 
     &-lead {

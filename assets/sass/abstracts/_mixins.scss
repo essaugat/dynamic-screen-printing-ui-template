@@ -27,16 +27,20 @@
 }
 
 /* Flexbox Layouts */
-@mixin flex-column {
-  /* Flexbox grid layout for column */
+@mixin flex-wrap{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 @mixin flex-center {
   /* Aligning Content inside Flexbox in the center */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@mixin flex-column {
+  /* Flexbox grid layout for column */
+  display: flex;
+  flex-direction: column;
 }
 @mixin flex-center-column {
   /* Flexbox grid layout for column with centered content */

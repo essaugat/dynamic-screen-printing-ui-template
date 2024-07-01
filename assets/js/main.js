@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 $(document).ready(function () {
+  // HERO PRODUCT SLIDER
   $(".hero-product-slider").slick({
     infinite: true,
     slidesToShow: 1,
@@ -23,20 +24,22 @@ $(document).ready(function () {
     arrows: false,
   });
 
+  // QUOTE SLIDER
   $(".quote-slider").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     arrows: true,
     autoplay: true,
-    autoplaySpped: 5000,
+    autoplaySpeed: 5000,
     prevArrow:
       "<img class='slick-slider-btn slick-prev' src='../../assets/icons/circle_chevron_left_light.svg'>",
     nextArrow:
       "<img class='slick-slider-btn slick-next' src='../../assets/icons/circle_chevron_right_light.svg'>",
   });
 
+  // TRUST REVIEWS SLIDER
   $(".trust-reviews-slider").slick({
     dots: false,
     arrows: true,
@@ -66,6 +69,7 @@ $(document).ready(function () {
     ],
   });
 
+  // BLOG SLIDER
   $(".blog-list-slider").slick({
     dots: false,
     arrows: true,
@@ -164,3 +168,23 @@ document.addEventListener("DOMContentLoaded", function () {
 $(".hamburger").on("click", function () {
   $(this).toggleClass("is-open");
 });
+
+$(document).on("click", function (event) {
+  var navGroup = $(".header-nav-group");
+  var hamburger = $(".header-nav-open-btn");
+
+  if (
+    !navGroup.is(event.target) &&
+    navGroup.has(event.target).length === 0 &&
+    !hamburger.is(event.target) &&
+    hamburger.has(event.target).length === 0
+  ) {
+    navGroup.removeClass("show");
+    $(".header-nav-open-btn .hamburger").removeClass("is-open");
+  }
+});
+
+// $(".header-nav-open-btn").on("click", function () {
+//   var navGroup = $(".header-nav-group");
+//   navGroup.toggleClass("show");
+// });

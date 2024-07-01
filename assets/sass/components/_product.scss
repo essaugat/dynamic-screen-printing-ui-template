@@ -2,6 +2,11 @@
   .grid-head-ttl {
     color: #3d3d3d;
   }
+
+  &-head{
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
 }
 
 .product-grid-list {

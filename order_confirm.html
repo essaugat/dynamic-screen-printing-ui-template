@@ -41,15 +41,15 @@
       <header class="page-header">
         <div class="page-header-top d-flex align-items-center">
           <div
-            class="container d-flex align-items-center justify-content-between"
+            class="container d-flex align-items-center justify-content-between gap-3"
           >
             <div class="header-top-brand w-100">
               <a href="index.html">
                 <img src="assets/images/logo/logo.svg" alt="" />
               </a>
             </div>
-            <div class="header-top-search">
-              <form>
+            <div class="header-top-search d-md-flex d-none">
+              <form class="w-100">
                 <div
                   class="search-input-group d-flex align-items-center bg-white w-100 rounded-8"
                 >
@@ -76,13 +76,33 @@
         </div>
         <div class="page-header-nav position-relative pt-1 pb-1">
           <div class="container header-nav-content">
-            <div class="d-flex justify-content-start py-1 d-xl-none">
+            <div
+              class="d-flex align-items-center justify-content-between py-1 d-xl-none gap-x-6"
+            >
               <button
                 type="button"
                 class="header-nav-open-btn cursor-pointer icon-24"
               >
-                <img src="assets/icons/ham_menu.svg" alt="" />
+                <div class="hamburger">
+                  <div class="menu-bar"></div>
+                </div>
               </button>
+              <div class="nav-top-search flex-1 d-md-none">
+                <form>
+                  <div
+                    class="search-input-group d-flex align-items-center bg-white w-100 rounded-8"
+                  >
+                    <input
+                      type="text"
+                      class="control border-0 shadow-none w-100 ps-0 pe-0"
+                      placeholder="Search our services and products ..."
+                    />
+                    <button class="input-group-btn icon-24">
+                      <img src="assets/icons/search_gray.svg" alt="" />
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
             <div
               class="header-nav-group d-flex flex-wrap justify-content-between gap-1"
@@ -1498,7 +1518,7 @@
           <div class="sc-faq-content">
             <div class="faq-content-left">
               <div class="faq-img-collection row">
-                <div class="collection-col-one col-md-6 d-grid gap-y-6">
+                <div class="collection-col-one col-sm-6 d-grid gap-y-6">
                   <div class="collection-item-img">
                     <img
                       class="w-100 h-100 object-cover"
@@ -1514,7 +1534,9 @@
                     />
                   </div>
                 </div>
-                <div class="collection-col-two mt-4 mt-md-0 col-md-6 d-grid gap-y-6">
+                <div
+                  class="collection-col-two mt-4 mt-sm-0 col-sm-6 d-grid gap-y-6"
+                >
                   <div class="collection-item-img">
                     <img
                       class="w-100 h-100 object-cover"
@@ -2063,7 +2085,7 @@
               <span class="icon-24"
                 ><img src="assets/icons/globa_white.svg" alt=""
               /></span>
-              <span class="text-white">Region</span>
+              <span class="text-white text-base">Region</span>
             </div>
           </div>
         </div>
@@ -2087,7 +2109,11 @@
                 <h3 class="order-success-ttl text-theme font-normal">
                   Thank you for your order!
                 </h3>
-                <div class="order-success-user text-theme font-normal text-5xl leading-tight">Shyam Poudel</div>
+                <div
+                  class="order-success-user text-theme font-normal text-5xl leading-tight"
+                >
+                  Shyam Poudel
+                </div>
                 <div class="order-success-text pt-custom-20">
                   <div class="d-flex align-items-center flex-wrap gap-2">
                     <span class="info-icon icon-16">
@@ -2226,10 +2252,15 @@
             </div>
           </div>
           <div class="modal-footer border-t-platinum">
-            <div class="d-flex justify-content-end align-items-center gap-x-4 modal-btn-group">
-                <button type="button" class="btn btn-sm btn-alice-blue modal-btn text-sm">
-                    Shop again
-                  </button>
+            <div
+              class="d-flex justify-content-end align-items-center gap-x-4 modal-btn-group"
+            >
+              <button
+                type="button"
+                class="btn btn-sm btn-alice-blue modal-btn text-sm"
+              >
+                Shop again
+              </button>
               <button
                 type="button"
                 class="btn btn-primary btn-sm modal-btn text-sm"
@@ -2237,7 +2268,6 @@
               >
                 Done
               </button>
-              
             </div>
           </div>
         </div>
@@ -2257,6 +2287,6 @@
     ></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <!-- CUSTOM JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
   </body>
 </html>

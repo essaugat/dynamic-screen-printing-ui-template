@@ -6,6 +6,10 @@
   font-style: normal;
   color: $davy-gray;
   margin-bottom: 0 !important;
+
+  @include breakpoint-down(md) {
+    font-size: 14px;
+  }
 }
 .form-control {
   height: 50px;
@@ -15,6 +19,17 @@
   background: $white;
   font-size: 14px;
   color: $theme;
+
+  @include breakpoint-down(md) {
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 6px !important;
+    height: 46px;
+  }
+
+  @include breakpoint-down(sm) {
+    height: 40px;
+  }
 
   @include placeholder() {
     font-weight: 400;
@@ -33,6 +48,10 @@ textarea {
   &.form-control {
     padding: 16px;
     height: 130px;
+
+    @include breakpoint-down(md) {
+      padding: 14px;
+    }
   }
 }
 
@@ -46,11 +65,27 @@ textarea {
 .form-elem {
   display: grid;
   row-gap: 12px;
+
+  @include breakpoint-down(md) {
+    row-gap: 10px;
+  }
+
+  @include breakpoint-down(sm) {
+    row-gap: 8px;
+  }
 }
 
 .form-elem-group {
   display: grid;
   row-gap: 24px;
+
+  @include breakpoint-down(md) {
+    row-gap: 20px;
+  }
+
+  @include breakpoint-down(sm) {
+    row-gap: 16px;
+  }
 }
 
 .form-check .form-label {
@@ -99,8 +134,7 @@ textarea {
   }
 
   &-img {
-    background: url("../../../assets/images/form_banner.png") center/cover
-      no-repeat;
+    background: url("../../../assets/images/form_banner.png") center/cover no-repeat;
 
     @include breakpoint-down(lg) {
       display: none;
@@ -207,6 +241,7 @@ textarea {
       .form-separator {
         margin-top: 24px;
         margin-bottom: 20px;
+
         .separator-line {
           background: $timberwolf;
           height: 1px;

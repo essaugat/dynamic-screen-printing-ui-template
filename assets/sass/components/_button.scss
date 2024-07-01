@@ -19,71 +19,71 @@ $button-variants: (
     text: $white,
     border-color: $theme,
     hover-bg: darken($theme, 5%),
-    hover-text-color: $white,
+    hover-text-color: $white
   ),
   "theme": (
     bg: $theme,
     text: $white,
     border-color: $theme,
     hover-bg: darken($theme, 10%),
-    hover-text-color: $white,
+    hover-text-color: $white
   ),
   "secondary": (
     bg: $theme-light,
     text: $marian-blue,
     border-color: $theme-light,
     hover-bg: darken($theme-light, 5%),
-    hover-text-color: $marian-blue,
+    hover-text-color: $marian-blue
   ),
   "theme-light": (
     bg: $theme-light,
     text: $marian-blue,
     border-color: $theme-light,
     hover-bg: darken($theme-light, 5%),
-    hover-text-color: $marian-blue,
+    hover-text-color: $marian-blue
   ),
   "white": (
     bg: $white,
     text: $delft-blue,
     border-color: $white,
     hover-bg: darken($white, 10%),
-    hover-text-color: $delft-blue,
+    hover-text-color: $delft-blue
   ),
   "fulvous": (
     bg: $fulvous,
     text: $white,
     border-color: $fulvous,
     hover-bg: darken($fulvous, 10%),
-    hover-text-color: $white,
+    hover-text-color: $white
   ),
   "seasalt": (
     bg: $seasalt,
     text: $davy-gray,
     border-color: $seasalt,
     hover-bg: darken($seasalt, 10%),
-    hover-text-color: $davy-gray,
+    hover-text-color: $davy-gray
   ),
   "alice-blue": (
     bg: $alice-blue,
     text: $theme,
     border-color: $alice-blue,
     hover-bg: darken($alice-blue, 10%),
-    hover-text-color: $theme,
+    hover-text-color: $theme
   ),
   "transparent": (
     bg: transparent,
     text: $white,
     border-color: $white,
     hover-bg: transparent,
-    hover-text-color: $white,
+    hover-text-color: $white
   ),
   "o-platinum": (
     bg: transparent,
     text: $davy-gray,
     border-color: $platinum,
     hover-bg: transparent,
-    hover-text-color: $davy-gray,
-  ),
+    hover-text-color: $davy-gray
+  )
 );
 
 .btn {
@@ -161,17 +161,31 @@ $button-variants: (
   &.btn-sm {
     font-size: 16px;
     height: 42px;
+
+    @include breakpoint-down(xs) {
+      font-size: 14px;
+      height: 36px;
+    }
   }
 
   &.btn-sm-h {
     font-size: 14px;
     height: 36px;
+
+    @include breakpoint-down(xs) {
+      font-size: 13px;
+      height: 32px;
+    }
   }
 
   &.btn-xs {
     font-size: 12px;
     height: 32px;
     column-gap: 4px;
+
+    @include breakpoint-down(xs) {
+      height: 28px;
+    }
   }
 
   // BUTTON WIDTH VARIANTS

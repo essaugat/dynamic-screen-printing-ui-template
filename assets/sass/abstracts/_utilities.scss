@@ -38,7 +38,7 @@
 // FONT STACK CLASSES
 $font-families: (
   poppins: $font-family-poppins,
-  inter: $font-family-inter,
+  inter: $font-family-inter
 );
 
 @mixin font-families($fonts) {
@@ -88,7 +88,7 @@ $overflow-values: (auto, hidden, clip, visible, scroll);
 $dimension-properties: (
   0: 0,
   100: 100%,
-  100vh: 100vh,
+  100vh: 100vh
 );
 
 // Mixin to generate max/min width and height classes
@@ -122,7 +122,7 @@ $cursor-styles: (
   move: move,
   not-allowed: not-allowed,
   crosshair: crosshair,
-  none: none,
+  none: none
 );
 
 @mixin cursor-classes($styles) {
@@ -154,17 +154,7 @@ $object-fits: (contain, cover, fill, none, scale-down);
 }
 
 // OBJECT POSITION
-$object-positions: (
-  bottom,
-  center,
-  left,
-  left-bottom,
-  left-top,
-  right,
-  right-bottom,
-  right-top,
-  top
-);
+$object-positions: (bottom, center, left, left-bottom, left-top, right, right-bottom, right-top, top);
 
 @each $position in $object-positions {
   .object-#{$position} {
@@ -177,7 +167,7 @@ $flex-classes: (
   "flex-1": 1 1 0%,
   "flex-auto": 1 1 auto,
   "flex-initial": 0 1 auto,
-  "flex-none": none,
+  "flex-none": none
 );
 
 @each $class, $value in $flex-classes {
@@ -212,7 +202,7 @@ $grid-column-span-classes: (
   "col-span-10": "span 10 / span 10",
   "col-span-11": "span 11 / span 11",
   "col-span-12": "span 12 / span 12",
-  "col-span-full": "1 / -1",
+  "col-span-full": "1 / -1"
 );
 
 $grid-column-start-classes: (
@@ -229,7 +219,7 @@ $grid-column-start-classes: (
   "col-start-11": "11",
   "col-start-12": "12",
   "col-start-13": "13",
-  "col-start-auto": "auto",
+  "col-start-auto": "auto"
 );
 
 $grid-column-end-classes: (
@@ -246,7 +236,7 @@ $grid-column-end-classes: (
   "col-end-11": "11",
   "col-end-12": "12",
   "col-end-13": "13",
-  "col-end-auto": "auto",
+  "col-end-auto": "auto"
 );
 
 @each $class, $value in $grid-column-span-classes {
@@ -281,7 +271,7 @@ $grid-row-span-classes: (
   "row-span-10": "span 10 / span 10",
   "row-span-11": "span 11 / span 11",
   "row-span-12": "span 12 / span 12",
-  "row-span-full": "1 / -1",
+  "row-span-full": "1 / -1"
 );
 
 $grid-row-start-classes: (
@@ -298,7 +288,7 @@ $grid-row-start-classes: (
   "row-start-11": "11",
   "row-start-12": "12",
   "row-start-13": "13",
-  "row-start-auto": "auto",
+  "row-start-auto": "auto"
 );
 
 $grid-row-end-classes: (
@@ -315,7 +305,7 @@ $grid-row-end-classes: (
   "row-end-11": "11",
   "row-end-12": "12",
   "row-end-13": "13",
-  "row-end-auto": "auto",
+  "row-end-auto": "auto"
 );
 
 @each $class, $value in $grid-row-span-classes {
@@ -353,7 +343,7 @@ $rotations: (
   12: 12deg,
   45: 45deg,
   90: 90deg,
-  180: 180deg,
+  180: 180deg
 );
 
 @each $key, $value in $rotations {
@@ -444,19 +434,45 @@ $padding-values: (
   40: 40px,
   60: 60px,
   100: 100px,
-  50: 50px,
+  50: 50px
 );
 
 @each $padding, $value in $padding-values {
   .page-sc-py-#{$padding} {
     padding-top: $value;
     padding-bottom: $value;
+
+    @include breakpoint-down(md) {
+      padding-top: calc($value - 16px);
+      padding-bottom: calc($value - 16px);
+    }
+
+    @include breakpoint-down(xs) {
+      padding-top: calc($value - 24px);
+      padding-bottom: calc($value - 24px);
+    }
   }
   .page-sc-pt-#{$padding} {
     padding-top: $value;
+
+    @include breakpoint-down(md) {
+      padding-top: calc($value - 16px);
+    }
+
+    @include breakpoint-down(xs) {
+      padding-top: calc($value - 24px);
+    }
   }
   .page-sc-pb-#{$padding} {
     padding-bottom: $value;
+
+    @include breakpoint-down(md) {
+      padding-bottom: calc($value - 16px);
+    }
+
+    @include breakpoint-down(xs) {
+      padding-bottom: calc($value - 24px);
+    }
   }
 }
 
@@ -496,7 +512,7 @@ $icon-sizes: (40, 36, 32, 24, 20, 16);
 $negative-margin-values: (
   1: 4px,
   2: 8px,
-  3: 12px,
+  3: 12px
 );
 
 @each $key, $value in $negative-margin-values {
@@ -552,7 +568,7 @@ $margin-values: (12, 20);
 }
 
 $border-colors: (
-  platinum: #e5e5e5,
+  platinum: #e5e5e5
 );
 
 $directions: (
@@ -560,7 +576,7 @@ $directions: (
   "b-": bottom,
   "t-": top,
   "r-": right,
-  "l-": left,
+  "l-": left
 );
 
 $border-widths: (
@@ -573,7 +589,7 @@ $border-widths: (
   7: 7px,
   8: 8px,
   9: 9px,
-  10: 10px,
+  10: 10px
 );
 
 @each $color-name, $color-value in $border-colors {
@@ -581,9 +597,7 @@ $border-widths: (
     @each $width-key, $width-value in $border-widths {
       .border-#{$direction-prefix}#{$color-name}-#{$width-key} {
         @if ($direction-name) {
-          border-#{$direction-name}: #{$width-value}
-            solid
-            #{$color-value} !important;
+          border-#{$direction-name}: #{$width-value} solid #{$color-value} !important;
         } @else {
           border: #{$width-value} solid #{$color-value} !important;
         }
@@ -597,23 +611,23 @@ $shadows: (
   "sm": 0 1px 2px 0 rgba(0, 0, 0, 0.05),
   "": (
     0 1px 3px 0 rgba(0, 0, 0, 0.1),
-    0 1px 2px -1px rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1)
   ),
   "md": (
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -2px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1)
   ),
   "lg": (
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1)
   ),
   "xl": (
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 8px 10px -6px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1)
   ),
   "2xl": 0 25px 50px -12px rgba(0, 0, 0, 0.25),
   "inner": inset 0 2px 4px 0 rgba(0, 0, 0, 0.05),
-  "none": none,
+  "none": none
 );
 
 @each $key, $value in $shadows {
@@ -649,7 +663,7 @@ $leading-classes: (
   "leading-snug": 1.375,
   "leading-normal": 1.5,
   "leading-relaxed": 1.625,
-  "leading-loose": 2,
+  "leading-loose": 2
 );
 
 @each $class, $value in $leading-classes {

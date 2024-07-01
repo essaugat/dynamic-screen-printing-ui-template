@@ -32,7 +32,7 @@
     <!-- HEADER SECTION -->
     <header class="page-header">
       <div class="page-header-top d-flex align-items-center">
-        <div class="container d-flex align-items-center justify-content-between">
+        <div class="container d-flex align-items-center justify-content-between gap-3">
           <div class="header-top-brand w-100">
             <a href="index.html">
               <img src="assets/images/logo/logo.svg" alt="" />
@@ -61,7 +61,9 @@
         <div class="container header-nav-content">
           <div class="d-flex justify-content-start py-1 d-xl-none">
             <button type="button" class="header-nav-open-btn cursor-pointer icon-24">
-              <img src="assets/icons/ham_menu.svg" alt="" />
+              <div class="hamburger">
+                <div class="menu-bar"></div>
+              </div>
             </button>
           </div>
           <div class="header-nav-group d-flex flex-wrap justify-content-between gap-1">
@@ -1070,7 +1072,7 @@
         <div class="sc-faq-content">
           <div class="faq-content-left">
             <div class="faq-img-collection row">
-              <div class="collection-col-one col-md-6 d-grid gap-y-6">
+              <div class="collection-col-one col-sm-6 d-grid gap-y-6">
                 <div class="collection-item-img">
                   <img class="w-100 h-100 object-cover" src="assets/images/faq_collection1.png" alt="" />
                 </div>
@@ -1078,7 +1080,7 @@
                   <img class="w-100 h-100 object-cover" src="assets/images/faq_collection3.png" alt="" />
                 </div>
               </div>
-              <div class="collection-col-two mt-4 mt-md-0 col-md-6 d-grid gap-y-6">
+              <div class="collection-col-two mt-4 mt-sm-0 col-sm-6 d-grid gap-y-6">
                 <div class="collection-item-img">
                   <img class="w-100 h-100 object-cover" src="assets/images/faq_collection2.png" alt="" />
                 </div>
@@ -1466,7 +1468,7 @@
           </ul>
           <div class="footer-region d-flex align-items-center gap-x-2">
             <span class="icon-24"><img src="assets/icons/globa_white.svg" alt="" /></span>
-            <span class="text-white">Region</span>
+            <span class="text-white text-base">Region</span>
           </div>
         </div>
       </div>
@@ -1484,7 +1486,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
   <!-- CUSTOM JS -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
 </body>
 
 </html>

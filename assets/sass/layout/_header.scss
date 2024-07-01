@@ -33,6 +33,9 @@
       }
 
       &-profile {
+        @include breakpoint-down(xs) {
+          column-gap: 8px !important;
+        }
         .profile-icon {
           width: 42px;
           height: 42px;
@@ -40,7 +43,30 @@
 
         .auth-btn {
           min-height: 42px;
+
+          @include breakpoint-down(xs) {
+            height: 36px;
+            min-height: 36px;
+            border-radius: 4px;
+          }
         }
+      }
+    }
+  }
+}
+
+.nav-top-search {
+  .search-input-group {
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 1px solid $alice-blue;
+    column-gap: 8px;
+
+    input {
+      height: 40px;
+
+      &::placeholder {
+        color: $cadet-gray !important;
       }
     }
   }

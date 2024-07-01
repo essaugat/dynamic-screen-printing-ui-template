@@ -145,6 +145,16 @@
             padding-top: 65px;
             padding-bottom: 65px;
 
+            @include breakpoint-down(lg) {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            @include breakpoint-down(sm) {
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+
             h1,
             h2,
             h3,
@@ -166,6 +176,14 @@
             &-left,
             &-right {
                 padding: 16px;
+            }
+
+            &-right{
+                img{
+                    @include breakpoint-down(lg){
+                        max-width: 400px;
+                    }
+                }
             }
         }
     }

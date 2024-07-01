@@ -30,6 +30,12 @@
       padding-bottom: 180px;
     }
 
+    .hero-text-container {
+      @include breakpoint-down(sm) {
+        text-align: center;
+      }
+    }
+
     .hero-left {
       .hero-ttl {
         font-size: 42px;
@@ -69,6 +75,10 @@
         min-height: 48px;
         font-size: 16px;
         border-radius: 8px;
+
+        @include breakpoint-down(sm) {
+          flex: 1;
+        }
       }
     }
 
@@ -82,6 +92,7 @@
 
       @include breakpoint-down(sm) {
         margin-top: 32px;
+        justify-content: center;
       }
 
       .achieve-item {
@@ -125,6 +136,14 @@
   @include breakpoint-down(xl) {
     margin-top: -140px;
   }
+
+  @include breakpoint-down(md) {
+    margin-bottom: 80px;
+  }
+
+  @include breakpoint-down(xs) {
+    margin-bottom: 60px;
+  }
 }
 
 .page-sc-banner-01,
@@ -136,6 +155,11 @@
     background: $delft-blue;
     padding: 40px 40px 36px 40px;
     border-radius: 24px;
+
+    @include breakpoint-down(sm) {
+      padding: 24px 24px 20px 24px;
+      border-radius: 12px;
+    }
 
     &::before,
     &::after {
@@ -177,8 +201,24 @@
   .sc-banner-01-content {
     grid-template-columns: auto 387px;
 
+    @include breakpoint-down(md) {
+      grid-template-columns: 100%;
+    }
+
     .sc-banner-right {
       margin-bottom: -114px;
+
+      @include breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    .banner-btn-group {
+      @include breakpoint-down(md) {
+        .btn {
+          flex: 1;
+        }
+      }
     }
   }
 }
@@ -187,6 +227,11 @@
   .sc-banner-02-content {
     grid-template-columns: auto auto;
     column-gap: 100px;
+
+    @include breakpoint-down(lg) {
+      grid-template-columns: 100%;
+      row-gap: 40px !important;
+    }
 
     .banner-ttl {
       margin-bottom: 12px;
@@ -231,6 +276,10 @@
     .shape-one {
       right: 0;
       bottom: 0;
+
+      @include breakpoint-down(sm) {
+        width: 90px;
+      }
     }
 
     .banner-ttl {
@@ -254,6 +303,9 @@
       }
 
       &-right {
+        @include breakpoint-down(sm) {
+          display: none !important;
+        }
         img {
           max-width: 317px;
         }
@@ -268,6 +320,14 @@
 
       @include breakpoint-down(lg) {
         scale: 0.9;
+      }
+    }
+
+    &::after {
+      @include breakpoint-down(sm) {
+        right: -19px;
+        top: -25px;
+        scale: 0.7;
       }
     }
   }
@@ -294,6 +354,18 @@
         font-size: 54px;
         margin-top: 8px;
         margin-bottom: 12px;
+
+        @include breakpoint-down(lg) {
+          font-size: 48px;
+        }
+
+        @include breakpoint-down(sm) {
+          font-size: 40px;
+        }
+
+        @include breakpoint-down(xs) {
+          font-size: 32px;
+        }
       }
     }
 
@@ -325,6 +397,11 @@
       border-radius: 12px;
       height: 100%;
 
+      @include breakpoint-down(sm) {
+        grid-template-columns: 100%;
+        row-gap: 20px !important;
+      }
+
       &-wrapper {
         padding: 12px;
       }
@@ -333,6 +410,10 @@
         height: 200px;
         width: 200px;
         border-radius: 12px;
+
+        @include breakpoint-down(sm) {
+          width: 100%;
+        }
       }
 
       &-badge {
@@ -348,6 +429,10 @@
 
       &-text {
         margin-bottom: 82px;
+
+        @include breakpoint-down(sm) {
+          margin-bottom: 24px;
+        }
       }
     }
   }
@@ -365,11 +450,20 @@
       row-gap: 40px;
       column-gap: 40px;
       max-width: 960px;
+
+      @include breakpoint-down(md) {
+        gap: 24px;
+      }
     }
 
     &-item {
       max-width: 253px;
       height: 54px;
+
+      @include breakpoint-down(md) {
+        height: auto;
+        max-width: 220px;
+      }
 
       &-img {
         filter: grayscale(100%);
@@ -405,6 +499,11 @@
 
 .page-sc-trust-reviews {
   background: $alice-blue;
+
+  .sc-heading-grid {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 
   .trust-reviews-items {
     margin-top: 80px;
@@ -455,6 +554,10 @@
 }
 
 .page-sc-portrait-gallery {
+  @include breakpoint-down(sm) {
+    display: none !important;
+  }
+
   .portrait-gallery-items {
     grid-template-columns: repeat(5, 1fr);
 
@@ -489,7 +592,16 @@
     @include breakpoint-down(lg) {
       grid-template-columns: 100%;
     }
+
+    .sc-heading-ttl {
+      @include breakpoint-down(md) {
+        br {
+          display: none;
+        }
+      }
+    }
   }
+
   .faq-accordion {
     margin-top: 40px;
     display: grid;
@@ -516,6 +628,10 @@
   .collection-col-one {
     .collection-item-img {
       height: 235px;
+
+      @include breakpoint-down(lg) {
+        height: 100%;
+      }
     }
   }
   .collection-col-two mt-4 mt-md-0 {
@@ -541,6 +657,11 @@
       font-size: 16px;
       font-weight: 400;
       font-style: normal;
+
+      @include breakpoint-down(md) {
+        font-size: 14px;
+        padding: 10px 14px;
+      }
 
       &::after {
         background: url("../../../assets/icons/plus_blue.svg") center/cover no-repeat;
