@@ -4282,6 +4282,14 @@ input[type=button].btn-block {
   margin-bottom: 24px;
 }
 
+.delete-account-modal .modal-content {
+  padding: 40px;
+  max-width: 400px;
+}
+.delete-account-modal .popup-alert-msg {
+  max-width: 220px;
+}
+
 .sc-heading-ttl {
   font-size: 36px;
   font-style: normal;

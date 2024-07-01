@@ -984,6 +984,8 @@
                   <button
                     type="button"
                     class="btn btn-sm-h rounded-4 btn-lavender-blush px-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteAccountModal"
                   >
                     <img src="assets/icons/trash_red.svg" alt="" />
                   </button>
@@ -1552,6 +1554,49 @@
       </div>
     </div>
     <!-- CHANGE PASSWORD -->
+
+    <!-- DELETE ACCOUNT MODAL -->
+    <div
+      class="modal fade modal-customized delete-account-modal"
+      id="deleteAccountModal"
+      tabindex="-1"
+      aria-labelledby="deleteAccountModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-popup text-center">
+              <div class="icon-36 mx-auto mb-custom-20">
+                <img src="assets/icons/trash_red.svg" alt="" />
+              </div>
+              <div class="d-grid align-items-start gap-y-3">
+                <p class="text-davy-gray text-base font-medium popup-alert-msg mx-auto mb-0">
+                  Are you sure you want to delete your account?
+                </p>
+                <p class="text-battleship-gray text-xs font-normal mb-0">
+                  This action cannot be undone.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex align-items-center flex-wrap justify-content-center gap-x-5">
+            <button type="button" class="btn btn-alice-blue btn-sm text-sm flex-1">
+              Confirm
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-sm text-sm flex-1"
+              data-bs-dismiss="modal"
+            >
+              <span>Discard</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END OF DELETE ACCOUNT MODAL -->
 
     <!-- JQUERY CDN -->
     <script src="assets/js/lib/jquery.min.js"></script>
