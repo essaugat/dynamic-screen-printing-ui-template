@@ -1,1 +1,5 @@
 *.bin filter=lfs diff=lfs merge=lfs -text
+# Example .gitignore
+*.log
+*.tmp
+build/
