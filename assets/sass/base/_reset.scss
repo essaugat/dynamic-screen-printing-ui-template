@@ -1,54 +1,60 @@
-// Some important resets
+/* Reset, normalization of HTML elements */
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box; // Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+  margin: 0;
+  padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-    overflow-y: scroll;
-    text-rendering: optimizeLegibility;
-    height: 100%;
-}
-
-body {
-    min-height: 100vh;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    height: 100%;
-}
 ul,
 ol {
-    list-style-type: none;
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-a {
-    text-decoration: none;
-    color: unset;
-    // transition: $default-transition;
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
 }
+
+ul:not([class]) {
+  > li::marker {
+    display: block;
+    color: $davy-gray; // applying color only to the ul's marker having no any classes
+  }
+}
+
 img,
 picture,
 video,
 canvas,
 svg {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 img {
-    width: 100%;
+  width: 100%;
+  border-style: none; // Remove the border on images inside links in IE 10-.
+  max-width: 100%;
+}
+figure {
+  margin: 0;
 }
 input,
 button,
 textarea,
+optgroup,
 select {
-    font: inherit;
-    outline: 0;
-    border: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: 0;
+  border: none;
 }
 h1,
 h2,
@@ -57,16 +63,16 @@ h4,
 h5,
 h6,
 p {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 textarea {
-    resize: none;
+  resize: none;
 }
 
 button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 // Images, Flash & video
@@ -74,25 +80,57 @@ img,
 object,
 embed,
 video {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 //* Remove default table spacing.
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
+svg:not(:root) {
+  overflow: hidden; // Hide the overflow in IE
+}
+
+button,
+input {
+  overflow: visible; // Show the overflow in Edge
+}
+
+button,
+select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* Correct `inline-block` display not defined in IE 8/9. */
+  vertical-align: baseline; /* Normalize vertical alignment of `progress` in Chrome, Firefox and Opera. */
+}
+
+audio:not([controls]) {
+  /* Prevent modern browsers from displaying `audio` without controls */
+  display: none; /* Remove excess height in iOS 5 devices. */
+  height: 0;
+}
+
+[hidden],                               /* Address `[hidden]` styling not present in IE 8/9/10. */
+template {
+  display: none; /* Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22. */
+}
 
 // bootstrap resets
-.container{
-    max-width: 1320px!important;
-    width: 100%!important;
-    padding-right: 20px!important;
-    padding-left: 20px!important;
+.container {
+  max-width: 1320px !important;
+  width: 100% !important;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
 
-    @include breakpoint-down(xs){
-        padding-right: 16px!important;
-        padding-left: 16px!important;
-    }
+  @include breakpoint-down(xs) {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
 }

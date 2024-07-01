@@ -1,4 +1,13 @@
 // Typography
+html {
+  font-family: $font-family-poppins;
+  font-size: $font-size-base;
+  letter-spacing: normal;
+  font-weight: $font-weight-base;
+  line-height: $leading-base;
+  // font: normal $font-size-base/$leading-base $font-family-poppins;
+}
+
 %text {
   font-family: $font-family-poppins;
   font-weight: map-get($font-weights, normal);
@@ -37,31 +46,31 @@ $text-xl-sizes: (
 $text-2xl-sizes: (
   null: "2xl",
   lg: "xl",
-  sm: "lg"
+  sm: "lg",
 );
 
 $text-3xl-sizes: (
   null: "3xl",
   lg: "2xl",
-  sm: "xl"
+  sm: "xl",
 );
 
 $text-4xl-sizes: (
   null: "4xl",
   lg: "3xl",
-  sm: "2xl"
+  sm: "2xl",
 );
 
 $text-5xl-sizes: (
   null: "5xl",
   lg: "4xl",
-  sm: "3xl"
+  sm: "3xl",
 );
 
 $text-6xl-sizes: (
   null: "6xl",
   lg: "5xl",
-  sm: "4xl"
+  sm: "4xl",
 );
 
 /* ### PARAGRAPH ### */
@@ -83,35 +92,23 @@ $text-6xl-sizes: (
   }
 }
 
-.text-xs {
-  @include make-text-font-sizes($text-xs-sizes);
-}
-.text-sm {
-  @include make-text-font-sizes($text-sm-sizes);
-}
-.text-base {
-  @include make-text-font-sizes($text-base-sizes);
-}
-.text-lg {
-  @include make-text-font-sizes($text-lg-sizes);
-}
-.text-xl {
-  @include make-text-font-sizes($text-xl-sizes);
-}
-.text-2xl {
-  @include make-text-font-sizes($text-2xl-sizes);
-}
-.text-3xl {
-  @include make-text-font-sizes($text-3xl-sizes);
-}
-.text-4xl {
-  @include make-text-font-sizes($text-4xl-sizes);
-}
-.text-5xl {
-  @include make-text-font-sizes($text-5xl-sizes);
-}
-.text-6xl {
-  @include make-text-font-sizes($text-6xl-sizes);
+$text-sizes: (
+  xs: $text-xs-sizes,
+  sm: $text-sm-sizes,
+  base: $text-base-sizes,
+  lg: $text-lg-sizes,
+  xl: $text-xl-sizes,
+  "2xl": $text-2xl-sizes,
+  "3xl": $text-3xl-sizes,
+  "4xl": $text-4xl-sizes,
+  "5xl": $text-5xl-sizes,
+  "6xl": $text-6xl-sizes,
+);
+
+@each $size, $value in $text-sizes {
+  .text-#{$size} {
+    @include make-text-font-sizes($value);
+  }
 }
 
 /* #### HEADINGS #### */
@@ -121,9 +118,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-poppins;
-  font-weight: map-get($font-weights, "semibold");
-  margin-bottom: 0;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  margin-bottom: $headings-margin-bottom;
+  line-height: $headings-line-height;
+  color: $headings-color;
   letter-spacing: normal;
 }
 
@@ -172,4 +171,19 @@ h6,
 * + .h4,
 * + .delta {
   margin-top: 12px;
+}
+
+a {
+  text-decoration: $link-decoration;
+  color: $link-color; // or unset can be used
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $line-hover-decoration;
+  }
+
+  &:visited,
+  &:link {
+    text-decoration: none;
+  }
 }

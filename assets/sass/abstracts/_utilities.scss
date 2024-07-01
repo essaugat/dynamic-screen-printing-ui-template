@@ -1,3 +1,4 @@
+// COLOR & BACKGROUND CLASSES
 @mixin generate-color-classes($prefix, $property) {
   @each $color-name, $color in $colors {
     #{$prefix}-#{"" + $color-name} {
@@ -5,7 +6,10 @@
     }
   }
 }
+@include generate-color-classes(".text", "color");
+@include generate-color-classes(".bg", "background-color");
 
+// FONT WEIGHT CLASSES
 @mixin generate-font-weight-classes($prefix, $property) {
   @each $weight-name, $weight in $font-weights {
     #{$prefix}-#{$weight-name} {
@@ -14,7 +18,9 @@
   }
 }
 
-// mixin for opacity
+@include generate-font-weight-classes(".font", "font-weight");
+
+// OPACITY CLASSES
 @mixin generate-opacity-classes($prefix, $property, $step: 5) {
   @for $i from 0 through 20 {
     #{$prefix}-#{$i * $step} {
@@ -27,60 +33,27 @@
   }
 }
 
-@include generate-color-classes(".text", "color"); // text color generation
-@include generate-color-classes(".bg", "background-color"); // background color generation
-@include generate-font-weight-classes(".font", "font-weight"); // font weights generations
-@include generate-opacity-classes(".opacity", "opacity"); // opacity generation
-
-.scrollbar-x {
-  overflow-x: scroll;
-  &::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: $timberwolf;
-  }
-}
-
-.scrollbar-y {
-  overflow-y: scroll;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: $timberwolf;
-  }
-}
+@include generate-opacity-classes(".opacity", "opacity");
 
 // FONT STACK CLASSES
-.font-poppins {
-  font-family: $font-family-poppins;
+$font-families: (
+  poppins: $font-family-poppins,
+  inter: $font-family-inter,
+);
+
+@mixin font-families($fonts) {
+  @each $font-name, $font-family in $fonts {
+    .font-#{$font-name} {
+      font-family: $font-family;
+    }
+  }
 }
-.font-inter {
-  font-family: $font-family-inter;
-}
+
+@include font-families($font-families);
 
 /* CURSOR */
 .cursor-pointer {
   cursor: pointer;
-}
-
-/* TRANSITION */
-.default-transition {
-  transition: $default-transition;
 }
 
 /* SMOOTH FADING */
@@ -97,222 +70,331 @@
 }
 
 /* OVERFLOW UTILS */
-.overflow-auto {
-  overflow: auto;
-}
-.overflow-hidden {
-  overflow: hidden;
-}
-.overflow-visible {
-  overflow: visible;
-}
-.overflow-scroll {
-  overflow: scroll;
-}
-.overflow-x-scroll {
-  overflow-x: scroll;
-}
-.overflow-y-scroll {
-  overflow-y: scroll;
+$overflow-values: (auto, hidden, clip, visible, scroll);
+
+@each $value in $overflow-values {
+  .overflow-#{$value} {
+    overflow: #{$value};
+  }
+  .overflow-x-#{$value} {
+    overflow-x: #{$value};
+  }
+  .overflow-y-#{$value} {
+    overflow-y: #{$value};
+  }
 }
 
 /* MAX & MIN WIDTH/HEIGHT UTILS */
-.max-w-100 {
-  max-width: 100%;
+$dimension-properties: (
+  0: 0,
+  100: 100%,
+  100vh: 100vh,
+);
+
+// Mixin to generate max/min width and height classes
+@mixin dimension-classes($prefix, $property, $dimensions) {
+  @each $dimension-name, $dimension-value in $dimensions {
+    .#{$prefix}-#{$dimension-name} {
+      #{$property}: $dimension-value !important;
+    }
+  }
 }
-.max-h-100 {
-  max-height: 100%;
-}
-.min-w-0 {
-  min-width: 0;
-}
-.min-h-0 {
-  min-height: 0;
-}
-.min-w-100 {
-  min-width: 100%;
-}
-.max-h-100 {
-  max-height: 100%;
-}
-.min-w-100vh {
-  min-width: 100vh;
-}
-.min-h-100vh {
-  min-height: 100vh;
-}
-.max-w-100vh {
-  max-width: 100vh;
-}
-.max-h-100vh {
-  max-height: 100vh;
-}
+
+// Generate max/min width and height classes using the mixin
+@include dimension-classes("max-w", "max-width", $dimension-properties);
+@include dimension-classes("max-h", "max-height", $dimension-properties);
+@include dimension-classes("min-w", "min-width", $dimension-properties);
+@include dimension-classes("min-h", "min-height", $dimension-properties);
 
 /* TRANSITION UTILS */
-.transition {
-  transition: all 0.3s ease;
-}
-
-.transition-fast {
-  transition: all 0.15s ease;
-}
-
-.transition-slow {
-  transition: all 0.5s ease;
-}
-
 .default-transition {
-  transition: var(--default-transition);
+  transition: $default-transition;
 }
 
 /* CURSOR UTILS */
-.cursor-pointer {
-  cursor: pointer;
+$cursor-styles: (
+  pointer: pointer,
+  default: default,
+  help: help,
+  wait: wait,
+  text: text,
+  grab: grab,
+  move: move,
+  not-allowed: not-allowed,
+  crosshair: crosshair,
+  none: none,
+);
+
+@mixin cursor-classes($styles) {
+  @each $style-name, $style-value in $styles {
+    .cursor-#{$style-name} {
+      cursor: $style-value !important;
+    }
+  }
 }
 
-.cursor-default {
-  cursor: default;
-}
+@include cursor-classes($cursor-styles);
 
 /* RESIZE UTILS */
-.resize-none {
-  resize: none; /* Disable resizing */
-}
+$resize-directions: (none, vertical, horizontal, both);
 
-.resize-vertical {
-  resize: vertical; /* Allow vertical resizing */
-}
-
-.resize-horizontal {
-  resize: horizontal; /* Allow horizontal resizing */
-}
-
-.resize-both {
-  resize: both; /* Allow both vertical and horizontal resizing */
-}
-
-/* CLEARFIX UTILS */
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+@each $direction in $resize-directions {
+  .resize-#{$direction} {
+    resize: $direction;
+  }
 }
 
 /* OBJECT FITTING */
-.object-cover {
-  -o-object-fit: cover;
-  object-fit: cover;
+$object-fits: (contain, cover, fill, none, scale-down);
+
+@each $fit in $object-fits {
+  .object-#{$fit} {
+    object-fit: $fit;
+  }
+}
+
+// OBJECT POSITION
+$object-positions: (
+  bottom,
+  center,
+  left,
+  left-bottom,
+  left-top,
+  right,
+  right-bottom,
+  right-top,
+  top
+);
+
+@each $position in $object-positions {
+  .object-#{$position} {
+    object-position: str-replace($position, "-", " ");
+  }
 }
 
 /* FLEX UTILS */
-.flex-1 {
-  flex: 1;
+$flex-classes: (
+  "flex-1": 1 1 0%,
+  "flex-auto": 1 1 auto,
+  "flex-initial": 0 1 auto,
+  "flex-none": none,
+);
+
+@each $class, $value in $flex-classes {
+  .#{$class} {
+    flex: #{$value};
+  }
 }
 
 /* GRID UTILS */
-.grid-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
+// Grid Template Columns
+@for $i from 1 through 12 {
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+  .grid-rows-#{$i} {
+    grid-template-rows: repeat(#{$i}, 1fr);
+  }
 }
-.grid-cols-3 {
-  grid-template-columns: repeat(3, 1fr);
+
+// Grid Column Start / End
+$grid-column-span-classes: (
+  "col-auto": "auto",
+  "col-span-1": "span 1 / span 1",
+  "col-span-2": "span 2 / span 2",
+  "col-span-3": "span 3 / span 3",
+  "col-span-4": "span 4 / span 4",
+  "col-span-5": "span 5 / span 5",
+  "col-span-6": "span 6 / span 6",
+  "col-span-7": "span 7 / span 7",
+  "col-span-8": "span 8 / span 8",
+  "col-span-9": "span 9 / span 9",
+  "col-span-10": "span 10 / span 10",
+  "col-span-11": "span 11 / span 11",
+  "col-span-12": "span 12 / span 12",
+  "col-span-full": "1 / -1",
+);
+
+$grid-column-start-classes: (
+  "col-start-1": "1",
+  "col-start-2": "2",
+  "col-start-3": "3",
+  "col-start-4": "4",
+  "col-start-5": "5",
+  "col-start-6": "6",
+  "col-start-7": "7",
+  "col-start-8": "8",
+  "col-start-9": "9",
+  "col-start-10": "10",
+  "col-start-11": "11",
+  "col-start-12": "12",
+  "col-start-13": "13",
+  "col-start-auto": "auto",
+);
+
+$grid-column-end-classes: (
+  "col-end-1": "1",
+  "col-end-2": "2",
+  "col-end-3": "3",
+  "col-end-4": "4",
+  "col-end-5": "5",
+  "col-end-6": "6",
+  "col-end-7": "7",
+  "col-end-8": "8",
+  "col-end-9": "9",
+  "col-end-10": "10",
+  "col-end-11": "11",
+  "col-end-12": "12",
+  "col-end-13": "13",
+  "col-end-auto": "auto",
+);
+
+@each $class, $value in $grid-column-span-classes {
+  .#{$class} {
+    grid-column: #{$value};
+  }
 }
-.grid-cols-4 {
-  grid-template-columns: repeat(4, 1fr);
+
+@each $class, $value in $grid-column-start-classes {
+  .#{$class} {
+    grid-column-start: #{$value};
+  }
 }
-.grid-cols-5 {
-  grid-template-columns: repeat(5, 1fr);
+
+@each $class, $value in $grid-column-end-classes {
+  .#{$class} {
+    grid-column-end: #{$value};
+  }
+}
+
+$grid-row-span-classes: (
+  "row-auto": "auto",
+  "row-span-1": "span 1 / span 1",
+  "row-span-2": "span 2 / span 2",
+  "row-span-3": "span 3 / span 3",
+  "row-span-4": "span 4 / span 4",
+  "row-span-5": "span 5 / span 5",
+  "row-span-6": "span 6 / span 6",
+  "row-span-7": "span 7 / span 7",
+  "row-span-8": "span 8 / span 8",
+  "row-span-9": "span 9 / span 9",
+  "row-span-10": "span 10 / span 10",
+  "row-span-11": "span 11 / span 11",
+  "row-span-12": "span 12 / span 12",
+  "row-span-full": "1 / -1",
+);
+
+$grid-row-start-classes: (
+  "row-start-1": "1",
+  "row-start-2": "2",
+  "row-start-3": "3",
+  "row-start-4": "4",
+  "row-start-5": "5",
+  "row-start-6": "6",
+  "row-start-7": "7",
+  "row-start-8": "8",
+  "row-start-9": "9",
+  "row-start-10": "10",
+  "row-start-11": "11",
+  "row-start-12": "12",
+  "row-start-13": "13",
+  "row-start-auto": "auto",
+);
+
+$grid-row-end-classes: (
+  "row-end-1": "1",
+  "row-end-2": "2",
+  "row-end-3": "3",
+  "row-end-4": "4",
+  "row-end-5": "5",
+  "row-end-6": "6",
+  "row-end-7": "7",
+  "row-end-8": "8",
+  "row-end-9": "9",
+  "row-end-10": "10",
+  "row-end-11": "11",
+  "row-end-12": "12",
+  "row-end-13": "13",
+  "row-end-auto": "auto",
+);
+
+@each $class, $value in $grid-row-span-classes {
+  .#{$class} {
+    grid-row: #{$value};
+  }
+}
+
+@each $class, $value in $grid-row-start-classes {
+  .#{$class} {
+    grid-row-start: #{$value};
+  }
+}
+
+@each $class, $value in $grid-row-end-classes {
+  .#{$class} {
+    grid-row-end: #{$value};
+  }
 }
 
 /* TEXT UTILS - CLAMP */
-.clamp-line-2 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 2;
-}
-
-.clamp-line-3 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-}
-
-.clamp-line-4 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 4;
+@for $i from 1 through 4 {
+  .clamp-line-#{$i} {
+    @include clamp(#{$i});
+  }
 }
 
 /* TRANSFORMATION */
-.rotate-90deg {
-  transform: rotate(90deg);
-}
-.rotate-180deg {
-  transform: rotate(180deg);
+$rotations: (
+  0: 0deg,
+  1: 1deg,
+  2: 2deg,
+  3: 3deg,
+  6: 6deg,
+  12: 12deg,
+  45: 45deg,
+  90: 90deg,
+  180: 180deg,
+);
+
+@each $key, $value in $rotations {
+  .rotate-#{$key} {
+    transform: rotate(#{$value});
+  }
 }
 
 /* BORDER RADIUS */
-.rounded-0 {
-  border-radius: 0 !important;
-}
-.rounded-2 {
-  border-radius: 2px !important;
-}
-.rounded-3 {
-  border-radius: 3px !important;
-}
-.rounded-4 {
-  border-radius: 4px !important;
-}
-.rounded-5 {
-  border-radius: 5px !important;
-}
-.rounded-6 {
-  border-radius: 6px !important;
-}
-.rounded-7 {
-  border-radius: 7px !important;
-}
-.rounded-8 {
-  border-radius: 8px !important;
-}
-.rounded-9 {
-  border-radius: 9px !important;
-}
-.rounded-10 {
-  border-radius: 10px !important;
-}
-.rounded-11 {
-  border-radius: 11px !important;
-}
-.rounded-12 {
-  border-radius: 12px !important;
-}
-.rounded-13 {
-  border-radius: 13px !important;
-}
-.rounded-14 {
-  border-radius: 14px !important;
-}
-.rounded-15 {
-  border-radius: 15px !important;
-}
-.rounded-16 {
-  border-radius: 16px !important;
-}
-.rounded-17 {
-  border-radius: 17px !important;
-}
-.rounded-18 {
-  border-radius: 18px !important;
-}
-.rounded-19 {
-  border-radius: 19px !important;
-}
-.rounded-20 {
-  border-radius: 20px !important;
+@for $i from 0 through 20 {
+  .rounded-#{$i} {
+    border-radius: #{$i}px !important;
+  }
+  .rounded-tl-#{$i} {
+    border-top-left-radius: #{$i}px !important;
+  }
+  .rounded-tr-#{$i} {
+    border-top-right-radius: #{$i}px !important;
+  }
+  .rounded-bl-#{$i} {
+    border-bottom-left-radius: #{$i}px !important;
+  }
+  .rounded-br-#{$i} {
+    border-bottom-right-radius: #{$i}px !important;
+  }
+  .rounded-t-#{$i} {
+    border-top-left-radius: #{$i}px !important;
+    border-top-right-radius: #{$i}px !important;
+  }
+  .rounded-b-#{$i} {
+    border-bottom-left-radius: #{$i}px !important;
+    border-bottom-right-radius: #{$i}px !important;
+  }
+  .rounded-l-#{$i} {
+    border-top-left-radius: #{$i}px !important;
+    border-bottom-left-radius: #{$i}px !important;
+  }
+  .rounded-r-#{$i} {
+    border-top-right-radius: #{$i}px !important;
+    border-bottom-right-radius: #{$i}px !important;
+  }
 }
 .rounded-100vh {
   border-radius: 100vh !important;
@@ -321,311 +403,259 @@
   border-radius: 100% !important;
 }
 
-// GAP
-.gap-1 {
-  gap: 4px !important;
-}
-.gap-2 {
-  gap: 8px !important;
-}
-.gap-3 {
-  gap: 12px !important;
-}
-.gap-4 {
-  gap: 16px !important;
-}
-.gap-5 {
-  gap: 20px !important;
-}
-.gap-6 {
-  gap: 24px !important;
-}
-.gap-7 {
-  gap: 28px !important;
-}
-.gap-8 {
-  gap: 32px !important;
-}
-.gap-9 {
-  gap: 36px !important;
-}
-.gap-10 {
-  gap: 40px !important;
-}
+// WIDTH & HEIGHT
+$wahrem-step: 0.5; // Step increment
+$wahrem-step: 0.5;
 
-.gap-y-1 {
-  row-gap: 4px;
-}
-.gap-y-2 {
-  row-gap: 8px;
-}
-.gap-y-3 {
-  row-gap: 12px;
-}
-.gap-y-4 {
-  row-gap: 16px;
-}
-.gap-y-5 {
-  row-gap: 20px;
-}
-.gap-y-6 {
-  row-gap: 24px;
-}
-.gap-y-7 {
-  row-gap: 28px;
-}
-.gap-y-8 {
-  row-gap: 32px;
-}
-.gap-y-9 {
-  row-gap: 36px;
-}
-.gap-y-10 {
-  row-gap: 40px;
-}
+// @for $i from 0 through 20 {
+//   .w-#{$i * 10 * $wahrem-step} {
+//     width: #{calc($i * $wahrem-step * 10) + "%"} !important;
+//   }
+
+//   .h-#{$i * 10 * $wahrem-step} {
+//     height: #{calc($i * $wahrem-step * 10) + "%"} !important;
+//   }
+// }
+
+// GAP
+$gap-start: 4px;
+$gap-increment: 4px;
+$gap-count: 10;
 
 .gap-x-0_5 {
   column-gap: 2px;
 }
-.gap-x-1 {
-  column-gap: 4px;
-}
-.gap-x-2 {
-  column-gap: 8px;
-}
-.gap-x-3 {
-  column-gap: 12px;
-}
-.gap-x-4 {
-  column-gap: 16px;
-}
-.gap-x-5 {
-  column-gap: 20px;
-}
-.gap-x-6 {
-  column-gap: 24px;
-}
-.gap-x-7 {
-  column-gap: 28px;
-}
-.gap-x-8 {
-  column-gap: 32px;
-}
-.gap-x-9 {
-  column-gap: 36px;
-}
-.gap-x-10 {
-  column-gap: 40px;
+
+@for $i from 1 through $gap-count {
+  .gap-#{$i} {
+    gap: $gap-start + ($i - 1) * $gap-increment !important;
+  }
+  .gap-y-#{$i} {
+    row-gap: $gap-start + ($i - 1) * $gap-increment;
+  }
+  .gap-x-#{$i} {
+    column-gap: $gap-start + ($i - 1) * $gap-increment;
+  }
 }
 
 // PADDINGS
-.page-sc-py-32 {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.page-sc-pt-32 {
-  padding-top: 32px;
-}
-.page-sc-pb-32 {
-  padding-bottom: 32px;
+$padding-values: (
+  32: 32px,
+  40: 40px,
+  60: 60px,
+  100: 100px,
+  50: 50px,
+);
+
+@each $padding, $value in $padding-values {
+  .page-sc-py-#{$padding} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+  .page-sc-pt-#{$padding} {
+    padding-top: $value;
+  }
+  .page-sc-pb-#{$padding} {
+    padding-bottom: $value;
+  }
 }
 
-.page-sc-py-40 {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.page-sc-pt-40 {
-  padding-top: 40px;
-}
-.page-sc-pb-40 {
-  padding-bottom: 40px;
-}
-
-.page-sc-py-60 {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.page-sc-pt-60 {
-  padding-top: 60px;
-}
-.page-sc-pb-60 {
-  padding-bottom: 60px;
+@mixin display-utilities {
+  .show-block {
+    @extend %display-block;
+  }
+  .show-flex {
+    @extend %display-flex;
+  }
+  .hide {
+    @extend %display-none;
+  }
 }
 
-.page-sc-py-100 {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.page-sc-pt-100 {
-  padding-top: 100px;
-}
-.page-sc-pb-100 {
-  padding-bottom: 100px;
-}
+@include display-utilities;
 
-.page-sc-py-50 {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.page-sc-pt-50 {
-  padding-top: 50px;
-}
-.page-sc-pb-50 {
-  padding-bottom: 50px;
-}
-
-.show-block {
-  display: block;
-}
-
-.show-flex {
-  display: flex;
-}
-
-.hide {
-  display: none;
-}
-
-// icons
+// ICONS
 %icon-common {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.icon-40 {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
-  @extend %icon-common;
-}
+$icon-sizes: (40, 36, 32, 24, 20, 16);
 
-.icon-36 {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  min-height: 36px;
-  @extend %icon-common;
-}
-
-.icon-32 {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-  min-height: 32px;
-  @extend %icon-common;
-}
-
-.icon-24 {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  @extend %icon-common;
-}
-
-.icon-20 {
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  min-height: 20px;
-  @extend %icon-common;
-}
-
-.icon-16 {
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  min-height: 16px;
-  @extend %icon-common;
+@each $size in $icon-sizes {
+  .icon-#{$size} {
+    @include box($size + px, $size + px);
+    min-width: $size + px;
+    min-height: $size + px;
+    @extend %icon-common;
+  }
 }
 
 // NEGATIVE MARGINS
-.-mt-1 {
-  margin-top: -4px;
-}
-.-mb-1 {
-  margin-bottom: -4px;
+$negative-margin-values: (
+  1: 4px,
+  2: 8px,
+  3: 12px,
+);
+
+@each $key, $value in $negative-margin-values {
+  .-mt-#{$key} {
+    margin-top: -#{$value};
+  }
+  .-mb-#{$key} {
+    margin-bottom: -#{$value};
+  }
+  .-ms-#{$key} {
+    margin-left: -#{$value};
+  }
+  .-me-#{$key} {
+    margin-right: -#{$value};
+  }
 }
 
-.pt-custom-32 {
-  padding-top: 32px;
-}
-.pt-custom-32 {
-  padding-bottom: 32px;
-}
-.py-custom-32 {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.pt-custom-12 {
-  padding-top: 12px;
-}
-.pb-custom-12 {
-  padding-bottom: 12px;
-}
-.py-custom-12 {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-.pt-custom-20 {
-  padding-top: 20px;
-}
-.pb-custom-20 {
-  padding-bottom: 20px;
-}
-.py-custom-20 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+// PADDING CLASSES
+$padding-values: (12, 20, 32);
+
+@each $value in $padding-values {
+  .pt-custom-#{$value} {
+    padding-top: #{$value}px;
+  }
+  .pb-custom-#{$value} {
+    padding-bottom: #{$value}px;
+  }
+  .py-custom-#{$value} {
+    padding-top: #{$value}px;
+    padding-bottom: #{$value}px;
+  }
 }
 
-.ms-custom-12 {
-  margin-left: 12px !important;
-}
-.me-custom-12 {
-  margin-right: 12px;
-}
-.mt-custom-12 {
-  margin-top: 12px;
-}
-.mb-custom-12 {
-  margin-bottom: 12px;
-}
-.my-custom-12 {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-.mt-custom-20 {
-  margin-top: 20px;
-}
-.mb-custom-20 {
-  margin-bottom: 20px;
-}
-.my-custom-20 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+$margin-values: (12, 20);
+
+@each $value in $margin-values {
+  .ms-custom-#{$value} {
+    margin-left: #{$value}px !important;
+  }
+  .me-custom-#{$value} {
+    margin-right: #{$value}px;
+  }
+  .mt-custom-#{$value} {
+    margin-top: #{$value}px;
+  }
+  .mb-custom-#{$value} {
+    margin-bottom: #{$value}px;
+  }
+  .my-custom-#{$value} {
+    margin-top: #{$value}px;
+    margin-bottom: #{$value}px;
+  }
 }
 
-.border-b-platinum {
-  border-bottom: 1px solid $platinum !important;
+$border-colors: (
+  platinum: #e5e5e5,
+);
+
+$directions: (
+  "": null,
+  "b-": bottom,
+  "t-": top,
+  "r-": right,
+  "l-": left,
+);
+
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px,
+);
+
+@each $color-name, $color-value in $border-colors {
+  @each $direction-prefix, $direction-name in $directions {
+    @each $width-key, $width-value in $border-widths {
+      .border-#{$direction-prefix}#{$color-name}-#{$width-key} {
+        @if ($direction-name) {
+          border-#{$direction-name}: #{$width-value}
+            solid
+            #{$color-value} !important;
+        } @else {
+          border: #{$width-value} solid #{$color-value} !important;
+        }
+      }
+    }
+  }
 }
-.border-t-platinum {
-  border-top: 1px solid $platinum !important;
-}
-.border-platinum {
-  border: 1px solid $platinum !important;
-}
-.border-r-platinum {
-  border-right: 1px solid $platinum !important;
-}
-.border-l-platinum {
-  border-left: 1px solid $platinum !important;
+
+// SHADOW
+$shadows: (
+  "sm": 0 1px 2px 0 rgba(0, 0, 0, 0.05),
+  "": (
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1),
+  ),
+  "md": (
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1),
+  ),
+  "lg": (
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1),
+  ),
+  "xl": (
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1),
+  ),
+  "2xl": 0 25px 50px -12px rgba(0, 0, 0, 0.25),
+  "inner": inset 0 2px 4px 0 rgba(0, 0, 0, 0.05),
+  "none": none,
+);
+
+@each $key, $value in $shadows {
+  .shadow#{$key} {
+    @if type-of($value) == list {
+      box-shadow: #{join($value, ", ")};
+    } @else {
+      box-shadow: $value;
+    }
+  }
 }
 
 // LINE HEIGHTS
-.lh-1_2 {
-  line-height: 1.2;
+$leading-classes: (
+  "leading-3": 0.75rem,
+  // 12px
+  "leading-4": 1rem,
+  // 16px
+  "leading-5": 1.25rem,
+  // 20px
+  "leading-6": 1.5rem,
+  // 24px
+  "leading-7": 1.75rem,
+  // 28px
+  "leading-8": 2rem,
+  // 32px
+  "leading-9": 2.25rem,
+  // 36px
+  "leading-10": 2.5rem,
+  // 40px
+  "leading-none": 1,
+  "leading-tight": 1.25,
+  "leading-snug": 1.375,
+  "leading-normal": 1.5,
+  "leading-relaxed": 1.625,
+  "leading-loose": 2,
+);
+
+@each $class, $value in $leading-classes {
+  .#{$class} {
+    line-height: $value;
+  }
 }
 
 .status-badge {

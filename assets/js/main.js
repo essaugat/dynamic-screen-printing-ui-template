@@ -160,3 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+$(".hamburger").on("click", function () {
+  $(this).toggleClass("is-open");
+});

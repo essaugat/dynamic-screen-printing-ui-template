@@ -1,20 +1,155 @@
+$btn-bg: $primary;
+$btn-text-color: $white;
+$btn-font-weight: map-get($font-weights, "normal");
+$btn-font-size: map-get($font-sizes, "base");
+$btn-padding-x: 2px;
+$btn-padding-y: 16px;
+$btn-border-color: $primary;
+$btn-border-width: 1px;
+$btn-border-radius: 8px;
+
+$btn-hover-bg: darken($primary, 10%);
+$btn-hover-text-color: $white;
+$btn-hover-border-color: $primary;
+
+// BUTTON COLOR VARIANTS
+$button-variants: (
+  "primary": (
+    bg: $theme,
+    text: $white,
+    border-color: $theme,
+    hover-bg: darken($theme, 5%),
+    hover-text-color: $white,
+  ),
+  "theme": (
+    bg: $theme,
+    text: $white,
+    border-color: $theme,
+    hover-bg: darken($theme, 10%),
+    hover-text-color: $white,
+  ),
+  "secondary": (
+    bg: $theme-light,
+    text: $marian-blue,
+    border-color: $theme-light,
+    hover-bg: darken($theme-light, 5%),
+    hover-text-color: $marian-blue,
+  ),
+  "theme-light": (
+    bg: $theme-light,
+    text: $marian-blue,
+    border-color: $theme-light,
+    hover-bg: darken($theme-light, 5%),
+    hover-text-color: $marian-blue,
+  ),
+  "white": (
+    bg: $white,
+    text: $delft-blue,
+    border-color: $white,
+    hover-bg: darken($white, 10%),
+    hover-text-color: $delft-blue,
+  ),
+  "fulvous": (
+    bg: $fulvous,
+    text: $white,
+    border-color: $fulvous,
+    hover-bg: darken($fulvous, 10%),
+    hover-text-color: $white,
+  ),
+  "seasalt": (
+    bg: $seasalt,
+    text: $davy-gray,
+    border-color: $seasalt,
+    hover-bg: darken($seasalt, 10%),
+    hover-text-color: $davy-gray,
+  ),
+  "alice-blue": (
+    bg: $alice-blue,
+    text: $theme,
+    border-color: $alice-blue,
+    hover-bg: darken($alice-blue, 10%),
+    hover-text-color: $theme,
+  ),
+  "transparent": (
+    bg: transparent,
+    text: $white,
+    border-color: $white,
+    hover-bg: transparent,
+    hover-text-color: $white,
+  ),
+  "o-platinum": (
+    bg: transparent,
+    text: $davy-gray,
+    border-color: $platinum,
+    hover-bg: transparent,
+    hover-text-color: $davy-gray,
+  ),
+);
+
 .btn {
-  font-weight: 400;
-  font-family: $font-family-poppins;
-  font-size: 20px;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 8px;
+  @extend %flex-inline-center;
   text-align: center;
-  transition: $default-transition;
+  font-weight: $btn-font-weight;
+  font-family: $font-family-poppins;
+  font-size: $btn-font-size;
+  border-radius: $btn-border-radius;
+  column-gap: 8px;
   height: 48px;
   white-space: nowrap;
+  padding: $btn-padding-x $btn-padding-y;
+  border: $btn-border-width solid $btn-border-color;
+  background-color: $btn-bg;
+  color: $btn-text-color;
+  vertical-align: middle;
+  transition: $default-transition;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  touch-action: manipulation;
+  background-image: none;
+  transform-origin: bottom;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  // &:is(:hover, :focus-visible) {
+  //   background-color: scale-color($btnColor, $lightness: -20%);
+  // }
 
   // EFFECTS
-  &:hover {
+  &:hover,
+  &:focus,
+  &.focus {
     opacity: 0.9;
+    text-decoration: none;
+    transform: scale(0.99);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: $btn-hover-bg;
+    color: $btn-hover-text-color;
+    border-color: $btn-hover-border-color;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: no-drop;
+    background: $theme;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &.focus {
+      opacity: 0.8;
+      box-shadow: none;
+      transform: none;
+    }
   }
 
   // BUTTON INNER ELEMENTS
@@ -25,15 +160,11 @@
   // BUTTON SIZE VARIANTS
   &.btn-sm {
     font-size: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
     height: 42px;
   }
 
   &.btn-sm-h {
     font-size: 14px;
-    padding-left: 16px;
-    padding-right: 16px;
     height: 36px;
   }
 
@@ -48,114 +179,6 @@
     min-width: 260px;
   }
 
-  // BUTTON COLOR VARIANTS
-  &-primary,
-  &-theme {
-    background: $theme !important;
-    border-color: $theme !important;
-    color: $white !important;
-
-    &:hover,
-    &:focus,
-    &:disabled,
-    &:active {
-      background: darken($theme, 5%) !important;
-      border-color: $theme !important;
-      color: $white !important;
-    }
-  }
-
-  &-secondary,
-  &-theme-light {
-    background: $theme-light !important;
-    border-color: $theme-light !important;
-    color: $marian-blue !important;
-
-    &:hover,
-    &:focus,
-    &:disabled,
-    &:active {
-      background: darken($theme-light, 5%) !important;
-      border-color: $theme-light !important;
-      color: $marian-blue !important;
-    }
-  }
-
-  &-white {
-    background: $white !important;
-    color: $delft-blue !important;
-    border-color: $white !important;
-
-    &:hover,
-    &:focus,
-    &:disabled,
-    &:active {
-      background: darken($white, 5%) !important;
-      border-color: $white !important;
-      color: $delft-blue !important;
-    }
-  }
-
-  &-fulvous {
-    background: $fulvous !important;
-    color: $white !important;
-    border-color: $fulvous !important;
-
-    &:hover,
-    &:focus,
-    &:disabled,
-    &:active {
-      background: darken($fulvous, 5%) !important;
-      border-color: $fulvous !important;
-      color: $white !important;
-    }
-  }
-
-  &-seasalt {
-    background: $seasalt !important;
-    color: $davy-gray !important;
-    border-color: $seasalt !important;
-
-    &:hover,
-    &:focus,
-    &:disabled,
-    &:active {
-      background: darken($seasalt, 5%) !important;
-      border-color: $seasalt !important;
-      color: $davy-gray !important;
-    }
-  }
-
-  &-alice-blue {
-    background: $alice-blue !important;
-    border-color: $alice-blue !important;
-    color: $theme !important;
-
-    &:hover,
-    &:focus,
-    &:disabled,
-    &:active {
-      background: darken($alice-blue, 5%) !important;
-      border-color: $alice-blue !important;
-      color: $theme !important;
-    }
-  }
-
-  &-transparent {
-    background: transparent !important;
-    color: $white !important;
-    border: 1px solid $white !important;
-
-    &:hover,
-    &:focus,
-    &:disabled,
-    &:active {
-      background: transparent !important;
-      border-color: $white !important;
-      color: $white !important;
-    }
-  }
-
   &-o-platinum {
     background: transparent !important;
     border: 1px solid $platinum !important;
@@ -164,22 +187,80 @@
     &:hover,
     &:focus,
     &:disabled,
-    &:active {
+    &:active,
+    &.disabled,
+    &.active {
       background: transparent !important;
       border-color: $platinum !important;
       color: $davy-gray !important;
     }
   }
+
+  // ACCENT BUTTONS
+  @each $color-name, $color-value in $accent-color-list {
+    &.btn-#{$color-name} {
+      background: $color-value !important;
+      color: $white !important;
+      border: $btn-border-width solid $color-value !important;
+
+      &:hover,
+      &:focus,
+      &:disabled,
+      &:active,
+      &.disabled,
+      &.active {
+        background: $color-value !important;
+        border-color: $color-value !important;
+        color: $white !important;
+      }
+    }
+  }
 }
 
+@each $variant, $props in $button-variants {
+  .btn-#{$variant} {
+    background: map-get($props, bg) !important;
+    color: map-get($props, text) !important;
+    border: $btn-border-width solid map-get($props, border-color) !important;
+
+    &:hover,
+    &:focus,
+    &:disabled,
+    &:active,
+    &.disabled,
+    &.active {
+      background: map-get($props, hover-bg) !important;
+      border-color: map-get($props, border-color) !important;
+      color: map-get($props, hover-text-color) !important;
+    }
+  }
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+// BUTTON BLOCK - FULL WIDTH
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 0.5rem;
+}
+
+// BUTTON LINK
 .btn-link {
   color: $battleship-gray;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: map-get($font-sizes, "sm");
+  font-weight: map-get($font-weights, "normal");
   font-style: normal;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-inline-center;
   column-gap: 8px;
   transition: $default-transition;
 
@@ -190,9 +271,7 @@
   .btn-icon {
     width: 16px;
     height: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-inline-center;
   }
 
   &.btn-link-sm {
@@ -206,7 +285,7 @@
   }
 }
 
-// misc buttons
+// MISC BUTTON STYLINGS
 .sort-btn {
   background: $seasalt;
   border-radius: 8px;
@@ -220,5 +299,14 @@
   transition: $default-transition;
   &:hover {
     opacity: 0.8;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
   }
 }

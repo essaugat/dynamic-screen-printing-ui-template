@@ -1,63 +1,87 @@
 @use "sass:math";
 
-@function set-text-color($color){
-    @if(lightness($color) > 40%){
-        @return #000;
-    } @else{
-        @return #fff;
-    }
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@function set-button-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
+  }
 }
 
 // opacity value for black and white color
-@function black($opacity){
-    @return rgba(#000, $opacity);
+@function black($opacity) {
+  @return rgba(#000, $opacity);
 }
 
-@function white($opacity){
-    @return rgba(#fff, $opacity);
+@function white($opacity) {
+  @return rgba(#fff, $opacity);
 }
 
-@function opacity($color, $opacity){
-    @return rgba($color, $opacity);
+@function opacity($color, $opacity) {
+  @return rgba($color, $opacity);
 }
 
-@function tint($color, $percentage){
-    @return mix(#fff, $color, $percentage);
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
 }
 
-@function shade($color, $percentage){
-    @return mix(#000, $color, $percentage);
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
 }
 
 @function half($num) {
-    @return math.div($num, 2);
+  @return math.div($num, 2);
 }
 
 @function convert-to-rem($px-value) {
-    $rem-value: math.div($px-value, $font-size-base);
-    $zero-safe-rem-value: if($px-value == 0, 0, $rem-value);
-    @return $zero-safe-rem-value;
+  $rem-value: math.div($px-value, $font-size-base);
+  $zero-safe-rem-value: if($px-value == 0, 0, $rem-value);
+  @return $zero-safe-rem-value;
 }
 
 @function rem($px-values) {
-    $rem-values: ();
-    @each $px-value in $px-values {
-      $rem-values: append($rem-values, convert-to-rem($px-value));
-    }
-    @return $rem-values;
+  $rem-values: ();
+  @each $px-value in $px-values {
+    $rem-values: append($rem-values, convert-to-rem($px-value));
+  }
+  @return $rem-values;
 }
 
-@function str-replace($string, $search: "!important", $replace: ""){
-    $index: str-index($string, $search);
-
-    @if $index{
-        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-    }
-
-    @return $string;
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+  @return $string;
 }
 
-@function calculateRem($size){
-    $remSize: math.div($size, 16);
-    @return #{$remSize}rem;
+@function calculateRem($size) {
+  $remSize: math.div($size, 16);
+  @return #{$remSize}rem;
 }
+
+@function ease($key) {
+  @if map-has-key($ease, $key) {
+    @return map-get($ease, $key);
+  }
+
+  @warn "Unkown '#{$key}' in $ease.";
+  @return null;
+}
+
+// .example {
+//   animation: there-and-back 2.5s ease(in-quad) infinite alternate;
+// }

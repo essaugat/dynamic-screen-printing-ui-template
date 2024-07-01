@@ -1,0 +1,88 @@
+// Default Color
+$white: #fff;
+$black: #000;
+
+// Base colors
+$blue: #2975e7;
+$delft-blue: #1d3363;
+$uranian-blue: #c0e0fd;
+$theme: #1d3363;
+$theme-light: $uranian-blue;
+$alice-blue: #eff7ff;
+$alice-blue2: #dcedfd;
+$davy-gray: #5d5d5d;
+$argentinian-blue: #63b1f7;
+$seasalt: #f6f6f6;
+$onyx: #454545;
+$gray: #808080;
+$eerie-black: #262626;
+$orange: rgba(255, 165, 0, 0.1);
+$cadet-gray: #94a3b8;
+$battleship-gray: #888;
+$gray-100: #f7f7f7;
+$gray-200: #e0e0e0;
+$gray-300: #dee2e7;
+$gray-400: #bdc4cd;
+$gray-500: #8b96a5;
+$gray-600: #505050;
+$gray-800: #808080;
+$timberwolf: #d1d1d1;
+$bittersweet: #ff5c57;
+$platinum: #e7e7e7;
+$platinum2: #d9d9d9;
+$marian-blue: #204488;
+$sapphire: #214eac;
+$ivory: #fffcea;
+$fulvous: #e27c00;
+$brown: #984208;
+$mint: #49b38d;
+$seagreen: #008656;
+$primary: $theme;
+
+$colors: (
+  blue: #2975e7,
+  white: #fff,
+  black: #000,
+  delft-blue: #1d3363,
+  uranian-blue: #c0e0fd,
+  theme: #1d3363,
+  theme-light: #c0e0fd,
+  alice-blue: #eff7ff,
+  alice-blue2: #dcedfd,
+  davy-gray: #5d5d5d,
+  argentinian-blue: #63b1f7,
+  seasalt: #f6f6f6,
+  onyx: #454545,
+  gray: #808080,
+  eerie-black: #262626,
+  orange: rgba(255, 165, 0, 0.1),
+  cadet-gray: #94a3b8,
+  battleship-gray: #888,
+  gray-100: #f7f7f7,
+  gray-200: #e0e0e0,
+  gray-300: #dee2e7,
+  gray-400: #bdc4cd,
+  gray-500: #8b96a5,
+  gray-600: #505050,
+  gray-800: #808080,
+  timberwolf: #d1d1d1,
+  bittersweet: #ff5c57,
+  platinum: #e7e7e7,
+  platinum2: #d9d9d9,
+  marian-blue: #204488,
+  sapphire: #214eac,
+  ivory: #fffcea,
+  fulvous: #e27c00,
+  brown: #984208,
+  mint: #49b38d,
+  seagreen: #008656,
+);
+
+$accent-color-list: (
+  primary: #1d3363,
+  theme-light: #c0e0fd,
+  success: #008656,
+  info: #17a2b8,
+  warning: #fcb92c,
+  error: #dc3545,
+);

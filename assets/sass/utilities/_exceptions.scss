@@ -1,0 +1,15 @@
+.sr-only {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+// The .sr-only class is used to visually hide elements from the screen while still making them accessible to screen readers. This is particularly useful for improving web accessibility by providing information to users who rely on screen readers without displaying that information on the screen.
