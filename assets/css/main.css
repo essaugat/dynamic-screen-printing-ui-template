@@ -4520,7 +4520,7 @@ textarea.form-control {
   }
 }
 .page-form-img {
-  background: url("../../../assets/images/form_banner.png") center/cover no-repeat;
+  background: url("../images/form_banner.png") center/cover no-repeat;
 }
 @media (max-width: 991.98px) {
   .page-form-img {
@@ -4791,7 +4791,7 @@ textarea.form-control {
 
 .page-breadcrumb::after {
   content: "";
-  background: url("../../../assets/images/breadcrumb_banner.png") center/cover no-repeat;
+  background: url("../images/breadcrumb_banner.png") center/cover no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -4833,7 +4833,7 @@ textarea.form-control {
   content: "";
   width: 9px;
   height: 9px;
-  background: url("../../../assets/icons/chevron_left_white.svg") center/cover no-repeat;
+  background: url("../icons/chevron_left_white.svg") center/cover no-repeat;
   top: 50%;
 }
 .page-breadcrumb .breadcrumb-link {
@@ -5791,7 +5791,7 @@ textarea.form-control {
   width: 243px;
   height: 243px;
   left: 0;
-  background-image: url("../../../assets/images/shapes/circle_light.svg");
+  background-image: url("../images/shapes/circle_light.svg");
 }
 @media (max-width: 991.98px) {
   .page-sc-banner-01 .sc-banner-01-content::before,
@@ -5818,7 +5818,7 @@ textarea.form-control {
   width: 133px;
   height: 153px;
   right: 0;
-  background-image: url("../../../assets/images/shapes/circle_yellow.svg");
+  background-image: url("../images/shapes/circle_yellow.svg");
 }
 .page-sc-banner-01 .sc-banner-01-content .sc-banner-left .banner-ttl-group,
 .page-sc-banner-01 .sc-banner-02-content .sc-banner-left .banner-ttl-group,
@@ -5935,7 +5935,7 @@ textarea.form-control {
   width: 243px;
   height: 243px;
   left: 0;
-  background-image: url("../../../assets/images/shapes/circle_yellow_light.svg");
+  background-image: url("../images/shapes/circle_yellow_light.svg");
 }
 @media (max-width: 991.98px) {
   .page-sc-banner-03 .sc-banner-03-content::before {
@@ -6210,7 +6210,7 @@ textarea.form-control {
   }
 }
 .page-sc-faq .accordion-button::after {
-  background: url("../../../assets/icons/plus_blue.svg") center/cover no-repeat;
+  background: url("../icons/plus_blue.svg") center/cover no-repeat;
   width: 24px;
   height: 24px;
 }
@@ -6219,7 +6219,7 @@ textarea.form-control {
 }
 
 .page-sc-get-connected {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../../../assets/images/contact_banner.png") center/cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/contact_banner.png") center/cover no-repeat;
 }
 .page-sc-get-connected .get-connected-grid {
   display: grid;

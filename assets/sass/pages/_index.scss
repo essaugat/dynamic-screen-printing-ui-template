@@ -174,7 +174,7 @@
       width: 243px;
       height: 243px;
       left: 0;
-      background-image: url("../../../assets/images/shapes/circle_light.svg");
+      background-image: url("../images/shapes/circle_light.svg");
 
       @include breakpoint-down(lg) {
         scale: 0.9;
@@ -185,7 +185,7 @@
       width: 133px;
       height: 153px;
       right: 0;
-      background-image: url("../../../assets/images/shapes/circle_yellow.svg");
+      background-image: url("../images/shapes/circle_yellow.svg");
     }
 
     .sc-banner-left {
@@ -316,7 +316,7 @@
       width: 243px;
       height: 243px;
       left: 0;
-      background-image: url("../../../assets/images/shapes/circle_yellow_light.svg");
+      background-image: url("../images/shapes/circle_yellow_light.svg");
 
       @include breakpoint-down(lg) {
         scale: 0.9;
@@ -658,7 +658,7 @@
       }
 
       &::after {
-        background: url("../../../assets/icons/plus_blue.svg") center/cover no-repeat;
+        background: url("../icons/plus_blue.svg") center/cover no-repeat;
         width: 24px;
         height: 24px;
       }
@@ -675,7 +675,7 @@
 .page-sc-get-connected {
   background:
     linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),
-    url("../../../assets/images/contact_banner.png") center/cover no-repeat;
+    url("../images/contact_banner.png") center/cover no-repeat;
 
   .get-connected-grid {
     display: grid;

@@ -34,9 +34,9 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 5000,
     prevArrow:
-      "<img class='slick-slider-btn slick-prev' src='../../assets/icons/circle_chevron_left_light.svg'>",
+      "<img class='slick-slider-btn slick-prev' src='./assets/icons/circle_chevron_left_light.svg'>",
     nextArrow:
-      "<img class='slick-slider-btn slick-next' src='../../assets/icons/circle_chevron_right_light.svg'>",
+      "<img class='slick-slider-btn slick-next' src='./assets/icons/circle_chevron_right_light.svg'>",
   });
 
   // PORTRAIT GALLERY SLIDER
@@ -115,9 +115,9 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow:
-      "<img class='slick-slider-btn slick-prev' src='../../assets/icons/arrow_left_black.svg'>",
+      "<img class='slick-slider-btn slick-prev' src='./assets/icons/arrow_left_black.svg'>",
     nextArrow:
-      "<img class='slick-slider-btn slick-next' src='../../assets/icons/arrow_right_black.svg'>",
+      "<img class='slick-slider-btn slick-next' src='./assets/icons/arrow_right_black.svg'>",
     responsive: [
       {
         breakpoint: 1400,

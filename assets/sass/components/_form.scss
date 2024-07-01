@@ -134,7 +134,7 @@ textarea {
   }
 
   &-img {
-    background: url("../../../assets/images/form_banner.png") center/cover no-repeat;
+    background: url("../images/form_banner.png") center/cover no-repeat;
 
     @include breakpoint-down(lg) {
       display: none;
