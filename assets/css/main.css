@@ -6125,14 +6125,6 @@ textarea.form-control {
   width: 12px;
   height: 12px;
 }
-@media (max-width: 575.98px) {
-  .page-sc-portrait-gallery {
-    display: none !important;
-  }
-}
-.page-sc-portrait-gallery .portrait-gallery-items {
-  grid-template-columns: repeat(5, 1fr);
-}
 .page-sc-portrait-gallery .portrait-gallery-items .portrait-gallery-item {
   height: 708px;
 }

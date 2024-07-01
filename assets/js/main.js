@@ -39,6 +39,43 @@ $(document).ready(function () {
       "<img class='slick-slider-btn slick-next' src='../../assets/icons/circle_chevron_right_light.svg'>",
   });
 
+  // PORTRAIT GALLERY SLIDER
+  $(".portrait-gallery-slider").slick({
+    dots: false,
+    arrows: false,
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   // TRUST REVIEWS SLIDER
   $(".trust-reviews-slider").slick({
     dots: false,
