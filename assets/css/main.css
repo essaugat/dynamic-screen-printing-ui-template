@@ -6481,6 +6481,22 @@ textarea.form-control {
 .page-sc-product-detail .product-preview-thumbs .preview-thumb-item:hover img {
   filter: grayscale(0);
 }
+.page-sc-product-detail .product-detail-main .add-to-fav-btn .in-wishlist {
+  display: none;
+}
+.page-sc-product-detail .product-detail-main .add-to-fav-btn .product-wishlist-check {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.page-sc-product-detail .product-detail-main .add-to-fav-btn .product-wishlist-check:checked + .product-wishlist-icons .not-in-wishlist {
+  display: none;
+}
+.page-sc-product-detail .product-detail-main .add-to-fav-btn .product-wishlist-check:checked + .product-wishlist-icons .in-wishlist {
+  display: block;
+}
 
 .product-nav-tabs {
   border: 1px solid #e7e7e7;
