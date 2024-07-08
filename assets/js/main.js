@@ -203,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ) {
       megaMenus.forEach((menu) => {
         menu.classList.remove("show");
+        $(".nav-link-dropdown-icon").removeClass("rotate-180");
       });
     }
   });
