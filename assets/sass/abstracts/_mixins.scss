@@ -5,7 +5,8 @@
   @font-face {
     font-family: quote($font-name);
     src: url($file-path + ".eot");
-    src: url($file-path + ".eot?#iefix") format("embedded-opentype"),
+    src:
+      url($file-path + ".eot?#iefix") format("embedded-opentype"),
       url($file-path + ".woff2") format("woff2"),
       url($file-path + ".woff") format("woff"),
       url($file-path + ".ttf") format("truetype"),
@@ -27,7 +28,7 @@
 }
 
 /* Flexbox Layouts */
-@mixin flex-wrap{
+@mixin flex-wrap {
   display: flex;
   flex-wrap: wrap;
 }
@@ -102,13 +103,7 @@
 // Triangle with CSS
 // Usage
 // @include (#fff, 'down', 10px);
-@mixin triangle(
-  $color,
-  $direction,
-  $size: 6px,
-  $position: absolute,
-  $round: false
-) {
+@mixin triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
   content: "";
   display: block;
   position: $pos;
@@ -206,8 +201,7 @@
 // Usage:
 // @include placeholder;
 @mixin placeholder {
-  $placeholders: "::-webkit-input-placeholder", "::-moz-placeholder",
-    ":-ms-input-placeholder";
+  $placeholders: "::-webkit-input-placeholder", "::-moz-placeholder", ":-ms-input-placeholder";
 
   @each $placeholder in $placeholders {
     & #{$placeholder} {
@@ -349,4 +343,40 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+/// font-smothing
+/// @include font-smoothing(on);
+/// @include font-smoothing(off);
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  }
 }

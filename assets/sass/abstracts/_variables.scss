@@ -1,8 +1,7 @@
-
-// TRANSITION DEFAULT
-$default-transition: all 300ms ease-in-out;
-
 // FONT STACK
+$font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+$font-family-default: $font-family-system;
 $font-family-poppins: "Poppins", sans-serif;
 $font-family-inter: "Inter", sans-serif;
 
@@ -18,7 +17,7 @@ $font-sizes: (
   "3xl": 28px,
   "4xl": 32px,
   "5xl": 36px,
-  "6xl": 40px,
+  "6xl": 40px
 );
 
 // FONT WEIGHTS
@@ -31,7 +30,7 @@ $font-weights: (
   "semibold": 600,
   "bold": 700,
   "extrabold": 800,
-  "black": 900,
+  "black": 900
 );
 
 // MEDIA BREAK POINTS
@@ -41,7 +40,7 @@ $breakpoints-up: (
   "md": "768px",
   "lg": "992px",
   "xl": "1200px",
-  "xxl": "1400px",
+  "xxl": "1400px"
 );
 
 $breakpoints-down: (
@@ -51,7 +50,7 @@ $breakpoints-down: (
   "lg": "991.98px",
   "xl": "1199.98px",
   "xxl": "1399.98px",
-  "xxxl": "1499.98px",
+  "xxxl": "1499.98px"
 );
 
 $body-bg: $white !default;
@@ -99,8 +98,10 @@ $h6-font-size: 0.67 * $font-size-base !default;
 
 // LINKS
 $link-color: $davy-gray;
+$link-visited-color: $davy-gray;
 $link-decoration: none;
 $link-hover-color: darken($link-color, 10%);
+$link-active-color: darken($link-color, 10%);
 $line-hover-decoration: underline;
 
 // Z-INDEX
@@ -110,6 +111,7 @@ $z-index-tooltip: 1020 !default; /* Z-Index For Hover Tooltips */
 $z-index-alert: 1030 !default; /* Z-Index For Alert Messages */
 $z-index-modal: 1100 !default; /* Z-Index For Modal Popups */
 
+// TRANSITION EASE
 $ease: (
   in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53),
   in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19),
@@ -134,8 +136,14 @@ $ease: (
   in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95),
   in-out-expo: cubic-bezier(1, 0, 0, 1),
   in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86),
-  in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55) // easing customs,,,,,,
+  in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55)
 );
+
+@each $name, $value in $ease {
+  .ease-#{$name} {
+    transition-timing-function: #{$value};
+  }
+}
 
 // Z-INDEX
 $z-index: (
@@ -148,14 +156,15 @@ $z-index: (
   "tower": 70,
   "skyscrapper": 80,
   "sky": 90,
-  "satellite": 100,
+  "satellite": 100
 );
 
-$base-url: "../" !default;
+$img-path: "../images/" !default; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
 $max-width: 1320px;
 
 // BOX SHADOW
-$navbar-shadow: 0px 173px 48px 0px rgba(138, 138, 138, 0),
+$navbar-shadow:
+  0px 173px 48px 0px rgba(138, 138, 138, 0),
   0px 111px 44px 0px rgba(138, 138, 138, 0.01),
   0px 62px 37px 0px rgba(138, 138, 138, 0.03),
   0px 28px 28px 0px rgba(138, 138, 138, 0.04),

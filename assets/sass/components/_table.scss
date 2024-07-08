@@ -1,3 +1,33 @@
+$table-bg-color: $white !default;
+$table-bg-color-accent: #f9f9f9 !default; // Background color used for `.table-striped`.
+$table-bg-color-hover: inherit !default;
+$table-border-color: $gray-400 !default; // Border color for table and cell borders.
+$table-th-cell-padding: 8.5px 10px !default;
+$table-td-cellpadding: 20px 10px !default;
+
+// BASELINE STYLES
+table {
+  width: 100%;
+  max-width: 100%;
+  // border: 2px solid $table-borderColor;
+  // background-color: $table-bgColor;
+
+  // CELLS
+  th {
+    padding: $table-th-cell-padding;
+  }
+  td {
+    padding: $table-td-cellpadding;
+  }
+}
+
+// .table-striped {
+// 	tbody :nth-child(odd) th,
+// 	tbody :nth-child(odd) td {
+// 		background-color: $table-bg-color-accent !important;
+// 	}
+// }
+
 .table-wrapper {
   border-radius: 4px;
   overflow-x: scroll;
@@ -15,7 +45,6 @@
   thead {
     th {
       background: #f6f6f6;
-      padding: 8.5px 10px;
       font-weight: 400;
       border-bottom: 0;
       text-align: center;
@@ -24,7 +53,6 @@
 
   tbody {
     td {
-      padding: 20px 10px;
       border-bottom: 1px solid $seasalt;
       vertical-align: middle;
       text-align: center;
@@ -36,8 +64,7 @@
       grid-template-columns: 80px auto;
 
       .tbl-product-img {
-        width: 80px;
-        height: 80px;
+        @include box(80px);
       }
     }
 
@@ -46,8 +73,7 @@
 
       button {
         img {
-          width: 12px;
-          height: 12px;
+          @include box(12px);
         }
       }
     }

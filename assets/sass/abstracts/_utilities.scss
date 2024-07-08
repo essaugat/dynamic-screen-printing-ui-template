@@ -490,24 +490,6 @@ $padding-values: (
 
 @include display-utilities;
 
-// ICONS
-%icon-common {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-$icon-sizes: (40, 36, 32, 24, 20, 16);
-
-@each $size in $icon-sizes {
-  .icon-#{$size} {
-    @include box($size + px, $size + px);
-    min-width: $size + px;
-    min-height: $size + px;
-    @extend %icon-common;
-  }
-}
-
 // NEGATIVE MARGINS
 $negative-margin-values: (
   1: 4px,
@@ -713,4 +695,11 @@ $leading-classes: (
 // MISC
 .pointer-event-none {
   pointer-events: none;
+}
+
+a.hover-theme{
+  transform: $default-transition;
+  &:hover, &:hover span{
+    color: $theme!important;
+  }
 }
