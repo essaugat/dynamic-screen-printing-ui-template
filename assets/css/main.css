@@ -3996,6 +3996,9 @@ a.btn.disabled, fieldset[disabled] a.btn {
   padding-right: 12px;
   padding-left: 12px;
 }
+.sort-btn::after {
+  display: none;
+}
 
 .icon-btn {
   transition: all ease-in-out 300ms;
@@ -5344,6 +5347,13 @@ table td {
 }
 .table-wrapper tbody .order-detail-btn:hover {
   color: #2975e7 !important;
+}
+
+.sort-dropdown .dropdown-menu {
+  border: 1px solid #e7e7e7;
+}
+.sort-dropdown .dropdown-menu .dropdown-item {
+  font-family: "Poppins", sans-serif;
 }
 
 .page-header .container {

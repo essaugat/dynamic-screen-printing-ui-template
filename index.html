@@ -1373,10 +1373,15 @@
               <div
                 class="col-md-6 col-lg-4 col-xl-3 hero-explore-tab-item-wrapper hero-explore-1 hero-explore-2 hero-explore-3 hero-explore-4"
               >
-                <a href="product.html" class="hero-explore-tab-item hero-explore-tab-link bg-seasalt rounded-12 overflow-hidden p-3 d-flex flex-column justify-content-center align-items-center hover-theme">
-                  <span class="text-davy-gray text-sm">Explore all products</span>
+                <a
+                  href="product.html"
+                  class="hero-explore-tab-item hero-explore-tab-link bg-seasalt rounded-12 overflow-hidden p-3 d-flex flex-column justify-content-center align-items-center hover-theme"
+                >
+                  <span class="text-davy-gray text-sm"
+                    >Explore all products</span
+                  >
                   <span class="icon-16">
-                    <img src="./assets/icons/arrow_slanted_gray.svg" alt="">
+                    <img src="./assets/icons/arrow_slanted_gray.svg" alt="" />
                   </span>
                 </a>
               </div>
@@ -3685,15 +3690,23 @@
             <div class="sc-heading text-xl">
               <h3 class="sc-heading-ttl text-xl font-medium mb-0">Reviews</h3>
             </div>
-            <button
-              type="button"
-              class="d-inline-flex align-items-center gap-x-2 sort-btn"
-            >
-              <span class="text-davy-gray text-sm">Sort by</span>
-              <span class="icon-16">
-                <img src="assets/icons/sort_gray.svg" alt="" />
-              </span>
-            </button>
+            <div class="dropdown sort-dropdown">
+              <button
+                class="d-inline-flex align-items-center gap-x-2 sort-btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="text-davy-gray text-sm">Sort by</span>
+                <span class="icon-16">
+                  <img src="assets/icons/sort_gray.svg" alt="" />
+                </span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item text-sm" href="#">Recent</a></li>
+                <li><a class="dropdown-item text-sm" href="#">Oldest</a></li>
+              </ul>
+            </div>
           </div>
           <div class="sc-creviews-content">
             <div class="creviews-items d-grid gap-6 grid-cols-2">
@@ -4205,6 +4218,7 @@
     <!-- JQUERY CDN -->
     <script src="assets/js/lib/jquery.min.js"></script>
     <!-- BOOTSTRAP JS -->
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
     <!-- SLICK JS -->
     <script

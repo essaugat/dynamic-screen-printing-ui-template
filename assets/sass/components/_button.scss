@@ -314,6 +314,10 @@ a.btn {
   min-width: 90px;
   padding-right: 12px;
   padding-left: 12px;
+
+  &::after{
+    display: none;
+  }
 }
 
 .icon-btn {
