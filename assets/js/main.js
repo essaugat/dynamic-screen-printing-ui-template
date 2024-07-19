@@ -282,44 +282,46 @@ $(document).ready(function () {
 
     $(".preview-thumb-item").each(function () {
       const colorThumbItem = $(this);
-      const colorThumbId = colorThumbItem.find("img").attr("data-color-id");
+      $(colorThumbItem).find("img")
+      .attr("src", `assets/images/variant${dataColorId}.jpeg`);
+      // const colorThumbId = colorThumbItem.find("img").attr("data-color-id");
 
-      if (colorThumbId === dataColorId) {
-        $(".preview-thumb-item").removeClass("preview-selected");
-        colorThumbItem.addClass("preview-selected");
-      }
+      // if (colorThumbId === dataColorId) {
+      //   $(".preview-thumb-item").removeClass("preview-selected");
+      //   colorThumbItem.addClass("preview-selected");
+      // }
     });
   });
 
-  const previewThumbs = $(".preview-thumb-item");
+  // const previewThumbs = $(".preview-thumb-item");
 
-  $(".preview-thumb-item").each(function (idx, previewThumbItem) {
-    $(previewThumbItem).click(function () {
-      const currentThumbItem = $(this);
-      const dataThumbColorId = $(currentThumbItem)
-        .find("img")
-        .attr("data-color-id");
+  // $(".preview-thumb-item").each(function (idx, previewThumbItem) {
+  //   $(previewThumbItem).click(function () {
+  //     const currentThumbItem = $(this);
+  //     const dataThumbColorId = $(currentThumbItem)
+  //       .find("img")
+  //       .attr("data-color-id");
 
-      $(".color-variant-item").each(function () {
-        const colorVariantItem = $(this);
-        const colorVariantId = colorVariantItem
-          .find(".color-variant-item-box")
-          .attr("data-color-id");
+  //     $(".color-variant-item").each(function () {
+  //       const colorVariantItem = $(this);
+  //       const colorVariantId = colorVariantItem
+  //         .find(".color-variant-item-box")
+  //         .attr("data-color-id");
 
-        if (colorVariantId === dataThumbColorId) {
-          colorVariantItem
-            .find(".color-variant-item-check")
-            .prop("checked", true);
-        }
-      });
-    });
-  });
+  //       if (colorVariantId === dataThumbColorId) {
+  //         colorVariantItem
+  //           .find(".color-variant-item-check")
+  //           .prop("checked", true);
+  //       }
+  //     });
+  //   });
+  // });
 
-  function resetColorVariants() {
-    $(".color-variant-item-box").each(function (idx, colorVariantItemBox) {
-      $(colorVariantItemBox).prev().attr("checked", false);
-    });
-  }
+  // function resetColorVariants() {
+  //   $(".color-variant-item-box").each(function (idx, colorVariantItemBox) {
+  //     $(colorVariantItemBox).prev().attr("checked", false);
+  //   });
+  // }
 
   const productQtyValInput = $("#product-quantity-val");
   let productQtyVal = 1;
