@@ -101,7 +101,7 @@
 
 .page-sc-product-detail {
     .sc-product-detail-grid {
-        grid-template-columns: 428px auto;
+        grid-template-columns: 600px auto;
 
         @include breakpoint-down(lg) {
             grid-template-columns: 100%;
@@ -111,16 +111,32 @@
 
     .product-preview {
         &-full {
-            width: 430px;
-            height: 480px;
+            width: 100%;
+            height: 600px;
 
             @include breakpoint-down(lg) {
                 margin-right: auto;
                 margin-left: auto;
             }
+
+            @include breakpoint-down(sm){
+                width: 100%;
+            }
+        }
+
+        &-img{
+            @include breakpoint-down(sm){
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
         }
 
         &-thumbs {
+            @include breakpoint-down(sm){
+                gap: 10px!important;
+            }
             @include breakpoint-down(lg) {
                 max-width: 430px;
                 margin-right: auto;
@@ -128,18 +144,18 @@
             }
 
             .preview-thumb-item {
-                width: 90px;
-                height: 90px;
+                width: 135px;
+                height: 135px;
                 cursor: pointer;
 
-                &.preview-selected {
-                    img {
-                        filter: grayscale(0);
-                    }
+                @include breakpoint-down(xs){
+                    width: 70px;
+                    height: 70px;
                 }
 
-                img {
-                    filter: grayscale(100%);
+                &.preview-selected {
+                   outline: 2px solid $theme;
+                   outline-offset: 3px;
                 }
 
                 &:hover {

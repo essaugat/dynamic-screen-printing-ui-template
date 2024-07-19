@@ -267,3 +267,84 @@ $(document).on("click", function (event) {
 //   var navGroup = $(".header-nav-group");
 //   navGroup.toggleClass("show");
 // });
+
+$(document).ready(function () {
+  const colorVariants = $(".color-variant-item");
+  $(colorVariants[0]).find(".color-variant-item-check").attr("checked", true);
+
+  $("input[type='radio'][name='color_variant']").change(function () {
+    const currentItem = $(this);
+    const dataColorId = currentItem.next().attr("data-color-id");
+    const productPreviewFull = $(".product-preview-full");
+    productPreviewFull
+      .find(".product-preview-img")
+      .attr("src", `assets/images/variant${dataColorId}.jpeg`);
+
+    $(".preview-thumb-item").each(function () {
+      const colorThumbItem = $(this);
+      const colorThumbId = colorThumbItem.find("img").attr("data-color-id");
+
+      if (colorThumbId === dataColorId) {
+        $(".preview-thumb-item").removeClass("preview-selected");
+        colorThumbItem.addClass("preview-selected");
+      }
+    });
+  });
+
+  const previewThumbs = $(".preview-thumb-item");
+
+  $(".preview-thumb-item").each(function (idx, previewThumbItem) {
+    $(previewThumbItem).click(function () {
+      const currentThumbItem = $(this);
+      const dataThumbColorId = $(currentThumbItem)
+        .find("img")
+        .attr("data-color-id");
+
+      $(".color-variant-item").each(function () {
+        const colorVariantItem = $(this);
+        const colorVariantId = colorVariantItem
+          .find(".color-variant-item-box")
+          .attr("data-color-id");
+
+        if (colorVariantId === dataThumbColorId) {
+          colorVariantItem
+            .find(".color-variant-item-check")
+            .prop("checked", true);
+        }
+      });
+    });
+  });
+
+  function resetColorVariants() {
+    $(".color-variant-item-box").each(function (idx, colorVariantItemBox) {
+      $(colorVariantItemBox).prev().attr("checked", false);
+    });
+  }
+
+  const productQtyValInput = $("#product-quantity-val");
+  let productQtyVal = 1;
+  $(productQtyValInput).val(productQtyVal);
+  setProductPrice();
+
+  $(productQtyValInput).on("change keyup", function () {
+    productQtyVal = $(productQtyValInput).val();
+    setProductPrice(productQtyVal);
+  });
+
+  function setProductPrice(qtyVal = 1) {
+    if (qtyVal <= 499) {
+      $("#product-price-value").text(`$${13.5 * qtyVal}`);
+    } else if (qtyVal <= 999) {
+      $("#product-price-value").text(`$${12.5 * qtyVal}`);
+    } else {
+      $("#product-price-value").text(`$${11 * qtyVal}`);
+    }
+  }
+
+  $(productQtyValInput).on("blur", function () {
+    $(productQtyValInput).val(productQtyVal);
+    if (productQtyVal == "" || productQtyVal == 0) {
+      $(productQtyValInput).val(1);
+    }
+  });
+});

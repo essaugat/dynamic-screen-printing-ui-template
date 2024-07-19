@@ -703,3 +703,9 @@ a.hover-theme{
     color: $theme!important;
   }
 }
+
+.grid-cols-sm-1{
+  @include breakpoint-down(sm){
+    grid-template-columns: 100%;
+  }
+}

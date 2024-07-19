@@ -3,7 +3,7 @@
     color: #3d3d3d;
   }
 
-  &-head{
+  &-head {
     flex-wrap: wrap;
     row-gap: 12px;
   }
@@ -129,5 +129,71 @@
     color: #808080;
     font-size: 14px;
     margin-top: 4px;
+  }
+}
+
+// PRODUCT COLOR VARIANTS
+.product-sizes-variants {
+  .size-variant-item {
+    position: relative;
+    &-check {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      opacity: 0;
+
+      &:checked {
+        & + .size-variant-item-text {
+          color: $theme !important;
+          outline: 2px solid $theme;
+          outline-offset: -1px;
+        }
+      }
+    }
+    &-text {
+      min-width: 60px;
+      padding: 4px 12px;
+      border: 1px solid $platinum2;
+    }
+  }
+}
+
+.product-colors-variants {
+  .color-variant-item {
+    position: relative;
+    transition: $default-transition;
+    &:hover {
+      scale: 1.1;
+    }
+    &-check {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      opacity: 0;
+
+      &:checked {
+        & + .color-variant-item-box {
+          outline: 2px solid $theme;
+          outline-offset: 2px;
+        }
+      }
+    }
+
+    &-box {
+      @include box(24px);
+      border: 1px solid $platinum2;
+      }
+  }
+}
+
+.form-elem-qty{
+  input{
+    max-width: 155px;
   }
 }
