@@ -56,5 +56,6 @@ Link: https://dynamicscreenprinting.netlify.app/
 22. Terms and Condition Page: https://dynamicscreenprinting.netlify.app/terms_and_conditions
 23. Track Shipping Page : https://dynamicscreenprinting.netlify.app/track_shipping
 24. Track Shipping billing Page : https://dynamicscreenprinting.netlify.app/track_shipping_billing
-25. Proile Page: https://dynamicscreenprinting.netlify.app/profile
+25. Profile Page: https://dynamicscreenprinting.netlify.app/profile
+26. Product Details Page : https://dynamicscreenprinting.netlify.app/product_detail2
 
