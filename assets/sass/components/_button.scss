@@ -136,9 +136,10 @@ $button-variants: (
   }
 
   &:hover {
-    background-color: $btn-hover-bg;
+    background: $btn-hover-bg !important;
     color: $btn-hover-text-color;
     border-color: $btn-hover-border-color;
+    opacity: 1 !important;
   }
 
   &.disabled,
@@ -283,10 +284,10 @@ a.btn {
   font-style: normal;
   @extend %flex-inline-center;
   column-gap: 8px;
-  transition: $default-transition;
 
   &:hover {
     color: $theme;
+    font-weight: 600;
   }
 
   .btn-icon {
@@ -315,7 +316,17 @@ a.btn {
   padding-right: 12px;
   padding-left: 12px;
 
-  &::after{
+  &:hover{
+    background: $theme!important;
+    span{
+      color: $white!important;
+      img{
+        filter: invert(1) brightness(100);
+      }
+    }
+  }
+
+  &::after {
     display: none;
   }
 }

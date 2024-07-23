@@ -1,6 +1,6 @@
 .page-sc-quote {
     .sc-quote-grid {
-        grid-template-columns: 205px auto;
+        grid-template-columns: 360px auto;
 
         @include breakpoint-down(xl) {
             grid-template-columns: 100%;

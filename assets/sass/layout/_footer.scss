@@ -35,6 +35,17 @@
                     color: $white !important;
                 }
             }
+
+            &-item{
+                .footer-social-link{
+                   img{
+                    transition: $default-transition;
+                    &:hover{
+                        scale: 1.1!important;
+                    }
+                   }
+                }
+            }
         }
 
         &-right {

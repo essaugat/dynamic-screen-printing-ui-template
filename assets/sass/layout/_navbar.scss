@@ -20,6 +20,12 @@ $z-index-navbar-toggler: 1010;
     }
 
     .nav-link {
+      &-text{
+        &:hover{
+          text-decoration: underline!important;
+        }
+      }
+      
       .nav-link-dropdown-icon {
         transition: $default-transition;
         &.rotate-180 {
@@ -50,6 +56,12 @@ $z-index-navbar-toggler: 1010;
         &-icon {
           display: inline-flex;
           min-width: 20px;
+        }
+
+        &-text{
+          &:hover{
+            text-decoration: underline!important;
+          }
         }
       }
     }
