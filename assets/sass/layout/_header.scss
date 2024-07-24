@@ -43,6 +43,11 @@
 
         .auth-btn {
           min-height: 42px;
+          font-weight: 500;
+
+          &:hover{
+            scale: 1.02;
+          }
 
           @include breakpoint-down(xs) {
             height: 36px;

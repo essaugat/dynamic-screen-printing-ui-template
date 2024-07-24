@@ -33,6 +33,7 @@
                 transition: $default-transition;
                 &:hover {
                     color: $white !important;
+                    text-decoration: underline;
                 }
             }
 
@@ -69,6 +70,14 @@
         .footer-links{
             @include breakpoint-down(md){
                 justify-content: center;
+            }
+        }
+
+        .footer-link-item{
+            a{
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }

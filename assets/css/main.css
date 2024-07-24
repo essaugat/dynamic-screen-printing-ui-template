@@ -5527,6 +5527,10 @@ table td {
 }
 .page-header-top .header-top-profile .auth-btn {
   min-height: 42px;
+  font-weight: 500;
+}
+.page-header-top .header-top-profile .auth-btn:hover {
+  scale: 1.02;
 }
 @media (max-width: 479.98px) {
   .page-header-top .header-top-profile .auth-btn {
@@ -5873,6 +5877,7 @@ table td {
 }
 .page-footer .footer-top .footer-nav-link:hover {
   color: #fff !important;
+  text-decoration: underline;
 }
 .page-footer .footer-top .footer-nav-item .footer-social-link img {
   transition: all ease-in-out 300ms;
@@ -5902,6 +5907,9 @@ table td {
   .page-footer .footer-bottom .footer-links {
     justify-content: center;
   }
+}
+.page-footer .footer-bottom .footer-link-item a:hover {
+  text-decoration: underline;
 }
 
 .page-sc-hero {
