@@ -1,19 +1,40 @@
 // FORGOT PASSWORD PAGE
-.forgot-pwd-form{
-    .form-elem-group{
+.forgot-pwd-form {
+    .form-elem-group {
         margin-bottom: 52px;
     }
 }
 
-.page-sc-get-connected{
-    .get-connected-right{
-        .form-elem{
+.page-sc-get-connected {
+    .get-connected-right {
+        .form-elem {
             row-gap: 8px;
         }
 
-        .form-control{
-            &::placeholder{
-                color: #94A3B8!important;
+        .form-control {
+            &::placeholder {
+                color: #94a3b8 !important;
+            }
+        }
+    }
+}
+
+// PAGE FORM
+.page-form {
+    .form-elem {
+        .form-control {
+            &.contains-error {
+                border-color: $bittersweet !important;
+            }
+
+            &-wrapper {
+                position: relative;
+                .form-elem-icon {
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
             }
         }
     }

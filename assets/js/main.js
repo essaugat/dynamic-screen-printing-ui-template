@@ -1,7 +1,9 @@
 const headerNavOpenBtn = document.querySelector(".header-nav-open-btn");
-headerNavOpenBtn.addEventListener("click", () => {
-  document.querySelector(".header-nav-group").classList.toggle("show");
-});
+if(headerNavOpenBtn){
+  headerNavOpenBtn.addEventListener("click", () => {
+    document.querySelector(".header-nav-group").classList.toggle("show");
+  });
+}
 
 const formOtpElems = document.querySelectorAll(".form-otp-elems .otp-elem");
 

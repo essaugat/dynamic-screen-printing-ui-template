@@ -4591,6 +4591,12 @@ input[type=button].btn-block {
   font-size: 14px;
   color: #1d3363;
 }
+.form-control::-moz-placeholder {
+  color: #8b96a5 !important;
+}
+.form-control::placeholder {
+  color: #8b96a5 !important;
+}
 @media (max-width: 767.98px) {
   .form-control {
     padding-left: 14px;
@@ -4607,19 +4613,16 @@ input[type=button].btn-block {
 .form-control ::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #d1d1d1 !important;
   font-family: inherit;
 }
 .form-control ::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #d1d1d1 !important;
   font-family: inherit;
 }
 .form-control :-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  color: #d1d1d1 !important;
   font-family: inherit;
 }
 
@@ -4909,12 +4912,12 @@ textarea.form-control {
 .checkbox-option-text {
   border-radius: 8px;
   border: 1px solid #d1d1d1;
-  height: 42px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
   overflow: hidden;
   transition: all ease-in-out 300ms;
 }
@@ -5046,6 +5049,10 @@ textarea.form-control {
 .page-breadcrumb .breadcrumb-link {
   margin-left: 8px;
   color: #d1d1d1;
+  transition: all ease-in-out 300ms;
+}
+.page-breadcrumb .breadcrumb-link:hover {
+  color: #fff;
 }
 
 @media (max-width: 767.98px) {
@@ -5104,6 +5111,7 @@ textarea.form-control {
   border-radius: 20px;
   padding: 24px 12px;
   border: 1px solid #f6f6f6;
+  min-width: 140px;
 }
 @media (max-width: 767.98px) {
   .sc-hero-explore-tabs .hero-explore-tab-head {
@@ -5181,7 +5189,7 @@ textarea.form-control {
   padding: 12px;
   color: #5d5d5d;
   border: 0;
-  border-bottom: 1px solid var(--Neutral-Gray-100, #e7e7e7);
+  border-bottom: 1px solid #e7e7e7;
 }
 .print-commitment-tabs .nav-tabs .nav-link:focus, .print-commitment-tabs .nav-tabs .nav-link:hover {
   border-top: 0;
@@ -5198,8 +5206,7 @@ textarea.form-control {
 }
 .print-commitment-tabs .tab-content-block {
   max-width: 950px;
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 40px;
 }
 @media (max-width: 991.98px) {
   .print-commitment-tabs .tab-content-block {
@@ -5560,9 +5567,6 @@ table td {
 .page-header-nav {
   border-bottom: 1px solid #e7e7e7;
 }
-.page-header-nav .header-nav-left .nav-item:first-child {
-  padding-left: 4px;
-}
 .page-header-nav .nav-link-text:hover {
   text-decoration: underline !important;
 }
@@ -5909,7 +5913,8 @@ table td {
   }
 }
 .page-footer .footer-bottom .footer-link-item a:hover {
-  text-decoration: underline;
+  color: #fff !important;
+  text-decoration: underline !important;
 }
 
 .page-sc-hero {
@@ -6950,10 +6955,23 @@ table td {
   row-gap: 8px;
 }
 .page-sc-get-connected .get-connected-right .form-control::-moz-placeholder {
-  color: #94A3B8 !important;
+  color: #94a3b8 !important;
 }
 .page-sc-get-connected .get-connected-right .form-control::placeholder {
-  color: #94A3B8 !important;
+  color: #94a3b8 !important;
+}
+
+.page-form .form-elem .form-control.contains-error {
+  border-color: #ff5c57 !important;
+}
+.page-form .form-elem .form-control-wrapper {
+  position: relative;
+}
+.page-form .form-elem .form-control-wrapper .form-elem-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .page-sc-docs .sc-docs-grid {

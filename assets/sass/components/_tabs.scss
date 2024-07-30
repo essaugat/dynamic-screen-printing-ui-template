@@ -32,6 +32,7 @@
         border-radius: 20px;
         padding: 24px 12px;
         border: 1px solid $seasalt;
+        min-width: 140px;
 
         @include breakpoint-down(md) {
             width: calc(50% - 8px);
@@ -132,7 +133,7 @@
             padding: 12px;
             color: $davy-gray;
             border: 0;
-            border-bottom: 1px solid var(--Neutral-Gray-100, $platinum);
+            border-bottom: 1px solid $platinum;
 
             &:focus,
             &:hover {
@@ -154,8 +155,7 @@
 
         &-block {
             max-width: 950px;
-            padding-top: 65px;
-            padding-bottom: 65px;
+            padding-top: 40px;
 
             @include breakpoint-down(lg) {
                 padding-top: 40px;

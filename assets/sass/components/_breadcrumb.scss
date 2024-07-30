@@ -61,6 +61,11 @@
         &-link{
             margin-left: 8px;
             color: $timberwolf;
+            transition: $default-transition;
+
+            &:hover{
+                color: $white;
+            }
         }
     }
 }

@@ -117,7 +117,7 @@
                         id=""
                       />
                     </div>
-                    <div class="form-elem">
+                    <div class="form-elem password-form-elem">
                       <label for="" class="form-label">Password</label>
                       <div class="form-control-wrapper">
                         <input
@@ -128,9 +128,24 @@
                           name=""
                           id=""
                         />
+                        <button
+                          type="button"
+                          class="icon-20 position-absolute form-elem-icon pointer-event-none"
+                        >
+                          <img
+                            class="slashed"
+                            src="assets/icons/eye_outline_slash.svg"
+                            alt=""
+                          />
+                          <img
+                            class="un-slashed"
+                            src="assets/icons/eye_outline_dark.svg"
+                            alt=""
+                          />
+                        </button>
                       </div>
                     </div>
-                    <div class="form-elem">
+                    <div class="form-elem password-form-elem">
                       <label for="" class="form-label">Confirm Password</label>
                       <div class="form-control-wrapper">
                         <input
@@ -141,6 +156,21 @@
                           name=""
                           id=""
                         />
+                        <button
+                          type="button"
+                          class="icon-20 position-absolute form-elem-icon pointer-event-none"
+                        >
+                          <img
+                            class="slashed"
+                            src="assets/icons/eye_outline_slash.svg"
+                            alt=""
+                          />
+                          <img
+                            class="un-slashed"
+                            src="assets/icons/eye_outline_dark.svg"
+                            alt=""
+                          />
+                        </button>
                       </div>
                       <p class="form-error-text">
                         You entered the wrong password.
@@ -223,8 +253,20 @@
       <!-- END OF FORM WRAPPER -->
     </div>
 
+    <!-- JQUERY CDN -->
+    <script src="assets/js/lib/jquery.min.js"></script>
     <!-- BOOTSTRAP JS -->
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+    <!-- SLICK JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- CUSTOM JS -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>

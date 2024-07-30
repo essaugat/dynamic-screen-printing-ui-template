@@ -20,6 +20,10 @@
   font-size: 14px;
   color: $theme;
 
+  &::placeholder {
+    color: $gray-500 !important;
+  }
+
   @include breakpoint-down(md) {
     padding-left: 14px;
     padding-right: 14px;
@@ -34,7 +38,8 @@
   @include placeholder() {
     font-weight: 400;
     font-size: 14px;
-    color: $timberwolf !important;
+    // color: $timberwolf !important;
+
     font-family: inherit;
   }
 }
@@ -369,12 +374,12 @@ textarea {
   &-text {
     border-radius: 8px;
     border: 1px solid #d1d1d1;
-    height: 42px;
+    height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
     overflow: hidden;
     transition: $default-transition;
   }
